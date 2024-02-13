@@ -21,8 +21,8 @@ module.exports = {
         white: '#FFFFFF'
       },
       fontSize: {
-        menu: '1.75rem',
-        body : '1.125rem',
+        menu: '1.75rem',  // 28px
+        body : '1.125rem', // 18px
       },
       padding: {
         '18': '1.125rem',
