@@ -19,7 +19,16 @@ module.exports = {
         red: '#F24949',
         darkgray:'#OEOEOE',
         white: '#FFFFFF'
-      }
+      },
+      fontSize: {
+        menu: '1.75rem',
+        body : '1.125rem',
+      },
+      padding: {
+        '18': '1.125rem',
+        '42': '2.625rem'
+      },
+      
     },
   },
   plugins: [],

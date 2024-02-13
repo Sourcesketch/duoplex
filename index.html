@@ -6,26 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Duoplex</title>
+    
 </head>
 
 <body class="">
     <!--main-wrapper-->
-    <div class="dp-wrapper">
+    <div class="dp-wrapper py-18 px-42 bg-[url('/img/hero-pattern.png')]">
         <!--header-->
-        <header class="dp-header">
+        <header class="dp-header h-screen">
             <div class="dp-inner">
-                <div class="dp-header-main">
-                    <a href="" class="dp-header-main__logo"></a>
-                    <div class="dp-header-main__right"></div>
+                <div class="dp-header-main flex justify-between items-center">
+                    <a href="" class="dp-header-main__logo">
+                        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M54.8009 30.0433C53.3903 42.6121 43.4124 52.8491 30.8897 54.5879C17.037 56.5109 4.71576 48.2776 0.414847 36.2039C0.224847 35.6685 0.720002 35.1503 1.27273 35.277C4.09394 35.9161 7.07061 36.1233 10.1452 35.8412C23.7158 34.5976 34.6321 23.3933 35.5188 9.79393C35.7145 6.78272 35.4439 3.87515 34.7703 1.12303C34.6149 0.489693 35.1906 -0.091822 35.8067 0.115451C47.8976 4.15727 56.3554 16.2136 54.8009 30.0433Z"
+                                fill="#2580EF" />
+                            <g opacity="0.51">
+                                <rect width="45" height="47" fill="url(#pattern0)" />
+                            </g>
+                            <path
+                                d="M36.6243 8.33708C36.4976 23.635 24.0152 36.4456 8.72882 36.9753C6.09185 37.0674 3.52397 36.8083 1.07124 36.2325C0.61639 36.1231 0.460936 35.5474 0.78336 35.2134L34.6552 0.443439C34.9834 0.1095 35.5591 0.25344 35.68 0.702531C36.3191 3.13798 36.6473 5.69435 36.6243 8.33132V8.33708Z"
+                                fill="#21F48F" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_178_995"
+                                        transform="matrix(0.0127946 0 0 0.0122502 -0.355556 -0.340426)" />
+                                </pattern>
+                                <image id="image0_178_995" width="129" height="132"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                    </a>
+                    <div class="dp-header-main__right ">
+                        <ul class="relative" >
+                            <li id="menu-list" class="flex items-center gap-5 bg-white h-[3.875rem] w-[16.313rem] p-5 rounded-xl opacity-100 absolute top-0 right-[2.625rem] z-40" onclick="menuOpen()" >
+                                <a>
+                                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 1.57143C0 1.15466 0.163888 0.754961 0.455612 0.460261C0.747335 0.165561 1.143 0 1.55556 0H26.4444C26.857 0 27.2527 0.165561 27.5444 0.460261C27.8361 0.754961 28 1.15466 28 1.57143C28 1.9882 27.8361 2.3879 27.5444 2.6826C27.2527 2.9773 26.857 3.14286 26.4444 3.14286H1.55556C1.143 3.14286 0.747335 2.9773 0.455612 2.6826C0.163888 2.3879 0 1.9882 0 1.57143ZM0 11C0 10.5832 0.163888 10.1835 0.455612 9.88883C0.747335 9.59413 1.143 9.42857 1.55556 9.42857H26.4444C26.857 9.42857 27.2527 9.59413 27.5444 9.88883C27.8361 10.1835 28 10.5832 28 11C28 11.4168 27.8361 11.8165 27.5444 12.1112C27.2527 12.4059 26.857 12.5714 26.4444 12.5714H1.55556C1.143 12.5714 0.747335 12.4059 0.455612 12.1112C0.163888 11.8165 0 11.4168 0 11ZM1.55556 18.8571C1.143 18.8571 0.747335 19.0227 0.455612 19.3174C0.163888 19.6121 0 20.0118 0 20.4286C0 20.8453 0.163888 21.245 0.455612 21.5397C0.747335 21.8344 1.143 22 1.55556 22H26.4444C26.857 22 27.2527 21.8344 27.5444 21.5397C27.8361 21.245 28 20.8453 28 20.4286C28 20.0118 27.8361 19.6121 27.5444 19.3174C27.2527 19.0227 26.857 18.8571 26.4444 18.8571H1.55556Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                                <span class="text-menu font-body font-bold">Menu</span>
+                            </li>
+                            <li class="example flex items-center gap-5 bg-white h-[3.875rem] w-[16.313rem] p-5 rounded-xl opacity-70 absolute top-3 right-[2.625rem] z-30">                              
+                            </li>
+                            <li class="example flex items-center gap-5 bg-white h-[3.875rem] w-[16.313rem] p-5 rounded-xl opacity-60 absolute top-6 right-[2.625rem] z-20">                        
+                            </li>
+                            <li class="example flex items-center gap-5 bg-white h-[3.875rem] w-[16.313rem] p-5 rounded-xl opacity-50 absolute top-9 right-[2.625rem] z-10">
+                            </li>
+                        </ul>
+
+                        <div id="listMenu" style="display: none;">
+                               <p style="color: white;">hellllllooooooooooooooo</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
         <!--main-->
         <main class="dp-main">
             <section class="dp-intro-section">
-                <div class="dp-intro-section__title font-title text-orange">Design Code</div>
-                <div class="dp-intro-section__text font-body text-blue400">
-                    Welcome to our digital world, where design expertise meets coding brilliance. With 14 years of combined experience, we are proficient in creating engaging user experiences. From pixel-perfect designs to seamless development, we push the frontiers of creativity. Join us on a journey where creativity and technology come together to define the future of digital excellence.
+                <div class="dp-intro-section__title font-title text-orange"></div>
+                <div class="dp-intro-section__text  text-blue400">
+
                 </div>
             </section>
         </main>
@@ -36,6 +82,6 @@
         </footer>
 
     </div>
+    <script src="./js/menu.js"></script>
 </body>
-
 </html>

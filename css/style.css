@@ -697,6 +697,141 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-28 {
+  top: 7rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.top-\[2\.25rem\] {
+  top: 2.25rem;
+}
+
+.right-\[2\.625rem\] {
+  right: 2.625rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-9 {
+  top: 2.25rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[3\.875rem\] {
+  height: 3.875rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-\[16\.313\] {
+  width: 16.313;
+}
+
+.w-\[16\.313rem\] {
+  width: 16.313rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\/img\/hero-pattern\.png\'\)\] {
+  background-image: url('/img/hero-pattern.png');
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-42 {
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+}
+
+.py-18 {
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
 .font-body {
   font-family: Neue Montreal;
 }
@@ -705,9 +840,12 @@ video {
   font-family: DELIRIUM NCV;
 }
 
-.text-green {
-  --tw-text-opacity: 1;
-  color: rgb(33 244 143 / var(--tw-text-opacity));
+.text-menu {
+  font-size: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-blue400 {
@@ -718,4 +856,20 @@ video {
 .text-orange {
   --tw-text-opacity: 1;
   color: rgb(252 126 76 / var(--tw-text-opacity));
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
