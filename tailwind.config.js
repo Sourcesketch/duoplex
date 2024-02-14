@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: 'DELIRIUM NCV', // Adds a new `font-display` class
-        body: 'Neue Montreal', // Adds a new `font-display` class
+        delirium: 'DELIRIUM NCV', // Adds a new `font-display` class
+        neue: 'Neue Montreal', // Adds a new `font-display` class
       },
       colors:{
         green: '#21F48F',
