@@ -1,5 +1,6 @@
 @import url('./fonts/DELIRIUMNCV/DELIRIUMNCV.css');
 @import url('./fonts/NeueMontreal/NeueMontreal.css');
+@import url('./customtheme/custom.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
