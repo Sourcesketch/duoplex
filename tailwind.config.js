@@ -18,16 +18,26 @@ module.exports = {
         purple: '#7C22F2',
         red: '#F24949',
         darkgray:'#OEOEOE',
+        darkCyan: '#083644',
+        darkBlue:'#020611',
         white: '#FFFFFF'
       },
       fontSize: {
         menu: '1.75rem',  // 28px
         body : '1.125rem', // 18px
+        title: '14.75rem', // 236px
+        menu1: '3.25rem' //52px
       },
       padding: {
         '18': '1.125rem',
         '42': '2.625rem'
       },
+      lineHeight: {
+        'extra-loose' : '0.3'
+      },
+      letterSpacing: {
+        'tracking-medium': '0.01em',
+      }
       
     },
   },
