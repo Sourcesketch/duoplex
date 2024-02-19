@@ -1211,12 +1211,12 @@ video {
   line-height: 0.3;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
 .tracking-tracking-medium {
   letter-spacing: 0.01em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-blue500 {
