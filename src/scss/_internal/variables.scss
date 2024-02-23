@@ -1,17 +1,23 @@
 // Typography
 $root_font: 1rem;
-$font-family-primary: 'DELIRIUMNCV';
 $font-family-secondary: 'NeueMontreal-Regular';
-// headings 
+$fontFamily: (
+    "delirium": 'DELIRIUMNCV',
+    "light": 'NeueMontreal-Light',
+    "regular": 'NeueMontreal-Regular',
+    "medium": 'NeueMontreal-Medium' ,
+    "bold": 'NeueMontreal-Bold',
+);
 
 // theme colors 
-
 $themeColors: (
     "white": #ffffff,
+    "black": #000000,
     "green": #21F48F,
     "yellow": #F2BB22,
     "purple": #7C22F2,
     "orange": #FC7E4C,
+    "darkBlue": #020611,
     "bluishPurle": #225EF2,
     "blue": #2580EF,
     "skyBlue": #26B1ED,
@@ -19,3 +25,23 @@ $themeColors: (
     "fadeBlack": #353535,
     "mattRed": #F24949,
 );
+
+// border radius 
+$borderRadius: (
+    "4": 4,
+    "6": 6,
+    "8": 8,
+    "10": 10,
+    "12": 12,
+    "14": 14,
+    "16": 16
+);
+
+// positoning elements
+$postions: (
+    "relative": relative,
+    "absolute": absolute,
+    "sticky": sticky,
+    "fixed": fixed,
+);
+

@@ -9,10 +9,15 @@
     background-color: $color;
   }
 }
-
-/* font sizes */
+/* theme font family */
+@each $fname, $family in $fontFamily {
+  .font-family-#{$fname} {
+    font-family: $family;
+  }
+}
+/* theme font sizes */
 @function pxToRem($px-value) {
-	@return ($px-value / 16) + rem;
+  @return ($px-value / 16) + rem;
 }
 $fonts: 18, 28, 236;
 @each $value in $fonts {
@@ -75,6 +80,29 @@ $fonts: 18, 28, 236;
     height: pxToRem($size);
   }
 }
+
+/* theme icons */
+@for $size from 1 through 50 {
+  .icon-#{$size} {
+    height: pxToRem($size);
+    width: pxToRem($size);
+  }
+}
+
+/* theme border radius */
+@each $name, $border in $borderRadius {
+  .rounded-#{$name} {
+    border-radius: pxToRem($border);
+  }
+}
+/* theme border radius */
+@each $name, $pos in $postions {
+  .position-#{$name} {
+    position: $pos;
+  }
+}
+ 
+
 /* vertical-center */
 @mixin vertical-center {
   position: relative;
@@ -84,14 +112,6 @@ $fonts: 18, 28, 236;
   transform: translateY(-50%);
 }
 
-/* absolute positioning */
-@mixin abs-position($top, $right, $bottom, $left) {
-  position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
 /* retina-image */
 @mixin retina-image($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),

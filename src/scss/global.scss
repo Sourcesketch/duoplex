@@ -2,6 +2,7 @@
 @import '../../assets/fonts/NeueMontreal/fonts_neue.css';
 @import './_internal/variables.scss';
 @import './_internal/mixin.scss';
+@import './_page/element.scss';
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -20,10 +21,14 @@
     4. Improve text rendering
   */
   html, body {
-    height: 100%;
+    box-sizing: border-box;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
     font-family: $font-family-secondary;
     font-weight: normal;
-
+    min-height: 100%;
+    overflow: auto;
   }
   body {
     line-height: 1.5;
@@ -49,9 +54,34 @@
     overflow-wrap: break-word;
     margin: 0;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   /*
     8. Create a root stacking context
   */
   #root, #__next {
     isolation: isolate;
   }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .w40-full {
+    width: 40%;
+  }
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+.overflow-hidden {
+  overflow: hidden;
+}

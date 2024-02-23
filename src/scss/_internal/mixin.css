@@ -7,6 +7,14 @@
   background-color: #ffffff;
 }
 
+.text-black {
+  color: #000000;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
 .text-green {
   color: #21F48F;
 }
@@ -37,6 +45,14 @@
 
 .bg-orange {
   background-color: #FC7E4C;
+}
+
+.text-darkBlue {
+  color: #020611;
+}
+
+.bg-darkBlue {
+  background-color: #020611;
 }
 
 .text-bluishPurle {
@@ -87,7 +103,28 @@
   background-color: #F24949;
 }
 
-/* font sizes */
+/* theme font family */
+.font-family-delirium {
+  font-family: "DELIRIUMNCV";
+}
+
+.font-family-light {
+  font-family: "NeueMontreal-Light";
+}
+
+.font-family-regular {
+  font-family: "NeueMontreal-Regular";
+}
+
+.font-family-medium {
+  font-family: "NeueMontreal-Medium";
+}
+
+.font-family-bold {
+  font-family: "NeueMontreal-Bold";
+}
+
+/* theme font sizes */
 .fs-18 {
   font-size: 1.125rem;
 }
@@ -34169,7 +34206,303 @@
   height: 31.25rem;
 }
 
+/* theme icons */
+.icon-1 {
+  height: 0.0625rem;
+  width: 0.0625rem;
+}
+
+.icon-2 {
+  height: 0.125rem;
+  width: 0.125rem;
+}
+
+.icon-3 {
+  height: 0.1875rem;
+  width: 0.1875rem;
+}
+
+.icon-4 {
+  height: 0.25rem;
+  width: 0.25rem;
+}
+
+.icon-5 {
+  height: 0.3125rem;
+  width: 0.3125rem;
+}
+
+.icon-6 {
+  height: 0.375rem;
+  width: 0.375rem;
+}
+
+.icon-7 {
+  height: 0.4375rem;
+  width: 0.4375rem;
+}
+
+.icon-8 {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.icon-9 {
+  height: 0.5625rem;
+  width: 0.5625rem;
+}
+
+.icon-10 {
+  height: 0.625rem;
+  width: 0.625rem;
+}
+
+.icon-11 {
+  height: 0.6875rem;
+  width: 0.6875rem;
+}
+
+.icon-12 {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.icon-13 {
+  height: 0.8125rem;
+  width: 0.8125rem;
+}
+
+.icon-14 {
+  height: 0.875rem;
+  width: 0.875rem;
+}
+
+.icon-15 {
+  height: 0.9375rem;
+  width: 0.9375rem;
+}
+
+.icon-16 {
+  height: 1rem;
+  width: 1rem;
+}
+
+.icon-17 {
+  height: 1.0625rem;
+  width: 1.0625rem;
+}
+
+.icon-18 {
+  height: 1.125rem;
+  width: 1.125rem;
+}
+
+.icon-19 {
+  height: 1.1875rem;
+  width: 1.1875rem;
+}
+
+.icon-20 {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.icon-21 {
+  height: 1.3125rem;
+  width: 1.3125rem;
+}
+
+.icon-22 {
+  height: 1.375rem;
+  width: 1.375rem;
+}
+
+.icon-23 {
+  height: 1.4375rem;
+  width: 1.4375rem;
+}
+
+.icon-24 {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.icon-25 {
+  height: 1.5625rem;
+  width: 1.5625rem;
+}
+
+.icon-26 {
+  height: 1.625rem;
+  width: 1.625rem;
+}
+
+.icon-27 {
+  height: 1.6875rem;
+  width: 1.6875rem;
+}
+
+.icon-28 {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.icon-29 {
+  height: 1.8125rem;
+  width: 1.8125rem;
+}
+
+.icon-30 {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.icon-31 {
+  height: 1.9375rem;
+  width: 1.9375rem;
+}
+
+.icon-32 {
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon-33 {
+  height: 2.0625rem;
+  width: 2.0625rem;
+}
+
+.icon-34 {
+  height: 2.125rem;
+  width: 2.125rem;
+}
+
+.icon-35 {
+  height: 2.1875rem;
+  width: 2.1875rem;
+}
+
+.icon-36 {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.icon-37 {
+  height: 2.3125rem;
+  width: 2.3125rem;
+}
+
+.icon-38 {
+  height: 2.375rem;
+  width: 2.375rem;
+}
+
+.icon-39 {
+  height: 2.4375rem;
+  width: 2.4375rem;
+}
+
+.icon-40 {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.icon-41 {
+  height: 2.5625rem;
+  width: 2.5625rem;
+}
+
+.icon-42 {
+  height: 2.625rem;
+  width: 2.625rem;
+}
+
+.icon-43 {
+  height: 2.6875rem;
+  width: 2.6875rem;
+}
+
+.icon-44 {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.icon-45 {
+  height: 2.8125rem;
+  width: 2.8125rem;
+}
+
+.icon-46 {
+  height: 2.875rem;
+  width: 2.875rem;
+}
+
+.icon-47 {
+  height: 2.9375rem;
+  width: 2.9375rem;
+}
+
+.icon-48 {
+  height: 3rem;
+  width: 3rem;
+}
+
+.icon-49 {
+  height: 3.0625rem;
+  width: 3.0625rem;
+}
+
+.icon-50 {
+  height: 3.125rem;
+  width: 3.125rem;
+}
+
+/* theme border radius */
+.rounded-4 {
+  border-radius: 0.25rem;
+}
+
+.rounded-6 {
+  border-radius: 0.375rem;
+}
+
+.rounded-8 {
+  border-radius: 0.5rem;
+}
+
+.rounded-10 {
+  border-radius: 0.625rem;
+}
+
+.rounded-12 {
+  border-radius: 0.75rem;
+}
+
+.rounded-14 {
+  border-radius: 0.875rem;
+}
+
+.rounded-16 {
+  border-radius: 1rem;
+}
+
+/* theme border radius */
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
 /* vertical-center */
-/* absolute positioning */
 /* retina-image */
 /* text truncate *//*# sourceMappingURL=mixin.css.map */
