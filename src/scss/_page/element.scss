@@ -71,9 +71,30 @@
   .dp-main-content {
     display: flex;
     flex-direction: column;
+    position: relative;
     .dp-vision {
         display: flex;
         flex-direction: column; 
+        justify-content: space-evenly;
+        align-items: center;
+        .dp-vision-title {
+          &__I {
+          font-weight: normal;
+          transform: translateX(pxToRem(130));
+        }
+        &__II {
+          line-height: 100px;
+          font-weight: normal;
+        }
+      }
+      .dp-vision__content {
+        text-align: center;
+        transform: translateX(pxToRem(75));
+      }
+    }
+    .dp-footer {
+      position: absolute;
+      bottom: 0;
     }
   }
 }

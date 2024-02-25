@@ -68,8 +68,27 @@
 .dp-wrapper .dp-main-content {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .dp-wrapper .dp-main-content .dp-vision {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dp-wrapper .dp-main-content .dp-vision .dp-vision-title__I {
+  font-weight: normal;
+  transform: translateX(pxToRem(130));
+}
+.dp-wrapper .dp-main-content .dp-vision .dp-vision-title__II {
+  line-height: 100px;
+  font-weight: normal;
+}
+.dp-wrapper .dp-main-content .dp-vision .dp-vision__content {
+  text-align: center;
+  transform: translateX(pxToRem(75));
+}
+.dp-wrapper .dp-main-content .dp-footer {
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=element.css.map */
