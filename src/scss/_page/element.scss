@@ -1,45 +1,45 @@
 .dp-wrapper {
+  display: flex;
+  flex-direction: column;
+  .dp-header-top {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    &__menu {
+      a {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: pxToRem(18);
+        right: pxToRem(42);
+        opacity: 1;
+        z-index: 4;
+        &.tlayer {
+          opacity: 0.7;
+          position: absolute;
+          top: pxToRem(30);
+          z-index: 3;
+        }
+        &.mlayer {
+          opacity: 0.5;
+          position: absolute;
+          top: pxToRem(42);
+          z-index: 2;
+        }
+        &.blayer {
+          opacity: 0.5;
+          position: absolute;
+          top: pxToRem(54);
+          z-index: 1;
+        }
+      }
+    }
+  }
   .dp-top-content {
     background: url("../../../assets/img/bg-gradient.png") no-repeat center;
     display: flex;
     flex-direction: column;
-    .dp-header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: fixed;
-      &__menu {
-        a {
-          display: flex;
-          align-items: center;
-          position: absolute;
-          top: pxToRem(18);
-          right: pxToRem(42);
-          opacity: 1;
-          z-index: 4;
-          &.tlayer {
-            opacity: 0.7;
-            position: absolute;
-            top: pxToRem(30);
-            z-index: 3;
-          }
-          &.mlayer {
-            opacity: 0.5;
-            position: absolute;
-            top: pxToRem(42);
-            z-index: 2;
-          }
-          &.blayer {
-            opacity: 0.5;
-            position: absolute;
-            top: pxToRem(54);
-            z-index: 1;
-          }
-        }
-      }
-    }
     .dp-header-main {
       .dp-hero-wrapper {
         display: flex;
@@ -61,7 +61,7 @@
             justify-content: center;
             align-items: center;
             .dp-intro__content {
-                text-align: center;
+              text-align: center;
             }
           }
         }
@@ -73,12 +73,12 @@
     flex-direction: column;
     position: relative;
     .dp-vision {
-        display: flex;
-        flex-direction: column; 
-        justify-content: space-evenly;
-        align-items: center;
-        .dp-vision-title {
-          &__I {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .dp-vision-title {
+        &__I {
           font-weight: normal;
           transform: translateX(pxToRem(130));
         }

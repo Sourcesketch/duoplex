@@ -34512,18 +34512,13 @@
   display: flex;
   flex-direction: column;
 }
-.dp-wrapper .dp-top-content {
-  background: url("../../../assets/img/bg-gradient.png") no-repeat center;
-  display: flex;
-  flex-direction: column;
-}
-.dp-wrapper .dp-top-content .dp-header-top {
+.dp-wrapper .dp-header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
 }
-.dp-wrapper .dp-top-content .dp-header-top__menu a {
+.dp-wrapper .dp-header-top__menu a {
   display: flex;
   align-items: center;
   position: absolute;
@@ -34532,23 +34527,28 @@
   opacity: 1;
   z-index: 4;
 }
-.dp-wrapper .dp-top-content .dp-header-top__menu a.tlayer {
+.dp-wrapper .dp-header-top__menu a.tlayer {
   opacity: 0.7;
   position: absolute;
   top: 1.875rem;
   z-index: 3;
 }
-.dp-wrapper .dp-top-content .dp-header-top__menu a.mlayer {
+.dp-wrapper .dp-header-top__menu a.mlayer {
   opacity: 0.5;
   position: absolute;
   top: 2.625rem;
   z-index: 2;
 }
-.dp-wrapper .dp-top-content .dp-header-top__menu a.blayer {
+.dp-wrapper .dp-header-top__menu a.blayer {
   opacity: 0.5;
   position: absolute;
   top: 3.375rem;
   z-index: 1;
+}
+.dp-wrapper .dp-top-content {
+  background: url("../../../assets/img/bg-gradient.png") no-repeat center;
+  display: flex;
+  flex-direction: column;
 }
 .dp-wrapper .dp-top-content .dp-header-main .dp-hero-wrapper {
   display: flex;
