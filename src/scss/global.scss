@@ -1,87 +1,122 @@
-@import '../../assets/fonts/DELIRIUMNCV/fonts_ncv.css';
-@import '../../assets/fonts/NeueMontreal/fonts_neue.css';
-@import './_internal/variables.scss';
-@import './_internal/mixin.scss';
-@import './_page/element.scss';
+@import "../../assets/fonts/DELIRIUMNCV/fonts_ncv.css";
+@import "../../assets/fonts/NeueMontreal/fonts_neue.css";
+@import "./_internal/variables.scss";
+@import "./_internal/mixin.scss";
+@import "./_page/element.scss";
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
   */
-  html, body {
-    box-sizing: border-box;
-    font-feature-settings: normal;
-    font-variation-settings: normal;
-    -webkit-tap-highlight-color: transparent;
-    font-family: $font-family-secondary;
-    font-weight: normal;
-    min-height: 100%;
-    overflow: auto;
-  }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+html,
+body {
+  box-sizing: border-box;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  font-family: $font-family-secondary;
+  font-weight: normal;
+  min-height: 100%;
+  overflow: auto;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*
     8. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-  .h-full {
-    height: 100%;
-  }
-  .h-screen {
-    height: 100vh;
-  }
-  .w-full {
-    width: 100%;
-  
-  }
-  .w-screen {
-    width: 100vw;
-  }
-  .w40-full {
-    width: 40%;
-  }
+#root,
+#__next {
+  isolation: isolate;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+.w40-full {
+  width: 40%;
+}
+.w50-full {
+  width: 50%;
+}
+.w90-full {
+  width: 90%;
+}
+// flex
 .flex-fill {
   flex: 1 1 auto !important;
+}
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.align-items-stretch {
+  align-items: stretch;
 }
 .overflow-hidden {
   overflow: hidden;

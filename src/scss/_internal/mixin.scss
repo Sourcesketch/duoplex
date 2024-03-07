@@ -25,6 +25,11 @@ $fonts: 18, 28, 236;
     font-size: pxToRem($value);
   }
 }
+@for $size from 100 through 900 {
+  .font-weight-#{$size} {
+    font-weight: $size;
+  }
+}
 /* padding , margins , heights, and widths */
 @for $size from 0 through 500 {
   .p-#{$size} {
@@ -78,6 +83,9 @@ $fonts: 18, 28, 236;
   }
   .h-#{$size} {
     height: pxToRem($size);
+  }
+  .gap-#{$size} {
+    gap: pxToRem($size);
   }
 }
 
