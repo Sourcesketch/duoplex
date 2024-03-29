@@ -7,6 +7,8 @@ $fontFamily: (
     "regular": 'NeueMontreal-Regular',
     "medium": 'NeueMontreal-Medium' ,
     "bold": 'NeueMontreal-Bold',
+    "boldItalic": "NeueMontreal-BoldItalic",
+    "mediumItalic": "NeueMontreal-MediumItalic",
 );
 
 // theme colors 
@@ -24,6 +26,8 @@ $themeColors: (
     "darkCyan": #083644,
     "fadeBlack": #353535,
     "mattRed": #F24949,
+    "modalbg": #232323,
+    "innerModalbg": #2D2D2D,
 );
 
 // border radius 

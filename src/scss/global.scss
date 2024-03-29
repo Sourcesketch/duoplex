@@ -3,6 +3,8 @@
 @import "./_internal/variables.scss";
 @import "./_internal/mixin.scss";
 @import "./_page/element.scss";
+@import "./_page/modal.scss";
+@import "./_page/slider.scss";
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -81,6 +83,9 @@ a {
 #__next {
   isolation: isolate;
 }
+a {
+  cursor: pointer;
+}
 .h-full {
   height: 100%;
 }
@@ -102,6 +107,12 @@ a {
 .w90-full {
   width: 90%;
 }
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
 // flex
 .flex-fill {
   flex: 1 1 auto !important;

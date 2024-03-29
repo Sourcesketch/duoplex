@@ -1,0 +1,90 @@
+@import url("../_internal/variables.scss");
+//modal
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: pxToRem(70); /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+  transition: all .3s ease;
+  .modal-content {
+    margin: auto;
+    padding: pxToRem(20);
+    // border: pxToRem(1) solid #888;
+    width: 80%;
+    height: 95%;
+    display: flex;
+    gap: 1rem;
+    .dp__leftContent {
+      flex-grow: 60;
+      width: 60%;
+      height: 100%;
+      background-color: map-get($themeColors, "modalbg");
+      border-radius: pxToRem(26);
+      .dp__innerContent {
+        background: url("../../../assets/img/catalogDetail-leftbg.png")
+          no-repeat center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: pxToRem(26);
+      }
+    }
+    .dp__rightContent {
+      flex-grow: 40;
+      width: 40%;
+      height: 100%;
+      background-color: map-get($themeColors, "modalbg");
+      border-radius: pxToRem(26);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .dp__contentHeader {
+        display: flex;
+        gap: 1rem;
+        .title {
+          flex-grow: 87;
+          background-color: map-get($themeColors, "innerModalbg");
+          border: 1px solid #1e1e1e;
+          border-radius: 1rem;
+          padding: 1rem;
+        }
+        .close {
+          flex-grow: 13;
+          display: flex;
+          background-color: map-get($themeColors, "innerModalbg");
+          border: 1px solid #1e1e1e;
+          border-radius: 1rem;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .dp__contentbio {
+        display: flex;
+        justify-content: space-between;
+        background-color: map-get($themeColors, "innerModalbg");
+        border: 1px solid #1e1e1e;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+      .dp__contentOverview {
+        background-color: map-get($themeColors, "innerModalbg");
+        border: 1px solid #1e1e1e;
+        padding: 1rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        p {
+            overflow: auto;
+        }
+      }
+    }
+  }
+}

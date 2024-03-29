@@ -103,6 +103,22 @@
   background-color: #F24949;
 }
 
+.text-modalbg {
+  color: #232323;
+}
+
+.bg-modalbg {
+  background-color: #232323;
+}
+
+.text-innerModalbg {
+  color: #2D2D2D;
+}
+
+.bg-innerModalbg {
+  background-color: #2D2D2D;
+}
+
 /* theme font family */
 .font-family-delirium {
   font-family: "DELIRIUMNCV";
@@ -124,17 +140,61 @@
   font-family: "NeueMontreal-Bold";
 }
 
+.font-family-boldItalic {
+  font-family: "NeueMontreal-BoldItalic";
+}
+
+.font-family-mediumItalic {
+  font-family: "NeueMontreal-MediumItalic";
+}
+
 /* theme font sizes */
 .fs-18 {
   font-size: 1.125rem;
+}
+
+.fs-26 {
+  font-size: 1.625rem;
 }
 
 .fs-28 {
   font-size: 1.75rem;
 }
 
+.fs-46 {
+  font-size: 2.875rem;
+}
+
+.fs-48 {
+  font-size: 3rem;
+}
+
+.fs-90 {
+  font-size: 5.625rem;
+}
+
+.fs-96 {
+  font-size: 6rem;
+}
+
+.fs-146 {
+  font-size: 9.125rem;
+}
+
+.fs-162 {
+  font-size: 10.125rem;
+}
+
+.fs-192 {
+  font-size: 12rem;
+}
+
 .fs-236 {
   font-size: 14.75rem;
+}
+
+.fs-280 {
+  font-size: 17.5rem;
 }
 
 .font-weight-100 {
