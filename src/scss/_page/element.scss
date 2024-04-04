@@ -1,680 +1,672 @@
-@import url("../_internal/variables.scss");
-.dp-wrapper {
-  display: flex;
-  flex-direction: column;
-  .dp-header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 2;
-    &__menu {
-      a {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: pxToRem(18);
-        right: pxToRem(42);
-        opacity: 1;
-        z-index: 4;
-        &.tlayer {
-          opacity: 0.7;
-          position: absolute;
-          top: pxToRem(30);
-          z-index: 3;
-        }
-        &.mlayer {
-          opacity: 0.5;
-          position: absolute;
-          top: pxToRem(42);
-          z-index: 2;
-        }
-        &.blayer {
-          opacity: 0.5;
-          position: absolute;
-          top: pxToRem(54);
-          z-index: 1;
-        }
-      }
-    }
-  }
-  /* header custom style */
-
-  .dp-header-main__cards {
-    height: calc(100vh - 7rem);
-    position: absolute;
-    top: 6rem;
-    right: pxToRem(42);
-    overflow: hidden;
-    //display: none;
-    &:hover {
-      overflow-y: auto;
-    }
-    .dp-header__cards-list {
-      display: flex;
-      flex-direction: column;
-      gap: pxToRem(8);
-      
-      .card {
-        display: inline-block;
-        width: pxToRem(261);
-        background-color: white;
-        border-radius: pxToRem(12);
-        padding: pxToRem(20);
-        
-        &.reachout-card {
-          background-color: #21f48f;
-          padding: pxToRem(14) pxToRem(20);
-        }
-        .card-body {
-          .card-title {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding-bottom: pxToRem(8);
-            margin-bottom: pxToRem(14);
-            border-bottom: 1px solid #000000;
-          }
-        }
-        ul {
-          padding: 0;
-          li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-          }
-        }
-        &:active, &.active {
-          background-color: #21f48f;
-        }
-      }
-    }
-    &::-webkit-scrollbar {
-      width: 0.4rem;
-    }
-    &::-webkit-scrollbar-track {
-      --dp-bg-opacity: 1;
-      background-color: rgb(241 245 249 / var(--dp-bg-opacity)) !important;
-      border-radius: 0.25rem;
-    }
-    &::-webkit-scrollbar-thumb {
-      --dp-bg-opacity: 1;
-      background-color: rgb(33 244 143 / var(--dp-bg-opacity)) !important;
-      border-radius: 0.25rem;
-    }
-  }
-  .dp-top-content {
-    background: url("../../../assets/img/bg-gradient.png") no-repeat center;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    .dp-header-main {
-      .dp-hero-wrapper {
-        display: flex;
-        flex-direction: column;
-        .dp-top-img {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 0.1;
-        }
-        .dp-intro-wrapper {
-          position: absolute;
-          top: 50%;
-          display: flex;
-          justify-content: center;
-          .dp-intro-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .dp-intro__content {
-              text-align: center;
-            }
-          }
-        }
-      }
-    }
-  }
-  .dp-main-content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    .dp-vision {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      .dp-vision-title {
-        &__I {
-          font-weight: normal;
-          transform: translateX(pxToRem(130));
-        }
-        &__II {
-          line-height: pxToRem(100);
-          font-weight: normal;
-        }
-      }
-      .dp-vision__content {
-        text-align: center;
-        transform: translateX(pxToRem(75));
-      }
-    }
-    .dp-portfolio {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      .dp-portfolio-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: pxToRem(1100);
-        .dp-portfolio__left {
-          .dp-portfolio-title {
-            line-height: pxToRem(250);
-          }
-        }
-        .dp-portfolio__right {
-          .box {
-            min-width: pxToRem(255);
-            img {
-              object-fit: cover;
-              min-width: pxToRem(255);
-            }
-            &.box2 {
-              outline: 14px solid #191919;
-              border-radius: pxToRem(24);
-              z-index: 1;
-              img {
-                border-radius: 0px;
-                filter: grayscale(1);
-                z-index: -1;
-                position: relative;
-              }
-              &:hover {
-                img {
-                  filter: none;
-                  transform: rotate3d(1, 1, 1, 350deg);
-                  z-index: 1;
-                }
-              }
-            }
-            &.box3 {
-              flex-grow: 25;
-              background: url("../../../assets/img/img-md-1.png") no-repeat
-                center;
-              background-size: cover;
-              border-radius: pxToRem(24);
-            }
-            &.box4 {
-              flex-grow: 15;
-              background: url("../../../assets/img/img-md-2.png") no-repeat
-                center;
-              background-size: cover;
-              border-radius: pxToRem(24);
-              transition: flex-grow 0.1s ease;
-              &:hover {
-                flex-grow: 25;
-              }
-            }
-            &.box5 {
-              flex-grow: 15;
-              background: url("../../../assets/img/img-md-3.png") no-repeat
-                center;
-              background-size: cover;
-              border-radius: pxToRem(24);
-              transition: flex-grow 0.1s ease;
-              &:hover {
-                flex-grow: 25;
-              }
-            }
-            &.box6 {
-              img {
-                border-radius: pxToRem(24);
-              }
-            }
-          }
-        }
-      }
-    }
-    .dp-catalog {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      .dp-catalog-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: pxToRem(1440);
-        width: 100%;
-        .dp-catalog__1,
-        .dp-catalog__2 {
-          flex-grow: 50;
-          background-color: #1a1a1a;
-          min-height: pxToRem(450);
-          border-radius: pxToRem(24);
-          padding: pxToRem(16);
-          .dp-catalog-box__inner {
-            display: flex;
-            flex-direction: column;
-            .dp-catalog__header {
-              width: 100%;
-              display: flex;
-              .dp-catalog__title {
-                flex-grow: 90;
-                background-color: #222222;
-                border: 1px solid 11eE1E;
-                color: #ffffff;
-                border-radius: pxToRem(16);
-              }
-              .dp-catalog__year {
-                flex-grow: 10;
-                background-color: #2d2d2d;
-                border: 1px solid 11eE1E;
-                color: #434343;
-                border-radius: pxToRem(16);
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              }
-            }
-            .dp-catalog__content {
-              opacity: 0.5;
-              img {
-                border-radius: pxToRem(16);
-                filter: grayscale(1);
-                &:hover {
-                  filter: none;
-                }
-              }
-              &:hover {
-                opacity: 1;
-              }
-            }
-          }
-        }
-        .dp-catalog__1 {
-          &:hover {
-            flex-grow: 60;
-            background-color: #381f52;
-            .dp-catalog-box__inner {
-              .dp-catalog__header {
-                .dp-catalog__title,
-                .dp-catalog__year {
-                  background-color: #532ac6;
-                  color: #ffffff;
-                }
-              }
-            }
-          }
-        }
-
-        .dp-catalog__2 {
-          &:hover {
-            flex-grow: 60;
-            background-color: #f3d9d2;
-            .dp-catalog-box__inner {
-              .dp-catalog__header {
-                .dp-catalog__title,
-                .dp-catalog__year {
-                  background-color: #ed7800;
-                  color: #ffffff;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .dp-expertise {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: pxToRem(100) 0;
-      .dp-expertise__inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 90rem;
-        .dp-expertise__headings {
-          width: 50%;
-          .dp-expertise_title {
-            line-height: 10.75rem;
-          }
-          .dp-expertise__list {
-            width: 60%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.125rem;
-            button {
-              border-radius: pxToRem(31);
-              border: none;
-            }
-          }
-        }
-        .dp-expertise__showcase {
-          width: 50%;
-          .cont {
-            position: relative;
-            height: 70vh;
-            //  width: calc(29.7 / 21 * 100vh);
-            background: #222222;
-            margin: 5vh auto;
-            overflow: hidden;
-            &-int {
-              overflow: hidden;
-              padding: 1rem;
-              transform: scale(1.6) rotate(20deg);
-              transform-origin: 65.7% 52.3%;
-            }
-            &-wrap {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 0 1rem;
-              height: 100%;
-            }
-          }
-          .block {
-            position: relative;
-            padding-bottom: 70%;
-            width: 100%;
-            height: 0;
-            background: black;
-            margin: 0 0 1rem;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 1.3px 1.6px -6px rgba(0, 0, 0, 0.024),
-              0 3.6px 4.4px -6px rgba(0, 0, 0, 0.035),
-              0 8.7px 10.6px -6px rgba(0, 0, 0, 0.046),
-              0 29px 35px -6px rgba(0, 0, 0, 0.07);
-            & p {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              color: white;
-              font-size: 24px;
-              margin: 0;
-              transform: translate(-50%, -50%);
-            }
-          }
-        }
-      }
-    }
-    .dp-about {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      .dp-about__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: pxToRem(1260);
-        .dp-about__topContent {
-          width: 100%;
-          h2 {
-            line-height: 9.725rem;
-            font-weight: normal;
-            margin-bottom: pxToRem(35);
-          }
-          p {
-            width: 50%;
-          }
-        }
-        .dp-about__detail {
-          display: flex;
-          width: 100%;
-          gap: 1rem;
-          .dp-about__leftContent {
-            flex-grow: 50;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            .tablist {
-              background-color: #232323;
-              border-radius: pxToRem(26);
-              height: pxToRem(85);
-              .tab {
-                display: flex;
-                gap: 0.5rem;
-                width: 100%;
-                height: 100%;
-                .tablinks {
-                  background-color: #2d2d2d;
-                  border: 1px solid #1e1e1e;
-                  width: 50%;
-                  border-radius: pxToRem(26);
-                  height: 100%;
-                  color: #8a8a8a;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  &.active,
-                  &:active,
-                  &:hover {
-                    background-color: #21f48f;
-                    color: #000000;
-                  }
-                }
-              }
-            }
-            .tablist-content {
-              background-color: #232323;
-              border-radius: pxToRem(26);
-              min-height: pxToRem(512);
-            }
-          }
-          .dp-about__rightContent {
-            flex-grow: 50;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            .dp-about__intro {
-              background-color: #232323;
-              border-radius: pxToRem(26);
-            }
-            .dp-about__stack {
-              background-color: #232323;
-              border-radius: pxToRem(26);
-              .list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 1rem;
-                button {
-                  height: pxToRem(52);
-                  width: pxToRem(52);
-                  background-color: #c2c2c2;
-                  border-radius: pxToRem(8);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .dp-excelence {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .dp-excelence__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        max-width: pxToRem(1260);
-        width: 100%;
-        h2 {
-          line-height: 5rem;
-          font-weight: normal;
-        }
-        button {
-          border-radius: 140px;
-          padding: pxToRem(36) pxToRem(55);
-        }
-      }
-    }
-    .dp-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      .dp-contact__inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: pxToRem(1260);
-        width: 100%;
-        gap: 2rem;
-        .dp-contact__media {
-          flex-grow: 50;
-          width: 50%;
-        }
-        .dp-contact__form {
-          flex-grow: 50;
-          width: 50%;
-          display: flex;
-          flex-direction: column;
-          h2 {
-            font-weight: normal;
-            line-height: 7.75rem;
-            margin-bottom: pxToRem(12);
-          }
-          form {
-            &.cform {
-              display: flex;
-              flex-direction: column;
-              .form-control {
-                label {
-                  display: block;
-                  margin-bottom: pxToRem(8);
-                }
-                input {
-                  background-color: #232323;
-                  height: pxToRem(44);
-                  min-width: pxToRem(615);
-                  border-width: 0;
-                  padding: pxToRem(8) pxToRem(16);
-                  border-radius: pxToRem(12);
-                  margin-bottom: pxToRem(16);
-                  color: #ffffff;
-                  &:focus-visible {
-                    outline: none;
-                    border-radius: pxToRem(6);
-                    border-width: 1px;
-                    border-color: transparent;
-                    animation-name: animate-in;
-                    animation-duration: 1s;
-                    background-image: linear-gradient(
-                        to right,
-                        #21f48f,
-                        #21f48f
-                      ),
-                      linear-gradient(to bottom, #21f48f, #21f48f),
-                      linear-gradient(to right, #21f48f, #21f48f),
-                      linear-gradient(to bottom, #21f48f, #21f48f);
-                    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-                    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
-                    background-repeat: no-repeat;
-                  }
-                }
-                textarea {
-                  background-color: #232323;
-                  min-width: pxToRem(615);
-                  border-width: 0;
-                  padding: pxToRem(8) pxToRem(16);
-                  border-radius: pxToRem(12);
-                  margin-bottom: pxToRem(16);
-                  color: #ffffff;
-                  &:focus-visible {
-                    outline: none;
-                    border-width: 2px;
-                    border-radius: pxToRem(12);
-                    border-color: transparent;
-                    animation-name: animate-in;
-                    animation-duration: 1s;
-                    background-image: linear-gradient(
-                        to right,
-                        #21f48f,
-                        #21f48f
-                      ),
-                      linear-gradient(to bottom, #21f48f, #21f48f),
-                      linear-gradient(to right, #21f48f, #21f48f),
-                      linear-gradient(to bottom, #21f48f, #21f48f);
-                    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-                    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
-                    background-repeat: no-repeat;
-                  }
-                }
-              }
-              .submitBtn {
-                border-radius: pxToRem(140);
-                width: pxToRem(123);
-                border: none;
-              }
-            }
-          }
-        }
-      }
-    }
-    .dp-footer {
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      justify-content: space-between;
-      
-      .dp__social-links, .dp__web{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        .dp_link {
-          height: 2rem;
-          width: 2rem;
-          border-radius: 50%;
-          background-color: #ffffff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
-  }
-}
-
-@keyframes animate-in {
-  0% {
-    background-size: 0 2px, 0 0, 0 0, 0 0;
-  }
-
-  25% {
-    background-size: 100% 2px, 0 0, 0 0, 0 0;
-  }
-
-  50% {
-    background-size: 100% 2px, 2px 100%, 0 0, 0 0;
-  }
-
-  75% {
-    background-size: 100% 2px, 2px 100%, 100% 2px, 0 0;
-  }
-
-  100% {
-    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
-  }
-}
+                        @import url("../_internal/variables.scss");
+                        .dp-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            .dp-header-top {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                position: absolute;
+                                z-index: 2;
+                                &__menu {
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        position: absolute;
+                                        top: pxToRem(18);
+                                        right: pxToRem(42);
+                                        opacity: 1;
+                                        z-index: 4;
+                                        &.tlayer {
+                                            opacity: 0.7;
+                                            position: absolute;
+                                            top: pxToRem(30);
+                                            z-index: 3;
+                                        }
+                                        &.mlayer {
+                                            opacity: 0.5;
+                                            position: absolute;
+                                            top: pxToRem(42);
+                                            z-index: 2;
+                                        }
+                                        &.blayer {
+                                            opacity: 0.5;
+                                            position: absolute;
+                                            top: pxToRem(54);
+                                            z-index: 1;
+                                        }
+                                    }
+                                }
+                            }
+                            /* header custom style */
+                            .dp-header-main__cards {
+                                height: calc(100vh - 7rem);
+                                position: absolute;
+                                top: 6rem;
+                                right: pxToRem(42);
+                                overflow: hidden;
+                                //display: none;
+                                &:hover {
+                                    overflow-y: auto;
+                                }
+                                .dp-header__cards-list {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: pxToRem(8);
+                                    .card {
+                                        display: inline-block;
+                                        width: pxToRem(261);
+                                        background-color: white;
+                                        border-radius: pxToRem(12);
+                                        padding: pxToRem(20);
+                                        &.reachout-card {
+                                            background-color: #21f48f;
+                                            padding: pxToRem(14) pxToRem(20);
+                                        }
+                                        .card-body {
+                                            .card-title {
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 1rem;
+                                                padding-bottom: pxToRem(8);
+                                                margin-bottom: pxToRem(14);
+                                                border-bottom: 1px solid #000000;
+                                            }
+                                        }
+                                        ul {
+                                            padding: 0;
+                                            li {
+                                                list-style: none;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 0.5rem;
+                                            }
+                                        }
+                                        &:active,
+                                        &.active {
+                                            background-color: #21f48f;
+                                        }
+                                    }
+                                }
+                                &::-webkit-scrollbar {
+                                    width: 0.4rem;
+                                }
+                                &::-webkit-scrollbar-track {
+                                    --dp-bg-opacity: 1;
+                                    background-color: rgb(241 245 249 / var(--dp-bg-opacity)) !important;
+                                    border-radius: 0.25rem;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    --dp-bg-opacity: 1;
+                                    background-color: rgb(33 244 143 / var(--dp-bg-opacity)) !important;
+                                    border-radius: 0.25rem;
+                                }
+                            }
+                            .dp-top-content {
+                                background: url("../../../assets/img/bg-gradient.png") repeat center;
+                                display: flex;
+                                flex-direction: column;
+                                z-index: 1;
+                                .dp-header-main {
+                                    .dp-hero-wrapper {
+                                        display: flex;
+                                        flex-direction: column;
+                                        .dp-top-img {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            opacity: 0.1;
+                                        }
+                                        .dp-intro-wrapper {
+                                            position: absolute;
+                                            top: 50%;
+                                            display: flex;
+                                            justify-content: center;
+                                            .dp-intro-container {
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                .dp-intro__content {
+                                                    text-align: center;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .dp-main-content {
+                                display: flex;
+                                flex-direction: column;
+                                position: relative;
+                                .dp-vision {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    align-items: center;
+                                    .dp-vision-title {
+                                        &__I {
+                                            font-weight: normal;
+                                            transform: translateX(pxToRem(130));
+                                        }
+                                        &__II {
+                                            line-height: pxToRem(100);
+                                            font-weight: normal;
+                                        }
+                                    }
+                                    .dp-vision__content {
+                                        text-align: center;
+                                        transform: translateX(pxToRem(75));
+                                    }
+                                }
+                                .dp-portfolio {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    .dp-portfolio-inner {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        max-width: pxToRem(1100);
+                                        .dp-portfolio__left {
+                                            .dp-portfolio-title {
+                                                line-height: pxToRem(250);
+                                            }
+                                        }
+                                        .dp-portfolio__right {
+                                            .box {
+                                                min-width: pxToRem(255);
+                                                img {
+                                                    object-fit: cover;
+                                                    min-width: pxToRem(255);
+                                                }
+                                                &.box2 {
+                                                    outline: 14px solid #191919;
+                                                    border-radius: pxToRem(24);
+                                                    z-index: 1;
+                                                    img {
+                                                        border-radius: 0px;
+                                                        filter: grayscale(1);
+                                                        z-index: -1;
+                                                        position: relative;
+                                                    }
+                                                    &:hover {
+                                                        img {
+                                                            filter: none;
+                                                            transform: rotate3d(1, 1, 1, 350deg);
+                                                            z-index: 1;
+                                                        }
+                                                    }
+                                                }
+                                                &.box3 {
+                                                    flex-grow: 25;
+                                                    background: url("../../../assets/img/img-md-1.png") no-repeat center;
+                                                    background-size: cover;
+                                                    border-radius: pxToRem(24);
+                                                }
+                                                &.box4 {
+                                                    flex-grow: 15;
+                                                    background: url("../../../assets/img/img-md-2.png") no-repeat center;
+                                                    background-size: cover;
+                                                    border-radius: pxToRem(24);
+                                                    transition: flex-grow 0.1s ease;
+                                                    &:hover {
+                                                        flex-grow: 25;
+                                                    }
+                                                }
+                                                &.box5 {
+                                                    flex-grow: 15;
+                                                    background: url("../../../assets/img/img-md-3.png") no-repeat center;
+                                                    background-size: cover;
+                                                    border-radius: pxToRem(24);
+                                                    transition: flex-grow 0.1s ease;
+                                                    &:hover {
+                                                        flex-grow: 25;
+                                                    }
+                                                }
+                                                &.box6 {
+                                                    img {
+                                                        border-radius: pxToRem(24);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dp-catalog {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    .dp-catalog-inner {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        max-width: pxToRem(1440);
+                                        width: 100%;
+                                        .dp-catalog__3,
+                                        .dp-catalog__2,
+                                        .dp-catalog__1 {
+                                            flex-grow: 50;
+                                            background-color: #1a1a1a;
+                                            min-height: pxToRem(450);
+                                            border-radius: pxToRem(24);
+                                            padding: pxToRem(16);
+                                            .dp-catalog-box__inner {
+                                                display: flex;
+                                                flex-direction: column;
+                                                .dp-catalog__header {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    .dp-catalog__title {
+                                                        flex-grow: 90;
+                                                        background-color: #222222;
+                                                        border: 1px solid 11eE1E;
+                                                        color: #ffffff;
+                                                        border-radius: pxToRem(16);
+                                                    }
+                                                    .dp-catalog__year {
+                                                        flex-grow: 10;
+                                                        background-color: #2d2d2d;
+                                                        border: 1px solid 11eE1E;
+                                                        color: #434343;
+                                                        border-radius: pxToRem(16);
+                                                        text-align: center;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                    }
+                                                }
+                                                .dp-catalog__content {
+                                                    opacity: 0.5;
+                                                    img {
+                                                        border-radius: pxToRem(16);
+                                                        filter: grayscale(1);
+                                                        &:hover {
+                                                            filter: none;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .dp-catalog__1 {
+                                            &:hover {
+                                                flex-grow: 60;
+                                                background-color: #381f52;
+                                                .dp-catalog-box__inner {
+                                                    .dp-catalog__header {
+                                                        .dp-catalog__title,
+                                                        .dp-catalog__year {
+                                                            background-color: #532ac6;
+                                                            color: #ffffff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .dp-catalog__2 {
+                                            &:hover {
+                                                flex-grow: 60;
+                                                background-color: #f3d9d2;
+                                                .dp-catalog-box__inner {
+                                                    .dp-catalog__header {
+                                                        .dp-catalog__title,
+                                                        .dp-catalog__year {
+                                                            background-color: #ed7800;
+                                                            color: #ffffff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .dp-catalog__3 {
+                                            &:hover {
+                                                flex-grow: 60;
+                                                background-color: #d2def3;
+                                                .dp-catalog-box__inner {
+                                                    .dp-catalog__header {
+                                                        .dp-catalog__title,
+                                                        .dp-catalog__year {
+                                                            background-color: #005fed;
+                                                            color: #ffffff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dp-expertise {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: pxToRem(100) 0;
+                                    .dp-expertise__inner {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        max-width: 90rem;
+                                        .dp-expertise__headings {
+                                            width: 50%;
+                                            .dp-expertise_title {
+                                                line-height: 10.75rem;
+                                            }
+                                            .dp-expertise__list {
+                                                width: 60%;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                gap: 1.125rem;
+                                                button {
+                                                    border-radius: pxToRem(31);
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                        .dp-expertise__showcase {
+                                            width: 50%;
+                                            .cont {
+                                                position: relative;
+                                                height: 70vh;
+                                                //  width: calc(29.7 / 21 * 100vh);
+                                                background: #222222;
+                                                margin: 5vh auto;
+                                                overflow: hidden;
+                                                &-int {
+                                                    overflow: hidden;
+                                                    padding: 1rem;
+                                                    transform: scale(1.6) rotate(20deg);
+                                                    transform-origin: 65.7% 52.3%;
+                                                }
+                                                &-wrap {
+                                                    display: grid;
+                                                    grid-template-columns: repeat(3, 1fr);
+                                                    grid-gap: 0 1rem;
+                                                    height: 100%;
+                                                }
+                                            }
+                                            .block {
+                                                position: relative;
+                                                padding-bottom: 70%;
+                                                width: 100%;
+                                                height: 0;
+                                                background: black;
+                                                margin: 0 0 1rem;
+                                                border-radius: 1rem;
+                                                overflow: hidden;
+                                                box-shadow: 0 1.3px 1.6px -6px rgba(0, 0, 0, 0.024), 0 3.6px 4.4px -6px rgba(0, 0, 0, 0.035), 0 8.7px 10.6px -6px rgba(0, 0, 0, 0.046), 0 29px 35px -6px rgba(0, 0, 0, 0.07);
+                                                & p {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    color: white;
+                                                    font-size: 24px;
+                                                    margin: 0;
+                                                    transform: translate(-50%, -50%);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dp-about {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    .dp-about__inner {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        max-width: pxToRem(1260);
+                                        .dp-about__topContent {
+                                            width: 100%;
+                                            h2 {
+                                                line-height: 9.725rem;
+                                                font-weight: normal;
+                                                margin-bottom: pxToRem(35);
+                                            }
+                                            p {
+                                                width: 50%;
+                                            }
+                                        }
+                                        .dp-about__detail {
+                                            display: flex;
+                                            width: 100%;
+                                            gap: 1rem;
+                                            .dp-about__leftContent {
+                                                flex-grow: 50;
+                                                width: 50%;
+                                                height: 100%;
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 1rem;
+                                                .tablist {
+                                                    background-color: #232323;
+                                                    border-radius: pxToRem(26);
+                                                    height: pxToRem(85);
+                                                    .tab {
+                                                        display: flex;
+                                                        gap: 0.5rem;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        .tablinks {
+                                                            background-color: #2d2d2d;
+                                                            border: 1px solid #1e1e1e;
+                                                            width: 50%;
+                                                            border-radius: pxToRem(26);
+                                                            height: 100%;
+                                                            color: #8a8a8a;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            &.active,
+                                                            &:active,
+                                                            &:hover {
+                                                                background-color: #21f48f;
+                                                                color: #000000;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .tablist-content {
+                                                    background-color: #232323;
+                                                    border-radius: pxToRem(26);
+                                                    min-height: pxToRem(512);
+                                                }
+                                            }
+                                            .dp-about__rightContent {
+                                                flex-grow: 50;
+                                                width: 50%;
+                                                height: 100%;
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 1rem;
+                                                .dp-about__intro {
+                                                    background-color: #232323;
+                                                    border-radius: pxToRem(26);
+                                                }
+                                                .dp-about__stack {
+                                                    background-color: #232323;
+                                                    border-radius: pxToRem(26);
+                                                    .list {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        gap: 1rem;
+                                                        button {
+                                                            height: pxToRem(52);
+                                                            width: pxToRem(52);
+                                                            background-color: #c2c2c2;
+                                                            border-radius: pxToRem(8);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dp-excelence {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .dp-excelence__inner {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 1rem;
+                                        max-width: pxToRem(1260);
+                                        width: 100%;
+                                        h2 {
+                                            line-height: 5rem;
+                                            font-weight: normal;
+                                        }
+                                        button {
+                                            border-radius: 140px;
+                                            padding: pxToRem(36) pxToRem(55);
+                                        }
+                                    }
+                                }
+                                .dp-contact {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 100%;
+                                    .dp-contact__inner {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        max-width: pxToRem(1260);
+                                        width: 100%;
+                                        gap: 2rem;
+                                        .dp-contact__media {
+                                            flex-grow: 50;
+                                            width: 50%;
+                                        }
+                                        .dp-contact__form {
+                                            flex-grow: 50;
+                                            width: 50%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            h2 {
+                                                font-weight: normal;
+                                                line-height: 7.75rem;
+                                                margin-bottom: pxToRem(12);
+                                            }
+                                            form {
+                                                &.cform {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    .form-control {
+                                                        label {
+                                                            display: block;
+                                                            margin-bottom: pxToRem(8);
+                                                        }
+                                                        input {
+                                                            background-color: #232323;
+                                                            height: pxToRem(44);
+                                                            min-width: pxToRem(615);
+                                                            border-width: 0;
+                                                            padding: pxToRem(8) pxToRem(16);
+                                                            border-radius: pxToRem(12);
+                                                            margin-bottom: pxToRem(16);
+                                                            color: #ffffff;
+                                                            &:focus-visible {
+                                                                outline: none;
+                                                                border-radius: pxToRem(6);
+                                                                border-width: 1px;
+                                                                border-color: transparent;
+                                                                animation-name: animate-in;
+                                                                animation-duration: 1s;
+                                                                background-image: linear-gradient( to right, #21f48f, #21f48f), linear-gradient(to bottom, #21f48f, #21f48f), linear-gradient(to right, #21f48f, #21f48f), linear-gradient(to bottom, #21f48f, #21f48f);
+                                                                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                                                                background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+                                                                background-repeat: no-repeat;
+                                                            }
+                                                        }
+                                                        textarea {
+                                                            background-color: #232323;
+                                                            min-width: pxToRem(615);
+                                                            border-width: 0;
+                                                            padding: pxToRem(8) pxToRem(16);
+                                                            border-radius: pxToRem(12);
+                                                            margin-bottom: pxToRem(16);
+                                                            color: #ffffff;
+                                                            &:focus-visible {
+                                                                outline: none;
+                                                                border-width: 2px;
+                                                                border-radius: pxToRem(12);
+                                                                border-color: transparent;
+                                                                animation-name: animate-in;
+                                                                animation-duration: 1s;
+                                                                background-image: linear-gradient( to right, #21f48f, #21f48f), linear-gradient(to bottom, #21f48f, #21f48f), linear-gradient(to right, #21f48f, #21f48f), linear-gradient(to bottom, #21f48f, #21f48f);
+                                                                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                                                                background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+                                                                background-repeat: no-repeat;
+                                                            }
+                                                        }
+                                                    }
+                                                    .submitBtn {
+                                                        border-radius: pxToRem(140);
+                                                        width: pxToRem(123);
+                                                        border: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dp-footer {
+                                    // position: absolute;
+                                    bottom: 1rem;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .dp__social-links,
+                                    .dp__web {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 0.5rem;
+                                        .dp_link {
+                                            height: 2rem;
+                                            width: 2rem;
+                                            border-radius: 50%;
+                                            background-color: #ffffff;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            &:hover {
+                                                background-color: #21f48f;
+                                                fill: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            @keyframes animate-in {
+                                0% {
+                                    background-size: 0 2px, 0 0, 0 0, 0 0;
+                                }
+                                25% {
+                                    background-size: 100% 2px, 0 0, 0 0, 0 0;
+                                }
+                                50% {
+                                    background-size: 100% 2px, 2px 100%, 0 0, 0 0;
+                                }
+                                75% {
+                                    background-size: 100% 2px, 2px 100%, 100% 2px, 0 0;
+                                }
+                                100% {
+                                    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+                                }
+                            }
+                        }

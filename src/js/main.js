@@ -1,8 +1,5 @@
-
-
 gsap.to(
-    ".dp-intro__logo",
-    {
+    ".dp-intro__logo", {
         x: "100vw",
         scrollTrigger: {
             trigger: ".dp-intro__logo",
@@ -27,12 +24,10 @@ gsap.to(".dp-intro__content", {
 });
 gsap.set('#top-svg', { scale: 1 })
 gsap.fromTo(
-    '#top-svg',
-    {
+    '#top-svg', {
         scale: 2,
         rotation: 1140,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: '#top-svg',
             start: "top center-=1",
@@ -46,7 +41,7 @@ gsap.fromTo(
 gsap.fromTo(".dp-vision-title__I", {
     // skewY: 20,
     scale: 1,
-    xPercent: 200,
+    xPercent: 300,
 }, {
     scrollTrigger: {
         trigger: ".dp-vision-title__I",
@@ -63,7 +58,7 @@ gsap.fromTo(".dp-vision-title__I", {
 gsap.fromTo(".dp-vision-title__II     ", {
     // skewY: 20,
     scale: 1,
-    xPercent: -200,
+    xPercent: -300,
 }, {
     scrollTrigger: {
         trigger: ".dp-vision-title__I",
@@ -79,12 +74,10 @@ gsap.fromTo(".dp-vision-title__II     ", {
 });
 
 gsap.fromTo(
-    ".dp-vision__content",
-    {
+    ".dp-vision__content", {
         y: 100,
         opacity: 0
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-vision__content",
             start: "top center+=900",
@@ -100,13 +93,11 @@ gsap.fromTo(
 )
 
 gsap.fromTo(
-    ".dp-portfolio__left",
-    {
+    ".dp-portfolio__left", {
         scale: 1,
         xPercent: -200,
-        opacity:0,
-    },
-    {
+        opacity: 0,
+    }, {
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
@@ -115,7 +106,7 @@ gsap.fromTo(
         },
         y: 0,
         xPercent: 0,
-        opacity:1,
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 1,
@@ -123,13 +114,11 @@ gsap.fromTo(
 )
 
 gsap.fromTo(
-    ".box1",
-    {
+    ".box1", {
         scale: 1,
         y: -100,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
@@ -137,23 +126,21 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-        opacity:1,
-       // xPercent: 0,
+        opacity: 1,
+        // xPercent: 0,
         transformOrigin: "0% 100%",
         ease: "power4",
-        duration: 1,
+        duration: 2,
     }
 )
 
 
 gsap.fromTo(
-    ".box2,.box3,.box4,.box5,.box6",
-    {
+    ".box2,.box3,.box4,.box5,.box6", {
         scale: 1,
         y: 300,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
@@ -161,82 +148,76 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-       // xPercent: 0,
-       opacity: 1,
+        // xPercent: 0,
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
-        duration: 1,
+        duration: 3,
     }
 )
 
 gsap.fromTo(
-    ".dp-about__topContent h2",
-    {
+    ".dp-about__topContent h2", {
         scale: 1,
         y: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-about",
-            start: "top+=0",
+            start: "top+=100",
             markers: "true",
             toggleActions: "play none none reverse",
         },
-        y: -20,
-        fontSize:96,
-       // xPercent: 0,
-
-        transformOrigin: "0% 100%",
-        ease: "power4",
-        duration: 1,
-    }
-)
-gsap.fromTo(
-    ".dp-about__topContent p",
-    {
-        scale: 1,
-        y: 0,
-    },
-    {
-        scrollTrigger: {
-            trigger: ".dp-about",
-            start: "top+=0",
-            markers: "true",
-            toggleActions: "play none none reverse",
-        },
-        y: -60,
-        fontSize:18,
+        y: -10,
+        fontSize: 96,
         xPercent: 0,
 
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 1,
-         
+    }
+)
+gsap.fromTo(
+    ".dp-about__topContent p", {
+        scale: 1,
+        y: 0,
+    }, {
+        scrollTrigger: {
+            trigger: ".dp-about",
+            start: "top+=100",
+            markers: "true",
+            toggleActions: "play none none reverse",
+        },
+        y: -90,
+        fontSize: 18,
+        xPercent: 0,
+
+        transformOrigin: "0% 100%",
+        ease: "power4",
+        duration: 1,
+
     }
 )
 
 gsap.fromTo(
-    ".dp-about__detail",
-    {
+    ".dp-about__detail", {
         scale: 1,
         y: 0,
         display: 'none',
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-about",
-            start: "top+=0",
+            start: "top+=200",
             markers: "true",
             toggleActions: "play none none reverse",
         },
         y: -70,
-        fontSize:18,
+        fontSize: 18,
         xPercent: 0,
         display: 'flex',
         transformOrigin: "0% 100%",
         ease: "power4",
-        duration: 1,
-         
+        duration: 2,
+
     }
 )
 
@@ -281,13 +262,11 @@ gsap.fromTo(".dp-excelence h3", {
 });
 
 gsap.fromTo(
-    ".dp-excelence button",
-    {
+    ".dp-excelence button", {
         scale: 1,
         y: -100,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-excelence",
             start: "top center",
@@ -295,21 +274,19 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-        opacity:1,
-       // xPercent: 0,
+        opacity: 1,
+        // xPercent: 0,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 2,
     }
 )
 gsap.fromTo(
-    ".dp-contact",
-    {
+    ".dp-contact", {
         scale: 1,
         y: -100,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-contact",
             start: "top center",
@@ -317,8 +294,8 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-        opacity:1,
-       // xPercent: 0,
+        opacity: 1,
+        // xPercent: 0,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 2,
@@ -326,13 +303,11 @@ gsap.fromTo(
 )
 
 gsap.fromTo(
-    ".dp-expertise__list",
-    {
+    ".dp-expertise__list", {
         scale: 1,
         y: 300,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-expertise",
             start: "top center",
@@ -340,8 +315,8 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-       // xPercent: 0,
-       opacity: 1,
+        // xPercent: 0,
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 2,
@@ -350,13 +325,11 @@ gsap.fromTo(
 
 
 gsap.fromTo(
-    ".dp-expertise_title",
-    {
+    ".dp-expertise_title", {
         scale: 1,
         xPercent: -200,
-        opacity:0,
-    },
-    {
+        opacity: 0,
+    }, {
         scrollTrigger: {
             trigger: ".dp-expertise",
             start: "top center",
@@ -365,7 +338,7 @@ gsap.fromTo(
         },
         y: 0,
         xPercent: 0,
-        opacity:1,
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 1,
@@ -373,13 +346,11 @@ gsap.fromTo(
 )
 
 gsap.fromTo(
-    ".dp-catalog-inner",
-    {
+    ".dp-catalog-inner", {
         scale: 1,
         y: 300,
         opacity: 0,
-    },
-    {
+    }, {
         scrollTrigger: {
             trigger: ".dp-catalog",
             start: "top center",
@@ -387,8 +358,8 @@ gsap.fromTo(
             toggleActions: "play none none reverse",
         },
         y: 0,
-       // xPercent: 0,
-       opacity: 1,
+        // xPercent: 0,
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 2,
@@ -408,20 +379,11 @@ const easing = "none"
 const time = 1.5
 const time2 = 1.75
 
-tl1.fromTo(col1,
-    { yPercent: -23.5, duration: time, ease: easing },
-    { yPercent: 26.5, duration: time, ease: easing }
-)
+tl1.fromTo(col1, { yPercent: -23.5, duration: time, ease: easing }, { yPercent: 26.5, duration: time, ease: easing })
 
-tl2.fromTo(col2,
-    { yPercent: -33.5, duration: time2, ease: easing },
-    { yPercent: 16.5, duration: time2, ease: easing }
-)
+tl2.fromTo(col2, { yPercent: -33.5, duration: time2, ease: easing }, { yPercent: 16.5, duration: time2, ease: easing })
 
-tl3.fromTo(col3,
-    { yPercent: -40.5, duration: time, ease: easing },
-    { yPercent: 9.5, duration: time, ease: easing }
-)
+tl3.fromTo(col3, { yPercent: -40.5, duration: time, ease: easing }, { yPercent: 9.5, duration: time, ease: easing })
 
 const slowDown = gsap.to(tl2, {
     duration: 0.75,
@@ -431,11 +393,26 @@ const slowDown = gsap.to(tl2, {
 })
 
 
-cont.addEventListener('mouseenter', function () {
+cont.addEventListener('mouseenter', function() {
     slowDown.play();
 })
 
-cont.addEventListener('mouseleave', function () {
+cont.addEventListener('mouseleave', function() {
     slowDown.reverse();
 })
 
+//studio-freight/lenis
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time) => {
+    lenis.raf(time * 500)
+})
+
+gsap.ticker.lagSmoothing(0)
