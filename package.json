@@ -1,6 +1,12 @@
 {
- 
+ 
   "dependencies": {
-    "sass": "^1.71.1"
+ 
+   
+  "@studio-freight/lenis": "^1.0.42",
+ 
+   
+  "sass": "^1.71.1"
+ 
   }
 }

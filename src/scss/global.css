@@ -39787,7 +39787,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   z-index: 2;
 }
 .dp-wrapper .dp-header-top__menu a {
@@ -40382,8 +40382,7 @@
   border: none;
 }
 .dp-wrapper .dp-main-content .dp-footer {
-  position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -40403,7 +40402,11 @@
   justify-content: center;
   align-items: center;
 }
-
+.dp-wrapper .dp-main-content .dp-footer .dp__social-links .dp_link:hover,
+.dp-wrapper .dp-main-content .dp-footer .dp__web .dp_link:hover {
+  background-color: #21f48f;
+  fill: #fff;
+}
 @keyframes animate-in {
   0% {
     background-size: 0 2px, 0 0, 0 0, 0 0;
@@ -40421,6 +40424,7 @@
     background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
   }
 }
+
 /* The Modal (background) */
 .modal {
   display: none;
