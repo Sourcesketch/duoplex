@@ -13,7 +13,8 @@
     padding-top: pxToRem(70);
     /* Location of the box */
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     /* Full width */
     height: 100%;
@@ -30,7 +31,7 @@
         padding: pxToRem(20);
         // border: pxToRem(1) solid #888;
         width: 80%;
-        height: 95%;
+        height: 90%;
         display: flex;
         gap: 1rem;
         .dp__leftContent {

@@ -1,43 +1,56 @@
-gsap.to(
-    ".dp-intro__logo", {
-        x: "100vw",
-        scrollTrigger: {
-            trigger: ".dp-intro__logo",
-            start: 'top center-=100',
-            end: "bottom bottom",
-            markers: true,
-            toggleActions: "play none reverse none",
-            duration: 0.5,
-            stagger: 0.05,
-        },
-    });
-gsap.to(".dp-intro__content", {
-    x: "-100vw",
+gsap.fromTo(".dp-intro__logo svg", {
+    // skewY: 20,
+    scale: 1,
+    xPercent: 300,
+}, {
     scrollTrigger: {
-        trigger: ".dp-intro__content",
-        start: "top center-=1",
-        end: "bottom bottom",
-        markers: true,
-        toggleActions: "play none reverse none",
-        stagger: 0.05,
+        trigger: ".dp-intro-wrapper",
+        start: "top center",
+        markers: "true",
+        toggleActions: "play none none reverse",
     },
+    // skewY: 0,
+    xPercent: 0,
+    transformOrigin: "0% 100%",
+    ease: "power4",
+    duration: 2,
 });
-gsap.set('#top-svg', { scale: 1 })
-gsap.fromTo(
-    '#top-svg', {
-        scale: 2,
-        rotation: 1140,
-    }, {
-        scrollTrigger: {
-            trigger: '#top-svg',
-            start: "top center-=1",
-            end: "bottom bottom",
-            scrub: 1,
-        },
-        scale: 1.5,
 
-    }
-);
+gsap.fromTo(".dp-intro__content", {
+    // skewY: 20,
+    scale: 1,
+    xPercent: -300,
+}, {
+    scrollTrigger: {
+        trigger: ".dp-intro-wrapper",
+        start: "top center",
+        markers: "true",
+        toggleActions: "play none none reverse",
+    },
+    // skewY: 0,
+    xPercent: 0,
+    transformOrigin: "0% 100%",
+    ease: "power4",
+    duration: 2,
+});
+
+gsap.fromTo(".dp-intro-wrapper", {
+  skewY: 20,
+  transformOrigin: "50% 0%",
+}, {
+    scrollTrigger: {
+        trigger: ".dp-intro-wrapper",
+        start: "top center",
+        markers: "true",
+        toggleActions: "play none none reverse",
+    },
+    skewY: 0,
+    scaleY:1,
+    transformOrigin: "0% 100%",
+    ease: "power4",
+    duration:   1,
+});
+
 gsap.fromTo(".dp-vision-title__I", {
     // skewY: 20,
     scale: 1,
@@ -157,69 +170,126 @@ gsap.fromTo(
 )
 
 gsap.fromTo(
-    ".dp-about__topContent h2", {
+    ".dp-about__leftContent", {
         scale: 1,
-        y: 0,
+        xPercent: -200,
+        opacity: 0,
     }, {
         scrollTrigger: {
             trigger: ".dp-about",
-            start: "top+=100",
+            start: "top center",
             markers: "true",
             toggleActions: "play none none reverse",
         },
-        y: -10,
-        fontSize: 96,
+        y: 0,
         xPercent: 0,
-
+        opacity: 1,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 1,
     }
 )
+gsap.fromTo(".dp-about__rightContent", {
+    // skewY: 20,
+    scale: 1,
+    xPercent: 200,
+}, {
+    scrollTrigger: {
+        trigger: ".dp-about",
+        start: "top center",
+        markers: "true",
+        toggleActions: "play none none reverse",
+    },
+    // skewY: 0,
+    xPercent: 0,
+    transformOrigin: "0% 100%",
+    ease: "power4",
+    duration: 1,
+});
 gsap.fromTo(
-    ".dp-about__topContent p", {
+    ".dp-about__topContent", {
         scale: 1,
-        y: 0,
+        y: -100,
+        opacity: 0,
     }, {
         scrollTrigger: {
             trigger: ".dp-about",
-            start: "top+=100",
+            start: "top center",
             markers: "true",
             toggleActions: "play none none reverse",
         },
-        y: -90,
-        fontSize: 18,
-        xPercent: 0,
-
-        transformOrigin: "0% 100%",
-        ease: "power4",
-        duration: 1,
-
-    }
-)
-
-gsap.fromTo(
-    ".dp-about__detail", {
-        scale: 1,
         y: 0,
-        display: 'none',
-    }, {
-        scrollTrigger: {
-            trigger: ".dp-about",
-            start: "top+=200",
-            markers: "true",
-            toggleActions: "play none none reverse",
-        },
-        y: -70,
-        fontSize: 18,
-        xPercent: 0,
-        display: 'flex',
+        opacity: 1,
+        // xPercent: 0,
         transformOrigin: "0% 100%",
         ease: "power4",
         duration: 2,
-
     }
 )
+// gsap.fromTo(
+//     ".dp-about__topContent h2", {
+//         scale: 1,
+//         y: 0,
+//     }, {
+//         scrollTrigger: {
+//             trigger: ".dp-about",
+//             start: "top+=100",
+//             markers: "true",
+//             toggleActions: "play none none reverse",
+//         },
+//         y: -10,
+//         fontSize: 96,
+//         xPercent: 0,
+
+//         transformOrigin: "0% 100%",
+//         ease: "power4",
+//         duration: 1,
+//     }
+// )
+// gsap.fromTo(
+//     ".dp-about__topContent p", {
+//         scale: 1,
+//         y: 0,
+//     }, {
+//         scrollTrigger: {
+//             trigger: ".dp-about",
+//             start: "top+=100",
+//             markers: "true",
+//             toggleActions: "play none none reverse",
+//         },
+//         y: -90,
+//         fontSize: 18,
+//         xPercent: 0,
+
+//         transformOrigin: "0% 100%",
+//         ease: "power4",
+//         duration: 1,
+
+//     }
+// )
+
+// gsap.fromTo(
+//     ".dp-about__detail", {
+//         scale: 1,
+//         y: 0,
+//         display: 'none',
+//     }, {
+//         scrollTrigger: {
+//             trigger: ".dp-about",
+//             start: "top+=200",
+//             markers: "true",
+//             toggleActions: "play none none reverse",
+//         },
+//         y: -70,
+//         fontSize: 18,
+//         xPercent: 0,
+//         display: 'flex',
+//         transformOrigin: "0% 100%",
+//         ease: "power4",
+//         duration: 2,
+
+//     }
+// )
 
 gsap.fromTo(".dp-excelence h2", {
     // skewY: 20,
@@ -366,6 +436,24 @@ gsap.fromTo(
     }
 )
 
+gsap.fromTo(
+    ".cont", {
+        scale: 0,
+        opacity: 0.2,
+    }, {
+        scrollTrigger: {
+            trigger: ".dp-expertise",
+            start: "top center",
+            markers: "true",
+            toggleActions: "play none none reverse",
+        },
+        scale: 1,
+        opacity: 1,
+        transformOrigin: "50% 50%",
+        ease: "power4",
+        duration: 2,
+    }
+)
 // expertise section
 
 const cont = document.querySelector('.cont')
@@ -376,8 +464,8 @@ let tl1 = gsap.timeline({ repeat: -1 })
 let tl2 = gsap.timeline({ repeat: -1 })
 let tl3 = gsap.timeline({ repeat: -1 })
 const easing = "none"
-const time = 1.5
-const time2 = 1.75
+const time = 2.5
+const time2 = 2.75
 
 tl1.fromTo(col1, { yPercent: -23.5, duration: time, ease: easing }, { yPercent: 26.5, duration: time, ease: easing })
 
@@ -401,7 +489,7 @@ cont.addEventListener('mouseleave', function() {
     slowDown.reverse();
 })
 
-//studio-freight/lenis
+//lenis
 
 const lenis = new Lenis()
 

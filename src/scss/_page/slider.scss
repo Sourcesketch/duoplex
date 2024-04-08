@@ -44,7 +44,7 @@
   .carousel-container {
     position: relative;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: pxToRem(745);
     top: 50%;
       transform: translateY(-50%);
   
@@ -79,10 +79,10 @@
     display: inline;
   }
   .prev {
-    left: pxToRem(-100);
+    left: pxToRem(-45);
   }
   .next {
-    right: pxToRem(-100);
+    right: pxToRem(-45);
     padding: pxToRem(8) pxToRem(12);
   }
   .prev:hover,

@@ -37,6 +37,10 @@
                                         }
                                     }
                                 }
+                                &__logo {
+                                    position: fixed;
+                                    top: 2%;
+                                }
                             }
                             /* header custom style */
                             .dp-header-main__cards {
@@ -60,7 +64,7 @@
                                         border-radius: pxToRem(12);
                                         padding: pxToRem(20);
                                         &.reachout-card {
-                                            background-color: #21f48f;
+                                            background-color: #2580EF;
                                             padding: pxToRem(14) pxToRem(20);
                                         }
                                         .card-body {
@@ -103,7 +107,8 @@
                                 }
                             }
                             .dp-top-content {
-                                background: url("../../../assets/img/bg-gradient.png") repeat center;
+                                background: url("../../../assets/img/bg-gradient.png") no-repeat center;
+                                background-size: cover;
                                 display: flex;
                                 flex-direction: column;
                                 z-index: 1;
@@ -111,17 +116,18 @@
                                     .dp-hero-wrapper {
                                         display: flex;
                                         flex-direction: column;
-                                        .dp-top-img {
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            opacity: 0.1;
-                                        }
+                                        // .dp-top-img {
+                                        //     display: flex;
+                                        //     justify-content: center;
+                                        //     align-items: center;
+                                        //     opacity: 0.1;
+                                           
+                                        // }
                                         .dp-intro-wrapper {
-                                            position: absolute;
-                                            top: 50%;
                                             display: flex;
                                             justify-content: center;
+                                            position: relative;
+                                           
                                             .dp-intro-container {
                                                 display: flex;
                                                 flex-direction: column;
@@ -130,6 +136,21 @@
                                                 .dp-intro__content {
                                                     text-align: center;
                                                 }
+                                            }
+                                            &::before {
+                                                content: ' ';
+                                                display: block;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                opacity: 0.1;
+                                                background-image: url('../../../assets/img/bg-gradient-top-img.svg');
+                                                background-repeat: no-repeat;
+                                                background-position: 50% 50%;
+                                                background-size: cover;
+                                                
                                             }
                                         }
                                     }
@@ -390,6 +411,18 @@
                                                     grid-gap: 0 1rem;
                                                     height: 100%;
                                                 }
+                                                &:before {
+                                                    position: absolute;
+                                                    z-index: 2;
+                                                    border: 15px solid #000000;
+                                                    filter: blur(5px);
+                                                    content: "";
+                                                    height: 102%;
+                                                    width: 102%;
+                                                    background-clip: border-box;
+                                                    top: -6px;
+                                                    left: -6px;
+                                                }
                                             }
                                             .block {
                                                 position: relative;
@@ -398,7 +431,7 @@
                                                 height: 0;
                                                 background: black;
                                                 margin: 0 0 1rem;
-                                                border-radius: 1rem;
+                                                border-radius: 0.35rem;
                                                 overflow: hidden;
                                                 box-shadow: 0 1.3px 1.6px -6px rgba(0, 0, 0, 0.024), 0 3.6px 4.4px -6px rgba(0, 0, 0, 0.035), 0 8.7px 10.6px -6px rgba(0, 0, 0, 0.046), 0 29px 35px -6px rgba(0, 0, 0, 0.07);
                                                 & p {
@@ -411,13 +444,14 @@
                                                     transform: translate(-50%, -50%);
                                                 }
                                             }
+                                           
                                         }
                                     }
                                 }
                                 .dp-about {
                                     display: flex;
                                     flex-direction: column;
-                                    justify-content: center;
+                                   // justify-content: center;
                                     align-items: center;
                                     width: 100%;
                                     .dp-about__inner {
@@ -430,7 +464,7 @@
                                         .dp-about__topContent {
                                             width: 100%;
                                             h2 {
-                                                line-height: 9.725rem;
+                                                line-height: 0.725rem;
                                                 font-weight: normal;
                                                 margin-bottom: pxToRem(35);
                                             }
@@ -480,7 +514,7 @@
                                                 .tablist-content {
                                                     background-color: #232323;
                                                     border-radius: pxToRem(26);
-                                                    min-height: pxToRem(512);
+                                                    min-height: pxToRem(424);
                                                 }
                                             }
                                             .dp-about__rightContent {
@@ -646,11 +680,18 @@
                                             align-items: center;
                                             &:hover {
                                                 background-color: #21f48f;
-                                                fill: #fff;
                                             }
                                         }
                                     }
                                 }
+                            }
+                            .floatingButton {
+                                position: fixed;
+                                bottom: 2.5rem;
+                                right: 2.5rem;
+                                height: 3rem;
+                                width: 3rem;
+                                border-radius: 50%;
                             }
                             @keyframes animate-in {
                                 0% {
@@ -670,3 +711,4 @@
                                 }
                             }
                         }
+                       
