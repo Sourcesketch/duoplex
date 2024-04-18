@@ -8,7 +8,7 @@
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 8;
     /* Sit on top */
     padding-top: pxToRem(70);
     /* Location of the box */
@@ -35,11 +35,13 @@
         display: flex;
         gap: 1rem;
         .dp__leftContent {
-            flex-grow: 60;
             width: 60%;
             height: 100%;
             background-color: map-get($themeColors, "modalbg");
             border-radius: pxToRem(26);
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
             .dp__innerContent {
                 // background: url("../../../assets/img/catalogDetail-leftbg.png")
                 //   no-repeat center;
@@ -51,7 +53,6 @@
             }
         }
         .dp__rightContent {
-            flex-grow: 40;
             width: 40%;
             height: 100%;
             background-color: map-get($themeColors, "modalbg");
@@ -59,6 +60,9 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+              }
             .dp__contentHeader {
                 display: flex;
                 gap: 1rem;
@@ -97,6 +101,9 @@
                     overflow: auto;
                 }
             }
+        }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
         }
     }
 }

@@ -6,7 +6,7 @@ gsap.fromTo(".dp-intro__logo svg", {
     scrollTrigger: {
         trigger: ".dp-intro-wrapper",
         start: "top center",
-        markers: "true",
+       // markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -24,7 +24,7 @@ gsap.fromTo(".dp-intro__content", {
     scrollTrigger: {
         trigger: ".dp-intro-wrapper",
         start: "top center",
-        markers: "true",
+      //  markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -41,7 +41,7 @@ gsap.fromTo(".dp-intro-wrapper", {
     scrollTrigger: {
         trigger: ".dp-intro-wrapper",
         start: "top center",
-        markers: "true",
+      //  markers: "true",
         toggleActions: "play none none reverse",
     },
     skewY: 0,
@@ -59,14 +59,14 @@ gsap.fromTo(".dp-vision-title__I", {
     scrollTrigger: {
         trigger: ".dp-vision-title__I",
         start: "top center",
-        markers: "true",
+     //   markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
     xPercent: 0,
     transformOrigin: "0% 100%",
     ease: "power4",
-    duration: 2,
+    duration: 1,
 });
 gsap.fromTo(".dp-vision-title__II     ", {
     // skewY: 20,
@@ -76,7 +76,7 @@ gsap.fromTo(".dp-vision-title__II     ", {
     scrollTrigger: {
         trigger: ".dp-vision-title__I",
         start: "top center",
-        markers: "true",
+       // markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -94,7 +94,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-vision__content",
             start: "top center+=900",
-            markers: "true",
+        //    markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -114,7 +114,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
-            markers: "true",
+           // markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -135,7 +135,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
-            markers: "true",
+        //    markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -157,7 +157,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-portfolio",
             start: "top center",
-            markers: "true",
+         //   markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -178,7 +178,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-about",
             start: "top center",
-            markers: "true",
+          //  markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -197,7 +197,7 @@ gsap.fromTo(".dp-about__rightContent", {
     scrollTrigger: {
         trigger: ".dp-about",
         start: "top center",
-        markers: "true",
+      //  markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -215,7 +215,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-about",
             start: "top center",
-            markers: "true",
+           // markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -300,7 +300,7 @@ gsap.fromTo(".dp-excelence h2", {
     scrollTrigger: {
         trigger: ".dp-excelence",
         start: "top center",
-        markers: "true",
+       // markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -320,7 +320,7 @@ gsap.fromTo(".dp-excelence h3", {
     scrollTrigger: {
         trigger: ".dp-excelence",
         start: "top center",
-        markers: "true",
+     //   markers: "true",
         toggleActions: "play none none reverse",
     },
     // skewY: 0,
@@ -340,7 +340,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-excelence",
             start: "top center",
-            markers: "true",
+          //  markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -360,7 +360,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-contact",
             start: "top center",
-            markers: "true",
+         //   markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -381,7 +381,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-expertise",
             start: "top center",
-            markers: "true",
+         //   markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -403,7 +403,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-expertise",
             start: "top center",
-            markers: "true",
+          //  markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -424,7 +424,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-catalog",
             start: "top center",
-            markers: "true",
+         //   markers: "true",
             toggleActions: "play none none reverse",
         },
         y: 0,
@@ -444,7 +444,7 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: ".dp-expertise",
             start: "top center",
-            markers: "true",
+         //   markers: "true",
             toggleActions: "play none none reverse",
         },
         scale: 1,

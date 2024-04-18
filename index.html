@@ -17,7 +17,6 @@
 
     <title>Duoplex</title>
   </head>
-
   <body>
     <div class="dp-wrapper h-full w-full position-relative">
       <header
@@ -485,8 +484,11 @@
                 <div
                   class="dp-intro__content fs-24 text-white font-family-regular px-42"
                 >
-                Captivate your audience with dynamic and engaging animations that bring your website to life.
-                  <span class="text-green font-family-bold"> Elevate your brand today!</span>
+                  Captivate your audience with dynamic and engaging animations
+                  that bring your website to life.
+                  <span class="text-green font-family-bold">
+                    Elevate your brand today!</span
+                  >
                 </div>
               </div>
             </div>
@@ -561,7 +563,10 @@
                   <img src="./assets/img/img-sm-1.png" alt="portfolio-img" />
                 </div>
               </div>
-              <div class="flex-box gap-17 align-items-stretch">
+              <div
+                class="flex-box gap-17 align-items-stretch"
+                id="portfolio-showcase"
+              >
                 <div class="flex-box flex-column gap-17">
                   <div class="box box3"></div>
                   <div class="box box4" id="box4"></div>
@@ -702,54 +707,33 @@
             <div class="modal-content">
               <div class="dp__leftContent p-16">
                 <div class="dp__innerContent">
-                  <!-- Slider main container -->
-                  <div class="carousel-container">
-                    <div class="carousel-imgs">
+                  <div class="slideshow-container">
+                    <div class="mySlidesforextend fade">
                       <img
                         src="./assets/img/Extend-1.png"
-                        class="carousel-img visible"
-                      />
-                      <img
-                        src="./assets/img/Extend-2.png"
-                        class="carousel-img hidden"
-                      />
-                      <img
-                        src="./assets/img/Extend-3.png"
-                        class="carousel-img hidden"
-                      />
-                      <img
-                        src="./assets/img/Extend-4.png"
-                        class="carousel-img hidden"
+                        style="width: 100%"
                       />
                     </div>
-                    <a class="prev prevOne arrow"
-                      ><svg
-                        width="9"
-                        height="16"
-                        viewBox="0 0 9 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.292893 7.29289C-0.0976309 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
-                    <a class="next nextOne arrow">
-                      <svg
-                        width="9"
-                        height="16"
-                        viewBox="0 0 9 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.70711 7.29289C9.09763 7.68342 9.09763 8.31658 8.70711 8.70711L2.34315 15.0711C1.95262 15.4616 1.31946 15.4616 0.928933 15.0711C0.538408 14.6805 0.538408 14.0474 0.928933 13.6569L6.58579 8L0.928932 2.34315C0.538407 1.95262 0.538407 1.31946 0.928932 0.928933C1.31946 0.538408 1.95262 0.538408 2.34315 0.928933L8.70711 7.29289ZM7 7L8 7L8 9L7 9L7 7Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
+                    <div class="mySlidesforextend fade">
+                      <img
+                        src="./assets/img/Extend-2.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesforextend fade">
+                      <img
+                        src="./assets/img/Extend-3.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesforextend fade">
+                      <img
+                        src="./assets/img/Extend-4.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <a class="prev" onclick="plusSlidesforextend(-1)">❮</a>
+                    <a class="next" onclick="plusSlidesforextend(1)">❯</a>
                   </div>
                 </div>
               </div>
@@ -846,47 +830,27 @@
               </div>
             </div>
           </div>
-           <!--Modal for Paw for all-->
+          <!--Modal for Paw for all-->
           <div id="myModal1" class="modal">
             <div class="modal-content">
               <div class="dp__leftContent p-16">
                 <div class="dp__innerContent">
                   <!-- Slider main container -->
-                  <div class="carousel-container">
-                     <div class="carousel-imgs">
-                      <img src="./assets/img/P4A-1.png"  class="carousel-img1 visible"/>
-                      <img src="./assets/img/P4A-2.png"  class="carousel-img1 hidden"/>
-                      <img src="./assets/img/P4A-3.png"  class="carousel-img1 hidden"/>
-                      <img src="./assets/img/P4A-4.png"  class="carousel-img1 hidden"/>
-                    </div> 
-                     <a class="prev prevTwo arrow"
-                      ><svg
-                        width="9"
-                        height="16"
-                        viewBox="0 0 9 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.292893 7.29289C-0.0976309 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
-                    <a class="next nextTwo arrow">
-                      <svg
-                        width="9"
-                        height="16"
-                        viewBox="0 0 9 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.70711 7.29289C9.09763 7.68342 9.09763 8.31658 8.70711 8.70711L2.34315 15.0711C1.95262 15.4616 1.31946 15.4616 0.928933 15.0711C0.538408 14.6805 0.538408 14.0474 0.928933 13.6569L6.58579 8L0.928932 2.34315C0.538407 1.95262 0.538407 1.31946 0.928932 0.928933C1.31946 0.538408 1.95262 0.538408 2.34315 0.928933L8.70711 7.29289ZM7 7L8 7L8 9L7 9L7 7Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a> 
+                  <div class="slideshow-container">
+                    <div class="mySlidesforpaw fade">
+                      <img src="./assets/img/P4A-1.png" style="width: 100%" />
+                    </div>
+                    <div class="mySlidesforpaw fade">
+                      <img src="./assets/img/P4A-2.png" style="width: 100%" />
+                    </div>
+                    <div class="mySlidesforpaw fade">
+                      <img src="./assets/img/P4A-3.png" style="width: 100%" />
+                    </div>
+                    <div class="mySlidesforpaw fade">
+                      <img src="./assets/img/P4A-4.png" style="width: 100%" />
+                    </div>
+                    <a class="prev" onclick="plusSlidesforpaw(-1)">❮</a>
+                    <a class="next" onclick="plusSlidesforpaw(1)">❯</a>
                   </div>
                 </div>
               </div>
@@ -983,280 +947,264 @@
               </div>
             </div>
           </div>
-            <!--Modal for Mie Consultants-->
-            <div id="myModal2" class="modal">
-              <div class="modal-content">
-                <div class="dp__leftContent p-16">
-                  <div class="dp__innerContent">
-                    <!-- Slider main container -->
-                    <div class="carousel-container">
-                       <div class="carousel-imgs">
-                        <img src="./assets/img/MIE-cover.png"  class="carousel-img2 visible"/>
-                        <img src="./assets/img/MIE-Landing.png"  class="carousel-img2 hidden"/>
-                        <img src="./assets/img/MIE-Countries.png"  class="carousel-img2 hidden"/>
-                        <img src="./assets/img/MIE-banners.png"  class="carousel-img2 hidden"/>
-                      </div> 
-                       <a class="prev prevSlide arrow"
-                        ><svg
-                          width="9"
-                          height="16"
-                          viewBox="0 0 9 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.292893 7.29289C-0.0976309 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                      <a class="next nextSlide arrow">
-                        <svg
-                          width="9"
-                          height="16"
-                          viewBox="0 0 9 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.70711 7.29289C9.09763 7.68342 9.09763 8.31658 8.70711 8.70711L2.34315 15.0711C1.95262 15.4616 1.31946 15.4616 0.928933 15.0711C0.538408 14.6805 0.538408 14.0474 0.928933 13.6569L6.58579 8L0.928932 2.34315C0.538407 1.95262 0.538407 1.31946 0.928932 0.928933C1.31946 0.538408 1.95262 0.538408 2.34315 0.928933L8.70711 7.29289ZM7 7L8 7L8 9L7 9L7 7Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a> 
+          <!--Modal for Mie Consultants-->
+          <div id="myModal2" class="modal">
+            <div class="modal-content">
+              <div class="dp__leftContent p-16">
+                <div class="dp__innerContent">
+                  <!-- Slider main container -->
+                  <div class="slideshow-container">
+                    <div class="mySlidesformie fade">
+                      <img
+                        src="./assets/img/MIE-cover.png"
+                        style="width: 100%"
+                      />
                     </div>
+                    <div class="mySlidesformie fade">
+                      <img
+                        src="./assets/img/MIE-Landing.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesformie fade">
+                      <img
+                        src="./assets/img/MIE-Countries.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesformie fade">
+                      <img
+                        src="./assets/img/MIE-banners.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <a class="prev" onclick="plusSlidesformie(-1)">❮</a>
+                    <a class="next" onclick="plusSlidesformie(1)">❯</a>
                   </div>
                 </div>
-                <div class="dp__rightContent p-16">
-                  <div class="dp__contentHeader">
-                    <div class="title fs-28 font-family-bold text-white">
-                      MIE Consultants
-                    </div>
-                    <div class="close close2" id="close2">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16 2L2 16"
-                          stroke="#F24949"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M16 16L2 2"
-                          stroke="#F24949"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+              </div>
+              <div class="dp__rightContent p-16">
+                <div class="dp__contentHeader">
+                  <div class="title fs-28 font-family-bold text-white">
+                    MIE Consultants
                   </div>
-                  <div class="dp__contentbio">
-                    <div class="year">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Year:</span
-                      >
-                      <p class="fs-14 font-family-bold text-white mb-0 mt-5">
-                        2024
-                      </p>
-                    </div>
-                    <div class="stack">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Tool Stack:</span
-                      >
-                      <p class="fs-12 font-family-regular text-green mb-0 mt-5">
-                        Web Design, Web Development
-                      </p>
-                    </div>
+                  <div class="close close2" id="close2">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 2L2 16"
+                        stroke="#F24949"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 16L2 2"
+                        stroke="#F24949"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
-                  <div class="dp__contentOverview p-16">
-                    <div class="summary">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Overview:</span
-                      >
-                      <p class="fs-14 font-family-regular text-white">
-                        Lorem ipsum dolor sit amet consectetur. In molestie
-                        faucibus diam malesuada orci placerat. Vitae elit at
-                        bibendum sed nulla sit nec. Velit porttitor sed mauris
-                        sit. Ullamcorper bibendum mi libero mauris sed risus
-                        fermentum adipiscing turpis. Non quis urna ultrices sed
-                        venenatis nibh tortor. Lacus ultricies arcu turpis quam
-                        magna. Massa blandit lorem euismod egestas. Est id purus
-                        quis porttitor in mi ac nam lectus. Cursus sagittis est
-                        mattis iaculis metus mattis phasellus. Commodo pretium
-                        tincidunt enim euismod consectetur lectus id eu varius.<br />
-                        Consectetur tempor arcu sit massa tincidunt ornare. At
-                        egestas vivamus nec tellus ante. In dolor augue rhoncus in
-                        amet eget ultrices. Fermentum orci vitae interdum donec.
-                        Enim fames nisl quis pellentesque libero diam sapien.
-                        Aliquet nec elit hac quis eget. Ipsum feugiat purus
-                        consectetur non non auctor augue sed. Faucibus nibh purus
-                        tortor aenean a. <br />
-                        Vitae aenean dolor et sapien sit enim amet. Fringilla
-                        facilisi aenean donec in cursus sem mauris. Vel eget at
-                        orci amet volutpat tincidunt. Blandit eu ac arcu nec amet
-                        sit. Vestibulum etiam egestas auctor non neque est augue.
-                        Amet nec laoreet mi ipsum massa convallis tempor nibh
-                        iaculis. Ultrices ut ultrices id quam turpis lacus
-                        tincidunt. Elementum fermentum vel vulputate leo. Enim
-                        interdum sagittis amet dui gravida est eget volutpat
-                        adipiscing.<br />
-                        Ultrices nibh pharetra odio suspendisse ut at scelerisque
-                        consequat amet. Neque sed tortor urna odio praesent libero
-                        ultrices pharetra. Amet sollicitudin turpis volutpat
-                        tempus nam. Et ultricies potenti nulla amet nulla commodo.
-                        Lorem ipsum dolor sit amet consectetur. In molestie
-                        faucibus diam malesuada orci placerat. Vitae elit at
-                        bibendum sed nulla sit nec.
-                      </p>
-                    </div>
+                </div>
+                <div class="dp__contentbio">
+                  <div class="year">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Year:</span
+                    >
+                    <p class="fs-14 font-family-bold text-white mb-0 mt-5">
+                      2024
+                    </p>
+                  </div>
+                  <div class="stack">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Tool Stack:</span
+                    >
+                    <p class="fs-12 font-family-regular text-green mb-0 mt-5">
+                      Web Design, Web Development
+                    </p>
+                  </div>
+                </div>
+                <div class="dp__contentOverview p-16">
+                  <div class="summary">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Overview:</span
+                    >
+                    <p class="fs-14 font-family-regular text-white">
+                      Lorem ipsum dolor sit amet consectetur. In molestie
+                      faucibus diam malesuada orci placerat. Vitae elit at
+                      bibendum sed nulla sit nec. Velit porttitor sed mauris
+                      sit. Ullamcorper bibendum mi libero mauris sed risus
+                      fermentum adipiscing turpis. Non quis urna ultrices sed
+                      venenatis nibh tortor. Lacus ultricies arcu turpis quam
+                      magna. Massa blandit lorem euismod egestas. Est id purus
+                      quis porttitor in mi ac nam lectus. Cursus sagittis est
+                      mattis iaculis metus mattis phasellus. Commodo pretium
+                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      Consectetur tempor arcu sit massa tincidunt ornare. At
+                      egestas vivamus nec tellus ante. In dolor augue rhoncus in
+                      amet eget ultrices. Fermentum orci vitae interdum donec.
+                      Enim fames nisl quis pellentesque libero diam sapien.
+                      Aliquet nec elit hac quis eget. Ipsum feugiat purus
+                      consectetur non non auctor augue sed. Faucibus nibh purus
+                      tortor aenean a. <br />
+                      Vitae aenean dolor et sapien sit enim amet. Fringilla
+                      facilisi aenean donec in cursus sem mauris. Vel eget at
+                      orci amet volutpat tincidunt. Blandit eu ac arcu nec amet
+                      sit. Vestibulum etiam egestas auctor non neque est augue.
+                      Amet nec laoreet mi ipsum massa convallis tempor nibh
+                      iaculis. Ultrices ut ultrices id quam turpis lacus
+                      tincidunt. Elementum fermentum vel vulputate leo. Enim
+                      interdum sagittis amet dui gravida est eget volutpat
+                      adipiscing.<br />
+                      Ultrices nibh pharetra odio suspendisse ut at scelerisque
+                      consequat amet. Neque sed tortor urna odio praesent libero
+                      ultrices pharetra. Amet sollicitudin turpis volutpat
+                      tempus nam. Et ultricies potenti nulla amet nulla commodo.
+                      Lorem ipsum dolor sit amet consectetur. In molestie
+                      faucibus diam malesuada orci placerat. Vitae elit at
+                      bibendum sed nulla sit nec.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-             <!--Modal for Mie Consultants-->
-             <div id="myModal3" class="modal">
-              <div class="modal-content">
-                <div class="dp__leftContent p-16">
-                  <div class="dp__innerContent">
-                    <!-- Slider main container -->
-                    <div class="carousel-container">
-                       <div class="carousel-imgs">
-                        <img src="./assets/img/MIE-cover.png"  class="carousel-img3 visible"/>
-                        <img src="./assets/img/MIE-Landing.png"  class="carousel-img3 hidden"/>
-                        <img src="./assets/img/MIE-Countries.png"  class="carousel-img3 hidden"/>
-                        <img src="./assets/img/MIE-banners.png"  class="carousel-img3 hidden"/>
-                      </div> 
-                       <a class="prev prevSlidet arrow"
-                        ><svg
-                          width="9"
-                          height="16"
-                          viewBox="0 0 9 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.292893 7.29289C-0.0976309 7.68342 -0.097631 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                      <a class="next nextSlidet arrow">
-                        <svg
-                          width="9"
-                          height="16"
-                          viewBox="0 0 9 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.70711 7.29289C9.09763 7.68342 9.09763 8.31658 8.70711 8.70711L2.34315 15.0711C1.95262 15.4616 1.31946 15.4616 0.928933 15.0711C0.538408 14.6805 0.538408 14.0474 0.928933 13.6569L6.58579 8L0.928932 2.34315C0.538407 1.95262 0.538407 1.31946 0.928932 0.928933C1.31946 0.538408 1.95262 0.538408 2.34315 0.928933L8.70711 7.29289ZM7 7L8 7L8 9L7 9L7 7Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a> 
+          </div>
+          <!--Modal for pixelied-->
+          <div id="myModal3" class="modal">
+            <div class="modal-content">
+              <div class="dp__leftContent p-16">
+                <div class="dp__innerContent">
+                  <!-- Slider main container -->
+                  <div class="slideshow-container">
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-cover.png"
+                        style="width: 100%"
+                      />
                     </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-Landing.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-Countries.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-banners.png"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <a class="prev" onclick="plusSlidesforpixel(-1)">❮</a>
+                    <a class="next" onclick="plusSlidesforpixel(1)">❯</a>
                   </div>
                 </div>
-                <div class="dp__rightContent p-16">
-                  <div class="dp__contentHeader">
-                    <div class="title fs-28 font-family-bold text-white">
-                      Pixelied
-                    </div>
-                    <div class="close close3" id="close3">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16 2L2 16"
-                          stroke="#F24949"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M16 16L2 2"
-                          stroke="#F24949"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+              </div>
+              <div class="dp__rightContent p-16">
+                <div class="dp__contentHeader">
+                  <div class="title fs-28 font-family-bold text-white">
+                    Pixelied
                   </div>
-                  <div class="dp__contentbio">
-                    <div class="year">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Year:</span
-                      >
-                      <p class="fs-14 font-family-bold text-white mb-0 mt-5">
-                        2019
-                      </p>
-                    </div>
-                    <div class="stack">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Tool Stack:</span
-                      >
-                      <p class="fs-12 font-family-regular text-green mb-0 mt-5">
-                        Web Design, Web Development
-                      </p>
-                    </div>
+                  <div class="close close3" id="close3">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 2L2 16"
+                        stroke="#F24949"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 16L2 2"
+                        stroke="#F24949"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
-                  <div class="dp__contentOverview p-16">
-                    <div class="summary">
-                      <span class="fs-14 font-family-regular text-white"
-                        >Overview:</span
-                      >
-                      <p class="fs-14 font-family-regular text-white">
-                        Lorem ipsum dolor sit amet consectetur. In molestie
-                        faucibus diam malesuada orci placerat. Vitae elit at
-                        bibendum sed nulla sit nec. Velit porttitor sed mauris
-                        sit. Ullamcorper bibendum mi libero mauris sed risus
-                        fermentum adipiscing turpis. Non quis urna ultrices sed
-                        venenatis nibh tortor. Lacus ultricies arcu turpis quam
-                        magna. Massa blandit lorem euismod egestas. Est id purus
-                        quis porttitor in mi ac nam lectus. Cursus sagittis est
-                        mattis iaculis metus mattis phasellus. Commodo pretium
-                        tincidunt enim euismod consectetur lectus id eu varius.<br />
-                        Consectetur tempor arcu sit massa tincidunt ornare. At
-                        egestas vivamus nec tellus ante. In dolor augue rhoncus in
-                        amet eget ultrices. Fermentum orci vitae interdum donec.
-                        Enim fames nisl quis pellentesque libero diam sapien.
-                        Aliquet nec elit hac quis eget. Ipsum feugiat purus
-                        consectetur non non auctor augue sed. Faucibus nibh purus
-                        tortor aenean a. <br />
-                        Vitae aenean dolor et sapien sit enim amet. Fringilla
-                        facilisi aenean donec in cursus sem mauris. Vel eget at
-                        orci amet volutpat tincidunt. Blandit eu ac arcu nec amet
-                        sit. Vestibulum etiam egestas auctor non neque est augue.
-                        Amet nec laoreet mi ipsum massa convallis tempor nibh
-                        iaculis. Ultrices ut ultrices id quam turpis lacus
-                        tincidunt. Elementum fermentum vel vulputate leo. Enim
-                        interdum sagittis amet dui gravida est eget volutpat
-                        adipiscing.<br />
-                        Ultrices nibh pharetra odio suspendisse ut at scelerisque
-                        consequat amet. Neque sed tortor urna odio praesent libero
-                        ultrices pharetra. Amet sollicitudin turpis volutpat
-                        tempus nam. Et ultricies potenti nulla amet nulla commodo.
-                        Lorem ipsum dolor sit amet consectetur. In molestie
-                        faucibus diam malesuada orci placerat. Vitae elit at
-                        bibendum sed nulla sit nec.
-                      </p>
-                    </div>
+                </div>
+                <div class="dp__contentbio">
+                  <div class="year">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Year:</span
+                    >
+                    <p class="fs-14 font-family-bold text-white mb-0 mt-5">
+                      2019
+                    </p>
+                  </div>
+                  <div class="stack">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Tool Stack:</span
+                    >
+                    <p class="fs-12 font-family-regular text-green mb-0 mt-5">
+                      Web Design, Web Development
+                    </p>
+                  </div>
+                </div>
+                <div class="dp__contentOverview p-16">
+                  <div class="summary">
+                    <span class="fs-14 font-family-regular text-white"
+                      >Overview:</span
+                    >
+                    <p class="fs-14 font-family-regular text-white">
+                      Lorem ipsum dolor sit amet consectetur. In molestie
+                      faucibus diam malesuada orci placerat. Vitae elit at
+                      bibendum sed nulla sit nec. Velit porttitor sed mauris
+                      sit. Ullamcorper bibendum mi libero mauris sed risus
+                      fermentum adipiscing turpis. Non quis urna ultrices sed
+                      venenatis nibh tortor. Lacus ultricies arcu turpis quam
+                      magna. Massa blandit lorem euismod egestas. Est id purus
+                      quis porttitor in mi ac nam lectus. Cursus sagittis est
+                      mattis iaculis metus mattis phasellus. Commodo pretium
+                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      Consectetur tempor arcu sit massa tincidunt ornare. At
+                      egestas vivamus nec tellus ante. In dolor augue rhoncus in
+                      amet eget ultrices. Fermentum orci vitae interdum donec.
+                      Enim fames nisl quis pellentesque libero diam sapien.
+                      Aliquet nec elit hac quis eget. Ipsum feugiat purus
+                      consectetur non non auctor augue sed. Faucibus nibh purus
+                      tortor aenean a. <br />
+                      Vitae aenean dolor et sapien sit enim amet. Fringilla
+                      facilisi aenean donec in cursus sem mauris. Vel eget at
+                      orci amet volutpat tincidunt. Blandit eu ac arcu nec amet
+                      sit. Vestibulum etiam egestas auctor non neque est augue.
+                      Amet nec laoreet mi ipsum massa convallis tempor nibh
+                      iaculis. Ultrices ut ultrices id quam turpis lacus
+                      tincidunt. Elementum fermentum vel vulputate leo. Enim
+                      interdum sagittis amet dui gravida est eget volutpat
+                      adipiscing.<br />
+                      Ultrices nibh pharetra odio suspendisse ut at scelerisque
+                      consequat amet. Neque sed tortor urna odio praesent libero
+                      ultrices pharetra. Amet sollicitudin turpis volutpat
+                      tempus nam. Et ultricies potenti nulla amet nulla commodo.
+                      Lorem ipsum dolor sit amet consectetur. In molestie
+                      faucibus diam malesuada orci placerat. Vitae elit at
+                      bibendum sed nulla sit nec.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </section>
         <section class="dp-expertise w-full h-screen gap-16" id="expertise">
           <div class="dp-expertise__inner">
@@ -1299,28 +1247,64 @@
                 <div class="cont-int">
                   <div class="cont-wrap">
                     <div class="col col-1 col-ext">
-                      <div class="block block-1"> <img src="./assets/img/E-5.png" /></div>
-                      <div class="block block-2"><img src="./assets/img/E-3.png" /></div>
-                      <div class="block block-3"><img src="./assets/img/E-1.png" /></div>
-                      <div class="block block-4"><img src="./assets/img/E-5.png" /></div>
-                      <div class="block block-5"><img src="./assets/img/E-3.png" /></div>
-                      <div class="block block-6"><img src="./assets/img/E-1.png" /></div>
+                      <div class="block block-1">
+                        <img src="./assets/img/E-5.png" />
+                      </div>
+                      <div class="block block-2">
+                        <img src="./assets/img/E-3.png" />
+                      </div>
+                      <div class="block block-3">
+                        <img src="./assets/img/E-1.png" />
+                      </div>
+                      <div class="block block-4">
+                        <img src="./assets/img/E-5.png" />
+                      </div>
+                      <div class="block block-5">
+                        <img src="./assets/img/E-3.png" />
+                      </div>
+                      <div class="block block-6">
+                        <img src="./assets/img/E-1.png" />
+                      </div>
                     </div>
                     <div class="col col-2 col-int">
-                      <div class="block block-1"><img src="./assets/img/E-4.png" /></div>
-                      <div class="block block-2"><img src="./assets/img/E-1.png" /></div>
-                      <div class="block block-3"><img src="./assets/img/E-2.png" /></div>
-                      <div class="block block-4"><img src="./assets/img/E-4.png" /></div>
-                      <div class="block block-5"><img src="./assets/img/E-1.png" /></div>
-                      <div class="block block-6"><img src="./assets/img/E-2.png" /></div>
+                      <div class="block block-1">
+                        <img src="./assets/img/E-4.png" />
+                      </div>
+                      <div class="block block-2">
+                        <img src="./assets/img/E-1.png" />
+                      </div>
+                      <div class="block block-3">
+                        <img src="./assets/img/E-2.png" />
+                      </div>
+                      <div class="block block-4">
+                        <img src="./assets/img/E-4.png" />
+                      </div>
+                      <div class="block block-5">
+                        <img src="./assets/img/E-1.png" />
+                      </div>
+                      <div class="block block-6">
+                        <img src="./assets/img/E-2.png" />
+                      </div>
                     </div>
                     <div class="col col-3 col-ext">
-                      <div class="block block-1"><img src="./assets/img/E-5.png" /></div>
-                      <div class="block block-2"><img src="./assets/img/E-3.png" /></div>
-                      <div class="block block-3"><img src="./assets/img/E-4.png" /></div>
-                      <div class="block block-4"><img src="./assets/img/E-5.png" /></div>
-                      <div class="block block-5"><img src="./assets/img/E-3.png" /></div>
-                      <div class="block block-6"><img src="./assets/img/E-4.png" /></div>
+                      <div class="block block-1">
+                        <img src="./assets/img/E-5.png" />
+                      </div>
+                      <div class="block block-2">
+                        <img src="./assets/img/E-3.png" />
+                      </div>
+                      <div class="block block-3">
+                        <img src="./assets/img/E-4.png" />
+                      </div>
+                      <div class="block block-4">
+                        <img src="./assets/img/E-5.png" />
+                      </div>
+                      <div class="block block-5">
+                        <img src="./assets/img/E-3.png" />
+                      </div>
+                      <div class="block block-6">
+                        <img src="./assets/img/E-4.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1439,18 +1423,17 @@
               <p class="fs-26 font-family-medium text-white mb-44">
                 For any inquiries feel free to reach out to us.
               </p>
-              <form method="post" action="reactOut.php" class="cform" id="cform">
+              <form action="" method="post" class="cform">
                 <div class="form-control">
                   <label
                     for="fname"
-
                     class="fs-18 font-family-medium text-white sr-only"
                     >Full Name</label
                   >
                   <input
                     type="text"
                     name="name"
-                    id="fname"
+                    id="name"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -1494,8 +1477,11 @@
                     cols="50"
                   ></textarea>
                 </div>
-                <button type="submit"
-                  class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue" 
+                <button
+                  id="submit"
+                  name="submit"
+                  type="submit"
+                  class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue"
                 >
                   Submit
                 </button>
@@ -1610,18 +1596,7 @@
         </footer>
       </div>
       <a href="https://wa.me/+923394018116" class="floatingButton">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 14 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.2681 8.40699C10.1275 8.33708 9.21317 7.9176 9.07251 7.84769C8.93185 7.77778 8.79119 7.77778 8.65053 7.9176C8.50987 8.05743 8.22856 8.4769 8.0879 8.61673C8.01757 8.75655 7.87691 8.75655 7.73625 8.68664C7.24394 8.4769 6.75164 8.19725 6.32966 7.84769C5.97801 7.49813 5.62636 7.07865 5.34505 6.65918C5.27472 6.51935 5.34505 6.37953 5.41537 6.30961C5.4857 6.2397 5.55603 6.09988 5.69669 6.02996C5.76702 5.96005 5.83735 5.82022 5.83735 5.75031C5.90768 5.6804 5.90768 5.54057 5.83735 5.47066C5.76702 5.40075 5.41537 4.5618 5.27472 4.21223C5.20439 3.72285 5.06373 3.72285 4.92307 3.72285H4.57142C4.43076 3.72285 4.21977 3.86267 4.14944 3.93258C3.72747 4.35206 3.51648 4.84145 3.51648 5.40075C3.58681 6.02996 3.7978 6.65918 4.21977 7.21848C4.9934 8.33708 5.97801 9.24594 7.17361 9.80524C7.52526 9.94507 7.80658 10.0849 8.15823 10.1548C8.50987 10.2946 8.86152 10.2946 9.2835 10.2247C9.77581 10.1548 10.1978 9.80524 10.4791 9.38577C10.6198 9.10612 10.6198 8.82647 10.5494 8.54682L10.2681 8.40699ZM12.0264 2.04494C9.2835 -0.681648 4.85274 -0.681648 2.10989 2.04494C-0.140659 4.28215 -0.562636 7.70786 0.984614 10.4345L0 14L3.72747 13.0212C4.78241 13.5805 5.90768 13.8602 7.03295 13.8602C10.9011 13.8602 13.9956 10.784 13.9956 6.93883C14.0659 5.1211 13.2923 3.37328 12.0264 2.04494ZM10.1275 11.8327C9.21317 12.392 8.15823 12.7416 7.03295 12.7416C5.97801 12.7416 4.9934 12.4619 4.07911 11.9725L3.86812 11.8327L1.68791 12.392L2.25055 10.2946L2.10989 10.0849C0.421977 7.28839 1.26593 3.79276 4.00878 2.04494C6.75164 0.297129 10.2681 1.20599 11.956 3.86267C13.6439 6.58926 12.8703 10.1548 10.1275 11.8327Z"
-            fill="black"
-          />
-        </svg>
+        <img src="./assets/img/whatsapp.svg" alt="whatsapp" />
       </a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -1637,24 +1612,30 @@
     <script src="./src/js/slide.js"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/menu.js"></script>
+    <script src="./src/js/tabs.js"></script>
     <script>
-      // tab switch
-      function openTabs(evt, role) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(role).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
+      $(document).ready(function (e) {
+        $(".cform").on("submit", function (e) {
+          e.preventDefault();
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var country = $("#country").val();
+          var message = $("#message").val();
+          var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
+          $.ajax({
+            url: "reach.php",
+            type: "POST",
+            data: data,
+            cache: false,
+            success: function (data) {
+              alert(data);
+            },
+            error: function () {
+              alert("Erorrrrrr");
+            },
+          });
+        });
+      });
     </script>
   </body>
 </html>

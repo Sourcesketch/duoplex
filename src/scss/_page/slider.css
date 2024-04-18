@@ -1,0 +1,108 @@
+#slider-wrapper {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  height: pxToRem(485);
+  width: 100%;
+  overflow: hidden;
+}
+#slider-wrapper .slider-list {
+  position: absolute;
+  overflow: hidden;
+}
+#slider-wrapper .slider-list a {
+  height: pxToRem(483);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  transition: height 0.1s ease-in-out;
+}
+#slider-wrapper .indicators {
+  position: absolute;
+  top: 40%;
+  right: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: pxToRem(12) 0;
+}
+#slider-wrapper .indicators .dot {
+  border-radius: 50%;
+  border: 1px solid white;
+}
+#slider-wrapper .indicators .dot.active {
+  background-color: #21f48f;
+  border: 0px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3rem;
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+}
+.slideshow-container .mySlides {
+  display: none;
+  /* Fading animation */
+}
+.slideshow-container .mySlides img {
+  vertical-align: middle;
+}
+.slideshow-container .mySlides .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0.5rem 0.75rem;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.slideshow-container .prev {
+  left: 0;
+  border-radius: 20%;
+  background-color: #fff;
+}
+.slideshow-container .next {
+  right: 0;
+  border-radius: 20%;
+  background-color: #fff;
+}
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: #21f48f;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next {
+    font-size: 11px;
+  }
+}/*# sourceMappingURL=slider.css.map */
