@@ -18,8 +18,12 @@
         opacity: 1;
         z-index: 4;
         @media screen and (max-width: 540px) {
-          right: pxToRem(12);
-       }
+          position: relative;
+          right: 0;
+          width: 100% !important;
+          text-align: center;
+          justify-content: center;
+        }
         &.tlayer {
           opacity: 0.7;
           position: absolute;
@@ -45,8 +49,18 @@
       top: 2%;
     }
     @media screen and (max-width: 540px) {
-      padding: pxToRem(12);
-   }
+        padding-left: 2rem;
+        padding-right: 2rem;
+      &__logo {
+        display: none;
+      }
+      &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
   }
   /* header custom style */
   .dp-header-main__cards {
@@ -55,10 +69,17 @@
     top: 6rem;
     right: pxToRem(42);
     overflow: hidden;
-    display: none;  
+    display: none;
     @media screen and (max-width: 540px) {
-      right: pxToRem(12);
-   }
+      right: 0;
+    //  display: flex;
+      justify-content: center;
+      width: 100%;
+      top: 0;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 7.5rem 0 0;
+      height: 100vh;
+    }
 
     &:hover {
       overflow-y: auto;
@@ -67,12 +88,19 @@
       display: flex;
       flex-direction: column;
       gap: pxToRem(8);
+      @media screen and (max-width: 540px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
       .card {
         display: inline-block;
         width: pxToRem(261);
         background-color: white;
         border-radius: pxToRem(12);
         padding: pxToRem(20);
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
         &.reachout-card {
           background-color: #2580ef;
           padding: pxToRem(14) pxToRem(20);
@@ -181,7 +209,7 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         justify-content: center;
         align-items: center;
         gap: pxToRem(80);
@@ -190,7 +218,7 @@
         &__I {
           font-weight: normal;
           transform: translateX(pxToRem(106));
-          @media screen and (max-width:768px) {
+          @media screen and (max-width: 768px) {
             font-size: pxToRem(160) !important;
             transform: translateX(pxToRem(0)) !important;
             text-align: center;
@@ -202,7 +230,7 @@
         &__II {
           line-height: pxToRem(100);
           font-weight: normal;
-          @media screen and (max-width:768px) {
+          @media screen and (max-width: 768px) {
             font-size: pxToRem(160) !important;
             line-height: pxToRem(70) !important;
             text-align: center;
@@ -244,8 +272,8 @@
         .dp-portfolio__left {
           .dp-portfolio-title {
             line-height: pxToRem(250);
-            @media screen and (max-width:768px) {
-              font-size: pxToRem(160) !important;  
+            @media screen and (max-width: 768px) {
+              font-size: pxToRem(160) !important;
             }
             @media screen and (max-width: 540px) {
               font-size: pxToRem(106) !important;
@@ -340,7 +368,6 @@
             align-items: center;
             .box {
               max-width: pxToRem(300);
-             
             }
             @media screen and (max-width: 540px) {
               .box {
@@ -348,8 +375,6 @@
               }
             }
           }
-         
-
         }
       }
       @media screen and (max-width: 1279px) {
@@ -468,7 +493,7 @@
         }
       }
       @media screen and (max-width: 1279px) {
-        padding: pxToRem(300) 0  pxToRem(100);
+        padding: pxToRem(300) 0 pxToRem(100);
       }
     }
     .dp-expertise {
@@ -492,8 +517,8 @@
           width: 50%;
           .dp-expertise_title {
             line-height: 10.75rem;
-            @media screen and (max-width:768px) {
-              font-size: pxToRem(160) !important;             
+            @media screen and (max-width: 768px) {
+              font-size: pxToRem(160) !important;
             }
             @media screen and (max-width: 540px) {
               font-size: pxToRem(106) !important;
@@ -512,9 +537,9 @@
           @media screen and (max-width: 1279px) {
             width: 90%;
             .dp-expertise__list {
-                width: 100%;
-                justify-content: center;
-                align-items: center;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
             }
           }
         }
@@ -605,7 +630,7 @@
           p {
             width: 50%;
           }
-         @media screen and (max-width: 1279px) {
+          @media screen and (max-width: 1279px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -614,7 +639,7 @@
             p {
               width: 95%;
             }
-         }
+          }
         }
         .dp-about__detail {
           display: flex;
@@ -693,6 +718,29 @@
                 text-align: center;
                 font-size: 16px !important;
               }
+              p {
+                span#pointsV {
+                  display: none;
+                  @media screen and (max-width: 768px) {
+                    display: inline;
+                  }
+                }
+                span#moreV {
+                  @media screen and (max-width: 768px) {
+                    display: none;
+                  }
+                }
+                button#textButtonV {
+                  display: none;
+                  background: transparent;
+                  border: none;
+                  color: #21F48F;
+                  font-family: map-get($fontFamily, 'medium');
+                  @media screen and (max-width: 768px) {
+                    display: inline;
+                  }
+                }
+              }
             }
             .dp-about__stack {
               background-color: #232323;
@@ -714,11 +762,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-         }
+          }
         }
       }
       @media screen and (max-width: 1279px) {
-        padding: pxToRem(300) 0  pxToRem(100);
+        padding: pxToRem(300) 0 pxToRem(100);
       }
     }
     .dp-excelence {
@@ -737,7 +785,7 @@
         h2 {
           line-height: 5rem;
           font-weight: normal;
-          @media screen and (max-width:768px) {
+          @media screen and (max-width: 768px) {
             font-size: pxToRem(160) !important;
           }
           @media screen and (max-width: 540px) {
@@ -745,7 +793,7 @@
           }
         }
         h3 {
-          @media screen and (max-width:768px) {
+          @media screen and (max-width: 768px) {
             font-size: pxToRem(96) !important;
           }
           @media screen and (max-width: 540px) {
@@ -755,9 +803,9 @@
         button {
           border-radius: 140px;
           padding: pxToRem(36) pxToRem(55);
-          @media screen and (max-width:768px) {
+          @media screen and (max-width: 768px) {
             font-size: 16px;
-            padding: pxToRem(20) ;
+            padding: pxToRem(20);
           }
         }
       }
@@ -796,7 +844,7 @@
             font-weight: normal;
             line-height: 7.75rem;
             margin-bottom: pxToRem(12);
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
               font-size: pxToRem(120) !important;
             }
             @media screen and (max-width: 540px) {
@@ -804,7 +852,7 @@
             }
           }
           p {
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
               text-align: center;
               font-size: 16px;
             }
@@ -851,7 +899,7 @@
                     background-repeat: no-repeat;
                   }
                   @media screen and (max-width: 768px) {
-                     min-width: pxToRem(420);
+                    min-width: pxToRem(420);
                   }
                 }
                 textarea {
@@ -883,7 +931,7 @@
                   }
                   @media screen and (max-width: 768px) {
                     min-width: pxToRem(420);
-                 }
+                  }
                 }
               }
               .submitBtn {
@@ -920,7 +968,7 @@
         }
       }
       @media screen and (max-width: 540px) {
-         padding: pxToRem(8);
+        padding: pxToRem(8);
       }
     }
   }
@@ -935,10 +983,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
- 
   }
- 
   @keyframes animate-in {
     0% {
       background-size: 0 2px, 0 0, 0 0, 0 0;

@@ -18,7 +18,7 @@
     <title>Duoplex</title>
   </head>
   <body>
-    <div class="dp-wrapper h-full w-full position-relative">
+    <div class="dp-wrapper h-full w-full position-relative" id="wrapper">
       <header
         class="dp-header-top px-42 py-18 w-full position-absolute"
         id="header"
@@ -711,25 +711,25 @@
                     <div class="mySlidesforextend fade">
                       <img
                         src="./assets/img/Extend-1.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforextend fade">
                       <img
                         src="./assets/img/Extend-2.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforextend fade">
                       <img
                         src="./assets/img/Extend-3.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforextend fade">
                       <img
                         src="./assets/img/Extend-4.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <a class="prev" onclick="plusSlidesforextend(-1)">❮</a>
@@ -800,7 +800,10 @@
                       magna. Massa blandit lorem euismod egestas. Est id purus
                       quis porttitor in mi ac nam lectus. Cursus sagittis est
                       mattis iaculis metus mattis phasellus. Commodo pretium
-                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      tincidunt enim euismod consectetur lectus id eu varius.
+                      <span id="points">...</span>
+                      <span id="more">
+                      </br>
                       Consectetur tempor arcu sit massa tincidunt ornare. At
                       egestas vivamus nec tellus ante. In dolor augue rhoncus in
                       amet eget ultrices. Fermentum orci vitae interdum donec.
@@ -824,6 +827,10 @@
                       Lorem ipsum dolor sit amet consectetur. In molestie
                       faucibus diam malesuada orci placerat. Vitae elit at
                       bibendum sed nulla sit nec.
+                    </span>
+                    <button onclick="toggleText()" id="textButton">
+                      Show More
+                    </button>
                     </p>
                   </div>
                 </div>
@@ -838,16 +845,16 @@
                   <!-- Slider main container -->
                   <div class="slideshow-container">
                     <div class="mySlidesforpaw fade">
-                      <img src="./assets/img/P4A-1.png" style="width: 100%" />
+                      <img src="./assets/img/P4A-1.png" style="width: 100%"  class="toggleImg"/>
                     </div>
                     <div class="mySlidesforpaw fade">
-                      <img src="./assets/img/P4A-2.png" style="width: 100%" />
+                      <img src="./assets/img/P4A-2.png" style="width: 100%"  class="toggleImg"/>
                     </div>
                     <div class="mySlidesforpaw fade">
-                      <img src="./assets/img/P4A-3.png" style="width: 100%" />
+                      <img src="./assets/img/P4A-3.png" style="width: 100%"  class="toggleImg"/>
                     </div>
                     <div class="mySlidesforpaw fade">
-                      <img src="./assets/img/P4A-4.png" style="width: 100%" />
+                      <img src="./assets/img/P4A-4.png" style="width: 100%"  class="toggleImg"/>
                     </div>
                     <a class="prev" onclick="plusSlidesforpaw(-1)">❮</a>
                     <a class="next" onclick="plusSlidesforpaw(1)">❯</a>
@@ -917,7 +924,10 @@
                       magna. Massa blandit lorem euismod egestas. Est id purus
                       quis porttitor in mi ac nam lectus. Cursus sagittis est
                       mattis iaculis metus mattis phasellus. Commodo pretium
-                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      tincidunt enim euismod consectetur lectus id eu varius.
+                      <span id="pointsII">...</span>
+                      <span id="moreII">
+                      </br>
                       Consectetur tempor arcu sit massa tincidunt ornare. At
                       egestas vivamus nec tellus ante. In dolor augue rhoncus in
                       amet eget ultrices. Fermentum orci vitae interdum donec.
@@ -941,6 +951,10 @@
                       Lorem ipsum dolor sit amet consectetur. In molestie
                       faucibus diam malesuada orci placerat. Vitae elit at
                       bibendum sed nulla sit nec.
+                    </span>
+                    <button onclick="toggleTextII()" id="textButtonII">
+                      Show More
+                    </button>
                     </p>
                   </div>
                 </div>
@@ -957,25 +971,25 @@
                     <div class="mySlidesformie fade">
                       <img
                         src="./assets/img/MIE-cover.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesformie fade">
                       <img
                         src="./assets/img/MIE-Landing.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesformie fade">
                       <img
                         src="./assets/img/MIE-Countries.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesformie fade">
                       <img
                         src="./assets/img/MIE-banners.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <a class="prev" onclick="plusSlidesformie(-1)">❮</a>
@@ -1046,7 +1060,10 @@
                       magna. Massa blandit lorem euismod egestas. Est id purus
                       quis porttitor in mi ac nam lectus. Cursus sagittis est
                       mattis iaculis metus mattis phasellus. Commodo pretium
-                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      tincidunt enim euismod consectetur lectus id eu varius.
+                      <span id="pointsIII">...</span>
+                      <span id="moreIII">
+                      </br>
                       Consectetur tempor arcu sit massa tincidunt ornare. At
                       egestas vivamus nec tellus ante. In dolor augue rhoncus in
                       amet eget ultrices. Fermentum orci vitae interdum donec.
@@ -1070,6 +1087,10 @@
                       Lorem ipsum dolor sit amet consectetur. In molestie
                       faucibus diam malesuada orci placerat. Vitae elit at
                       bibendum sed nulla sit nec.
+                    </span>
+                    <button onclick="toggleTextIII()" id="textButtonIII">
+                      Show More
+                    </button>
                     </p>
                   </div>
                 </div>
@@ -1086,25 +1107,25 @@
                     <div class="mySlidesforpixel fade">
                       <img
                         src="./assets/img/MIE-cover.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforpixel fade">
                       <img
                         src="./assets/img/MIE-Landing.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforpixel fade">
                       <img
                         src="./assets/img/MIE-Countries.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <div class="mySlidesforpixel fade">
                       <img
                         src="./assets/img/MIE-banners.png"
-                        style="width: 100%"
+                        style="width: 100%" class="toggleImg"
                       />
                     </div>
                     <a class="prev" onclick="plusSlidesforpixel(-1)">❮</a>
@@ -1175,7 +1196,10 @@
                       magna. Massa blandit lorem euismod egestas. Est id purus
                       quis porttitor in mi ac nam lectus. Cursus sagittis est
                       mattis iaculis metus mattis phasellus. Commodo pretium
-                      tincidunt enim euismod consectetur lectus id eu varius.<br />
+                      tincidunt enim euismod consectetur lectus id eu varius.
+                      <span id="pointsIV">...</span>
+                      <span id="moreIV">
+                      </br>
                       Consectetur tempor arcu sit massa tincidunt ornare. At
                       egestas vivamus nec tellus ante. In dolor augue rhoncus in
                       amet eget ultrices. Fermentum orci vitae interdum donec.
@@ -1199,6 +1223,10 @@
                       Lorem ipsum dolor sit amet consectetur. In molestie
                       faucibus diam malesuada orci placerat. Vitae elit at
                       bibendum sed nulla sit nec.
+                    </span>
+                    <button onclick="toggleTextIV()" id="textButtonIV">
+                      Show More
+                    </button>
                     </p>
                   </div>
                 </div>
@@ -1370,6 +1398,9 @@
                     Senior UI Engineer with 5 years' experience in HTML5, CSS3,
                     SCSS, and responsive design. Proficient in Angular, React,
                     Bootstrap. Skilled in translating UX designs into code.
+                    <span id="pointsV">...</span>
+                    <span id="moreV">
+                    </br>
                     Experienced in frontend/backend development and WordPress
                     customization. Led projects specializing in theme
                     development, component creation, and optimizing UI/UX for
@@ -1381,6 +1412,10 @@
                     GitHub, and Bitbucket. Passionate about delivering
                     user-centric web solutions with pixel-perfect precision and
                     seamless functionality.
+                  </span>
+                  <button onclick="toggleTextV()" id="textButtonV">
+                    Show More
+                  </button>
                   </p>
                 </div>
                 <div class="dp-about__stack p-24">

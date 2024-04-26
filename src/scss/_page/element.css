@@ -22,7 +22,11 @@
 }
 @media screen and (max-width: 540px) {
   .dp-wrapper .dp-header-top__menu a {
-    right: pxToRem(12);
+    position: relative;
+    right: 0;
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
   }
 }
 .dp-wrapper .dp-header-top__menu a.tlayer {
@@ -48,8 +52,14 @@
   top: 2%;
 }
 @media screen and (max-width: 540px) {
-  .dp-wrapper .dp-header-top {
-    padding: pxToRem(12);
+  .dp-wrapper .dp-header-top__logo {
+    display: none;
+  }
+  .dp-wrapper .dp-header-top__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
 .dp-wrapper .dp-header-main__cards {
@@ -62,7 +72,14 @@
 }
 @media screen and (max-width: 540px) {
   .dp-wrapper .dp-header-main__cards {
-    right: pxToRem(12);
+    right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 7.5rem 0 0;
+    height: 100vh;
   }
 }
 .dp-wrapper .dp-header-main__cards:hover {
@@ -79,6 +96,11 @@
   background-color: white;
   border-radius: pxToRem(12);
   padding: pxToRem(20);
+}
+@media screen and (max-width: 540px) {
+  .dp-wrapper .dp-header-main__cards .dp-header__cards-list .card {
+    width: 100%;
+  }
 }
 .dp-wrapper .dp-header-main__cards .dp-header__cards-list .card.reachout-card {
   background-color: #2580ef;
@@ -718,6 +740,27 @@
   .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro {
     text-align: center;
     font-size: 16px !important;
+  }
+}
+.dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro p span#pointsV {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro p span#pointsV {
+    display: inline;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro p span#moreV {
+    display: none;
+  }
+}
+.dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro p button#textButtonV {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__intro p button#textButtonV {
+    display: inline;
   }
 }
 .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__stack {
