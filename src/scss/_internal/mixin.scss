@@ -19,7 +19,7 @@
 @function pxToRem($px-value) {
   @return ($px-value / 16) + rem;
 }
-$fonts: 18, 24, 26, 28,46, 48, 90, 96, 146, 162, 192, 236, 280;
+$fonts: 14, 16, 18, 24, 26, 28,46, 48, 90, 96, 146, 162, 192, 236, 280;
 @each $value in $fonts {
   .fs-#{$value} {
     font-size: pxToRem($value);

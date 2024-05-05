@@ -153,6 +153,14 @@
 }
 
 /* theme font sizes */
+.fs-14 {
+  font-size: 0.875rem;
+}
+
+.fs-16 {
+  font-size: 1rem;
+}
+
 .fs-18 {
   font-size: 1.125rem;
 }
@@ -40571,8 +40579,10 @@
 .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail .dp-about__rightContent .dp-about__stack .list button {
   height: 3.25rem;
   width: 3.25rem;
-  background-color: #c2c2c2;
-  border-radius: 0.5rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  border: none;
+  padding: 0;
 }
 @media screen and (max-width: 1279px) {
   .dp-wrapper .dp-main-content .dp-about .dp-about__inner .dp-about__detail {
@@ -41272,4 +41282,8 @@ a {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.d-block {
+  display: block;
 }/*# sourceMappingURL=global.css.map */

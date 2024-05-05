@@ -14,18 +14,23 @@ var close = document.getElementsByClassName("close")[0];
 var close1 = document.getElementsByClassName("close1")[0];
 var close2 = document.getElementsByClassName("close2")[0];
 var close3 = document.getElementsByClassName("close3")[0];
+//var body =  document.getElementsByTagName("body")[0];
 // When the user clicks the button, open the modal 
 project.onclick = function () {
   modal.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 project1.onclick = function () {
   modal1.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 project2.onclick = function () {
   modal2.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 project3.onclick = function () {
   modal3.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 
 // When the user clicks on <span> (x), close the modal
