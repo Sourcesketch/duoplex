@@ -40922,6 +40922,12 @@
   border-radius: 1rem;
   padding: 1rem;
 }
+.modal .modal-content .dp__rightContent .dp__contentHeader .title svg {
+  cursor: pointer;
+}
+.modal .modal-content .dp__rightContent .dp__contentHeader .title svg:hover circle {
+  fill: #EA4C89;
+}
 .modal .modal-content .dp__rightContent .dp__contentHeader .close {
   flex-grow: 13;
   display: flex;

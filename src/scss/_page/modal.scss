@@ -84,6 +84,14 @@
           border: 1px solid #1e1e1e;
           border-radius: 1rem;
           padding: 1rem;
+          svg {
+            cursor: pointer;
+            &:hover {
+              circle {
+                fill: #EA4C89;
+              }
+            }
+          }
         }
         .close {
           flex-grow: 13;
