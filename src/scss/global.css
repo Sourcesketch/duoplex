@@ -153,6 +153,10 @@
 }
 
 /* theme font sizes */
+.fs-12 {
+  font-size: 0.75rem;
+}
+
 .fs-14 {
   font-size: 0.875rem;
 }
@@ -40711,6 +40715,9 @@
   .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform {
     align-items: center;
   }
+}
+.dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control span.error {
+  display: none;
 }
 .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control label {
   display: block;

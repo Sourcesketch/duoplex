@@ -1190,22 +1190,30 @@
             <p class="fs-26 font-family-medium text-white mb-44">
               For any inquiries feel free to reach out to us.
             </p>
-            <form action="" method="post" class="cform">
+            <form name="contactForm" action="" method="post" class="cform">
               <div class="form-control">
-                <label for="fname" class="fs-18 font-family-medium text-white sr-only">Full Name</label>
+                <label for="fname" class="fs-18 font-family-medium text-white sr-only">Full Name <span
+                    class="text-mattRed">*</span></label>
                 <input type="text" name="name" id="name" placeholder="Your Full Name" />
+                <span class="error d-block text-mattRed fs-12" id="name_err">Required</span>
               </div>
               <div class="form-control">
-                <label for="email" class="fs-18 font-family-medium text-white sr-only">Email</label>
+                <label for="email" class="fs-18 font-family-medium text-white sr-only">Email <span
+                    class="text-mattRed">*</span></label>
                 <input type="email" name="email" id="email" placeholder="Your Email" />
+                <span class="error text-mattRed fs-12" id="email_err" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">Required</span>
               </div>
               <div class="form-control">
-                <label for="country" class="fs-18 font-family-medium text-white">Country</label>
+                <label for="country" class="fs-18 font-family-medium text-white">Country <span
+                    class="text-mattRed">*</span></label>
                 <input type="text" name="country" id="country" placeholder="Your country" />
+                <span class="error text-mattRed fs-12" id="country_err">Required</span>
               </div>
               <div class="form-control">
-                <label for="message" class="fs-18 font-family-medium text-white">Message</label>
-                <textarea name="message" id="message" placeholder="Write here..." rows="4" cols="50"></textarea>
+                <label for="message" class="fs-18 font-family-medium text-white">Message <span
+                    class="text-mattRed">*</span></label>
+                <textarea name="message" id="message" placeholder="Write here..." rows="4" cols="50" ></textarea>
+                <span class="error text-mattRed fs-12" id="msg_err">Required</span>
               </div>
               <button id="submit" name="submit" type="submit"
                 class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue">
@@ -1294,6 +1302,7 @@
   <script src="./src/js/menu.js"></script>
   <script src="./src/js/tabs.js"></script>
   <script>
+ 
     $(document).ready(function (e) {
       $(".cform").on("submit", function (e) {
         e.preventDefault();
@@ -1301,6 +1310,27 @@
         var email = $("#email").val();
         var country = $("#country").val();
         var message = $("#message").val();
+        if(!name) {
+          $("#name_err").css("display", "block");
+        } else {
+          $("#name_err").css("display", "none");
+        }
+        if(!email) {
+          $("#email_err").css("display", "block");
+        } else {
+          $("#email_err").css("display", "none");
+        }
+        if(!country) {
+          $("#country_err").css("display", "block");
+        } else {
+          $("#country_err").css("display", "none");
+        }  
+        if(!message) {
+          $("#msg_err").css("display", "block");
+        } else {
+          $("#msg_err").css("display", "none");
+        }  
+
         var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
         $.ajax({
           url: "reach.php",
@@ -1311,7 +1341,8 @@
             alert(data);
           },
           error: function () {
-            alert("Erorrrrrr");
+            //alert("Erorrrrrr");
+            console.log('No post data');
           },
         });
       });

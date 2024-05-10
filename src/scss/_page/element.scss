@@ -868,6 +868,11 @@
                 align-items: center;
               }
               .form-control {
+                span {
+                  &.error {
+                    display: none;
+                  }
+                }
                 label {
                   display: block;
                   margin-bottom: pxToRem(8);
@@ -900,9 +905,11 @@
                     background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
                     background-repeat: no-repeat;
                   }
+                
                   @media screen and (max-width: 768px) {
                     min-width: pxToRem(420);
                   }
+                  
                 }
                 textarea {
                   background-color: #232323;
@@ -934,12 +941,15 @@
                   @media screen and (max-width: 768px) {
                     min-width: pxToRem(420);
                   }
+                 
+
                 }
               }
               .submitBtn {
                 border-radius: pxToRem(140);
                 width: pxToRem(123);
                 border: none;
+            
               }
             }
           }
