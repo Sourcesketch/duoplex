@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="We distinguish ourselves through a commitment to innovation and a holistic approach to client satisfaction" />
+  <meta name="keywords" content="Figma,HTML, CSS, JavaScript" />
+  <meta name="author"
+    content="We distinguish ourselves through a commitment to innovation and a holistic approach to client satisfaction" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+  <link rel="stylesheet" href="./src/scss/global.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVW505C0V3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YVW505C0V3');
+  </script>
+
+  <title>Duoplex</title>
+</head>
+
+<body>
+  <div class="loader loader-44">
+    <div class="loader-container"></div>
+    <span class='loader-numbers'>0%</span>
+  </div>
+  <div class="dp-wrapper h-full w-full position-relative" id="wrapper">
+    <header class="dp-header-top px-42 py-18 w-full position-absolute" id="header">
+      <a href="/" class="dp-header-top__logo">
+        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path
+            d="M54.8009 30.0433C53.3903 42.6121 43.4124 52.8491 30.8897 54.5879C17.037 56.5109 4.71576 48.2776 0.414847 36.2039C0.224847 35.6685 0.720002 35.1503 1.27273 35.277C4.09394 35.9161 7.07061 36.1233 10.1452 35.8412C23.7158 34.5976 34.6321 23.3933 35.5188 9.79393C35.7145 6.78272 35.4439 3.87515 34.7703 1.12303C34.6149 0.489693 35.1906 -0.091822 35.8067 0.115451C47.8976 4.15727 56.3554 16.2136 54.8009 30.0433Z"
+            fill="#2580EF" />
+          <g opacity="0.51">
+            <rect width="45" height="47" fill="url(#pattern0)" />
+          </g>
+          <path
+            d="M36.6243 8.33708C36.4976 23.635 24.0152 36.4456 8.72882 36.9753C6.09185 37.0674 3.52397 36.8083 1.07124 36.2325C0.61639 36.1231 0.460936 35.5474 0.78336 35.2134L34.6552 0.443439C34.9834 0.1095 35.5591 0.25344 35.68 0.702531C36.3191 3.13798 36.6473 5.69435 36.6243 8.33132V8.33708Z"
+            fill="#21F48F" />
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_178_995" transform="matrix(0.0127946 0 0 0.0122502 -0.355556 -0.340426)" />
+            </pattern>
+            <image id="image0_178_995" width="129" height="132"
+              xlink:href="data:image/png;base64,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" />
+          </defs>
+        </svg>
+      </a>
+      <nav class="dp-header-top__menu">
+        <a class="w-261 h-62 bg-white text-black p-20 rounded-12 nav-link" id="menu">
+          <svg class="me-20 icon-22" width="28" height="22" viewBox="0 0 28 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 1.57143C0 1.15466 0.163888 0.754961 0.455612 0.460261C0.747335 0.165561 1.143 0 1.55556 0H26.4444C26.857 0 27.2527 0.165561 27.5444 0.460261C27.8361 0.754961 28 1.15466 28 1.57143C28 1.9882 27.8361 2.3879 27.5444 2.6826C27.2527 2.9773 26.857 3.14286 26.4444 3.14286H1.55556C1.143 3.14286 0.747335 2.9773 0.455612 2.6826C0.163888 2.3879 0 1.9882 0 1.57143ZM0 11C0 10.5832 0.163888 10.1835 0.455612 9.88883C0.747335 9.59413 1.143 9.42857 1.55556 9.42857H26.4444C26.857 9.42857 27.2527 9.59413 27.5444 9.88883C27.8361 10.1835 28 10.5832 28 11C28 11.4168 27.8361 11.8165 27.5444 12.1112C27.2527 12.4059 26.857 12.5714 26.4444 12.5714H1.55556C1.143 12.5714 0.747335 12.4059 0.455612 12.1112C0.163888 11.8165 0 11.4168 0 11ZM1.55556 18.8571C1.143 18.8571 0.747335 19.0227 0.455612 19.3174C0.163888 19.6121 0 20.0118 0 20.4286C0 20.8453 0.163888 21.245 0.455612 21.5397C0.747335 21.8344 1.143 22 1.55556 22H26.4444C26.857 22 27.2527 21.8344 27.5444 21.5397C27.8361 21.245 28 20.8453 28 20.4286C28 20.0118 27.8361 19.6121 27.5444 19.3174C27.2527 19.0227 26.857 18.8571 26.4444 18.8571H1.55556Z"
+              fill="black" />
+          </svg>
+          <span class="font-family-bold fs-28">Menu</span>
+        </a>
+        <!-- <a
+            class="w-261 h-62 bg-white text-black p-20 rounded-12 nav-link tlayer dp-header-main__box" 
+          ></a>
+          <a
+            class="w-261 h-62 bg-white text-black p-20 rounded-12 nav-link mlayer dp-header-main__box"
+          ></a>
+          <a
+            class="w-261 h-62 bg-white text-black p-20 rounded-12 nav-link blayer dp-header-main__box"
+          ></a> -->
+      </nav>
+      <div id="cards" class="dp-header-main__cards">
+        <div class="dp-header__cards-list mb-6">
+          <a href="#portfolio" class="dp__portfolio-card card">
+            <div>
+              <div class="card-body">
+                <h4 class="card-title font-family-medium fs-26 text-black">
+                  <svg class="w-18 h-16" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L11.3431 0.928932C10.9526 0.538408 10.3195 0.538408 9.92893 0.928932C9.53841 1.31946 9.53841 1.95262 9.92893 2.34315L15.5858 8L9.92893 13.6569C9.53841 14.0474 9.53841 14.6805 9.92893 15.0711C10.3195 15.4616 10.9526 15.4616 11.3431 15.0711L17.7071 8.70711ZM1 9H17V7H1V9Z"
+                      fill="black" />
+                  </svg>
+                  Portfolio
+                </h4>
+                <span class="card-subtitle font-family-medium fs-16">
+                  We connect design and technology to change the way we
+                  interact with the world.
+                </span>
+              </div>
+            </div>
+          </a>
+          <a href="#expertise" class="dp__expertise-card card">
+            <div>
+              <div class="card-body">
+                <h4 class="card-title font-family-medium fs-26 text-black">
+                  <svg class="w-18 h-16" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L11.3431 0.928932C10.9526 0.538408 10.3195 0.538408 9.92893 0.928932C9.53841 1.31946 9.53841 1.95262 9.92893 2.34315L15.5858 8L9.92893 13.6569C9.53841 14.0474 9.53841 14.6805 9.92893 15.0711C10.3195 15.4616 10.9526 15.4616 11.3431 15.0711L17.7071 8.70711ZM1 9H17V7H1V9Z"
+                      fill="black" />
+                  </svg>
+                  Expertise
+                </h4>
+                <span class="card-subtitle font-family-medium fs-16">
+                  We create digital products that reflect the brand's
+                  identity.
+                </span>
+              </div>
+              <div class="card-body mt-8">
+                <ul>
+                  <li class="font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Discovery & Strategy
+                  </li>
+                  <li class="font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Website Design
+                  </li>
+                  <li class="font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Full Stack Development
+                  </li>
+                  <li class="font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Video Editing
+                  </li>
+                  <li class="font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Animation & Interactions
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </a>
+          <a href="#about" class="dp__about-card card">
+            <div>
+              <div class="card-body">
+                <h4 class="card-title font-family-medium fs-26 text-black">
+                  <svg class="w-18 h-16" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L11.3431 0.928932C10.9526 0.538408 10.3195 0.538408 9.92893 0.928932C9.53841 1.31946 9.53841 1.95262 9.92893 2.34315L15.5858 8L9.92893 13.6569C9.53841 14.0474 9.53841 14.6805 9.92893 15.0711C10.3195 15.4616 10.9526 15.4616 11.3431 15.0711L17.7071 8.70711ZM1 9H17V7H1V9Z"
+                      fill="black" />
+                  </svg>
+                  About
+                </h4>
+                <span class="card-subtitle font-family-medium fs-16">
+                  We trust in a small, customer-driven team to bring ideas to
+                  life.
+                </span>
+              </div>
+              <div class="card-body mt-8">
+                <ul>
+                  <li class="card-subtitle font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Designer
+                  </li>
+                  <li class="card-subtitle font-family-medium fs-16">
+                    <svg class="w-8 h-9" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.63397C8.16667 4.01887 8.16667 4.98113 7.5 5.36603L2.25 8.39711C1.58333 8.78201 0.75 8.30089 0.75 7.53109L0.75 1.46891C0.75 0.699111 1.58333 0.217985 2.25 0.602885L7.5 3.63397Z"
+                        fill="black" />
+                    </svg>
+                    Developer
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </a>
+          <a href="#contact" class="reachout-card card">
+            <div>
+              <h4 class="card-title font-family-medium fs-26 text-white flex-between">
+                REACH OUT
+                <svg class="w-18 h-16" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L11.3431 0.928932C10.9526 0.538408 10.3195 0.538408 9.92893 0.928932C9.53841 1.31946 9.53841 1.95262 9.92893 2.34315L15.5858 8L9.92893 13.6569C9.53841 14.0474 9.53841 14.6805 9.92893 15.0711C10.3195 15.4616 10.9526 15.4616 11.3431 15.0711L17.7071 8.70711ZM1 9H17V7H1V9Z"
+                    fill="white" />
+                </svg>
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="dp-top-content h-full">
+      <div class="dp-header-main flex-fill overflow-hidden h-full position-relative" id="main">
+        <section class="dp-hero-wrapper h-screen" id="top-img">
+          <!-- <div class="dp-top-img w-full h-full">
+               <svg
+                id="top-svg"
+                width="1622"
+                height="1080"
+                viewBox="0 0 1622 1080"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g style="mix-blend-mode: overlay">
+                  <path
+                    d="M810.92 1389.93C1258.28 1389.93 1620.93 1027.28 1620.93 579.92C1620.93 132.564 1258.28 -230.09 810.92 -230.09C363.564 -230.09 0.910034 132.564 0.910034 579.92C0.910034 1027.28 363.564 1389.93 810.92 1389.93Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 1254.93C1183.72 1254.93 1485.93 952.718 1485.93 579.92C1485.93 207.122 1183.72 -95.0898 810.92 -95.0898C438.122 -95.0898 135.91 207.122 135.91 579.92C135.91 952.718 438.122 1254.93 810.92 1254.93Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 1119.93C1109.16 1119.93 1350.93 878.159 1350.93 579.92C1350.93 281.681 1109.16 39.9102 810.92 39.9102C512.681 39.9102 270.91 281.681 270.91 579.92C270.91 878.159 512.681 1119.93 810.92 1119.93Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 984.92C1034.6 984.92 1215.92 803.595 1215.92 579.92C1215.92 356.245 1034.6 174.92 810.92 174.92C587.245 174.92 405.92 356.245 405.92 579.92C405.92 803.595 587.245 984.92 810.92 984.92Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 849.92C960.037 849.92 1080.92 729.037 1080.92 579.92C1080.92 430.803 960.037 309.92 810.92 309.92C661.803 309.92 540.92 430.803 540.92 579.92C540.92 729.037 661.803 849.92 810.92 849.92Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 714.92C885.478 714.92 945.92 654.478 945.92 579.92C945.92 505.361 885.478 444.92 810.92 444.92C736.362 444.92 675.92 505.361 675.92 579.92C675.92 654.478 736.362 714.92 810.92 714.92Z"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 579.92L951.58 1377.62"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 579.92L1613.04 692.65"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 579.92L1166 -148.11"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 579.92L228.24 17.2402"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M810.92 579.92L95.72 960.2"
+                    stroke="white"
+                    stroke-width="1.49"
+                    stroke-miterlimit="10"
+                  />
+                </g>
+              </svg> 
+            </div>  -->
+          <div class="dp-intro-wrapper w-full h-full" id="into">
+            <div class="dp-intro-container w40-full">
+              <div class="dp-intro__logo mb-50">
+                <svg width="676" height="120" viewBox="0 0 676 120" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g clip-path="url(#clip0_178_979)">
+                    <path
+                      d="M49.1979 42.873C56.1196 42.873 62.3682 43.3003 67.962 44.1549C73.5558 45.0094 78.2036 46.2458 81.9328 47.864C85.662 49.4821 88.8545 51.2821 91.5104 53.264C94.1663 55.2458 96.2037 57.4912 97.5953 59.9912C98.9961 62.4912 100.006 64.9458 100.642 67.3549C101.279 69.764 101.588 72.3367 101.588 75.0821V77.8276C101.588 81.064 101.188 84.0912 100.388 86.9276C99.5873 89.764 98.0046 92.7094 95.6489 95.7549C93.2931 98.8003 90.2461 101.4 86.517 103.528C82.7878 105.664 77.7306 107.428 71.3456 108.837C64.9605 110.237 57.6113 110.937 49.2888 110.937H0V42.873H49.1979ZM23.2482 94.5639H47.397C67.2889 94.5639 77.2304 88.7094 77.2304 77.0003V76.4549C77.2304 64.8094 67.2798 58.9821 47.397 58.9821H23.2482V94.573V94.5639Z"
+                      fill="white" />
+                    <path
+                      d="M205.196 42.6641V75.3368C205.196 78.1732 204.85 81.0368 204.159 83.9368C203.468 86.8368 202.094 89.955 200.048 93.3004C198.001 96.6459 195.391 99.5913 192.216 102.128C189.042 104.664 184.667 106.773 179.082 108.464C173.498 110.155 167.104 111 159.9 111H156.334C150.85 111 145.838 110.564 141.318 109.691C136.788 108.819 132.968 107.655 129.866 106.21C126.756 104.764 124.018 103.01 121.635 100.955C119.252 98.9004 117.369 96.8186 115.987 94.7095C114.595 92.6004 113.458 90.3368 112.567 87.9186C111.675 85.5004 111.075 83.3004 110.784 81.3095C110.484 79.3186 110.338 77.3277 110.338 75.3368V42.6641H133.541V74.0732C133.541 76.4913 133.887 78.7368 134.587 80.8186C135.287 82.9004 136.452 84.955 138.107 86.9732C139.762 88.9913 142.291 90.5913 145.693 91.7732C149.094 92.9459 153.178 93.5368 157.935 93.5368C162.692 93.5368 166.64 92.9459 169.978 91.7732C173.316 90.6004 175.826 89.0004 177.518 86.9732C179.21 84.9459 180.392 82.9004 181.083 80.8186C181.775 78.7368 182.12 76.4913 182.12 74.0732V42.6641H205.223H205.196Z"
+                      fill="white" />
+                    <path
+                      d="M334.144 88.3906V111.027H310.95V43.127H366.506C389.535 43.127 401.05 50.4906 401.05 65.2179V66.127C401.05 80.9724 389.535 88.3997 366.506 88.3997H334.153L334.144 88.3906ZM334.144 73.1542H366.096C373.264 73.1542 376.847 70.7815 376.847 66.036V65.7633C376.847 60.9542 373.264 58.5542 366.096 58.5542H334.144V73.1542Z"
+                      fill="white" />
+                    <path d="M432.112 43.127V94.1451H483.583V111.027H408.918V43.127H432.112Z" fill="white" />
+                    <path
+                      d="M568.918 42.873V58.3367H513.635V68.4003H567.626V83.9549H513.635V95.1185H569.919V110.946H490.687V42.873H568.927H568.918Z"
+                      fill="white" />
+                    <path
+                      d="M574.384 110.155L610.748 76.2727L575.176 43.1182H605.837L626.475 62.7636L647.113 43.1182H675.218L640.136 75.8273L676.009 110.155H647.213L624.801 89.3454L602.59 110.155H574.384Z"
+                      fill="white" />
+                    <path
+                      d="M299.771 72.6999C297.543 92.5453 281.78 108.709 261.998 111.454C240.114 114.491 220.649 101.491 213.855 82.4272C213.555 81.5817 214.337 80.7635 215.21 80.9635C219.667 81.9726 224.369 82.2999 229.226 81.8544C250.664 79.8908 267.91 62.1999 269.31 40.7272C269.62 35.9726 269.192 31.3817 268.128 27.0363C267.882 26.0363 268.792 25.1181 269.765 25.4453C288.866 31.8272 302.227 50.8635 299.771 72.6999Z"
+                      fill="#2580EF" />
+                    <g opacity="0.51">
+                      <rect x="187.923" width="117.333" height="120" fill="url(#pattern0)" />
+                    </g>
+                    <path
+                      d="M271.057 38.4277C270.857 62.5822 251.137 82.8095 226.989 83.6459C222.823 83.7913 218.766 83.3822 214.892 82.4731C214.173 82.3004 213.928 81.3913 214.437 80.864L267.946 25.964C268.464 25.4368 269.374 25.664 269.565 26.3731C270.575 30.2186 271.093 34.255 271.057 38.4186V38.4277Z"
+                      fill="#21F48F" />
+                  </g>
+                  <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_178_979" transform="scale(0.00775194 0.00757576)" />
+                    </pattern>
+                    <clipPath id="clip0_178_979">
+                      <rect width="676" height="120" fill="white" />
+                    </clipPath>
+                    <image id="image0_178_979" width="129" height="132"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </div>
+              <div class="dp-intro__content fs-24 text-white font-family-regular px-42">
+                Captivate your audience with dynamic and engaging animations
+                that bring your website to life.
+                <span class="text-green font-family-bold">
+                  Elevate your brand today!</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="dp-main-content h-full bg-darkBlue">
+      <section class="dp-vision w-full h-screen" id="vision">
+        <div class="dp-vision-inner">
+          <h2 class="dp-vision-title__I fs-236 font-family-delirium text-blue mb-4">
+            Design, Code
+          </h2>
+          <h2 class="dp-vision-title__II fs-236 font-family-delirium text-green">
+            & Transform
+          </h2>
+        </div>
+        <p class="dp-vision__content fs-18 font-family-medium text-white w40-full">
+          Welcome to our digital world, where design expertise meets coding
+          brilliance. With 14 years of combined experience, we are proficient
+          in creating engaging user experiences. From pixel-perfect designs to
+          seamless development, we push the frontiers of creativity. Join us
+          on a journey where creativity and technology come together to define
+          the future of digital excellence.
+        </p>
+      </section>
+      <section class="dp-portfolio w-full h-screen" id="portfolio">
+        <div class="dp-portfolio-inner">
+          <div class="dp-portfolio__left w50-full">
+            <h2 class="dp-portfolio-title fs-236 font-family-delirium font-weight-100 text-green mb-5">
+              Portfolio
+            </h2>
+            <p class="dp-portfolio__content fs-18 font-family-medium text-white w90-full mt-2">
+              Create engaging user experiences with a fluid balance of form
+              and function as your area of expertise. Every project I've
+              worked on demonstrates my commitment to creativity and attention
+              to detail, from complex interface designs to interesting
+              animations. I'm dedicated to discover your vision, whether
+              you're looking for cutting-edge development solutions or
+              user-friendly user interfaces. View my portfolio to see how I
+              can improve your online visibility and encourage relevant
+              interaction.
+            </p>
+          </div>
+          <div class="dp-portfolio__right w50-full">
+            <div class="flex-box gap-17">
+              <div class="box box1 mb-17">
+                <svg width="236" height="236" viewBox="0 0 236 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="118" cy="118" r="118" fill="#2580EF" />
+                  <path
+                    d="M78.0503 148.761C75.3166 151.495 75.3166 155.927 78.0503 158.661C80.7839 161.394 85.2161 161.394 87.9497 158.661L78.0503 148.761ZM160.711 83.0003C160.711 79.1343 157.577 76.0003 153.711 76.0003L90.7107 76.0003C86.8447 76.0003 83.7107 79.1343 83.7107 83.0003C83.7107 86.8663 86.8447 90.0003 90.7107 90.0003L146.711 90.0003L146.711 146C146.711 149.866 149.845 153 153.711 153C157.577 153 160.711 149.866 160.711 146L160.711 83.0003ZM87.9497 158.661L158.66 87.95L148.761 78.0505L78.0503 148.761L87.9497 158.661Z"
+                    fill="#21F48F" />
+                </svg>
+              </div>
+              <div class="box box2" id="box2">
+                <img src="./assets/img/img-sm-1.png" alt="portfolio-img" />
+              </div>
+            </div>
+            <div class="flex-box gap-17 align-items-stretch" id="portfolio-showcase">
+              <div class="flex-box flex-column gap-17">
+                <div class="box box3"></div>
+                <div class="box box4" id="box4"></div>
+                <div class="box box5"></div>
+              </div>
+              <div class="box box6 w-full">
+                <!-- Slider main container -->
+                <div id="slider-wrapper">
+                  <div class="slider-list">
+                    <a href="#"><img src="./assets/img/img-lg-1.png" alt="" class="h-full" /></a>
+                    <a href="#"><img src="./assets/img/img-lg-2.png" alt="" class="h-full" /></a>
+                    <a href="#"><img src="./assets/img/img-lg-3.png" alt="" class="h-full" /></a>
+                    <a href="#"><img src="./assets/img/img-lg-4.png" alt="" class="h-full" /></a>
+                  </div>
+                  <div class="indicators">
+                    <div class="dot w-18 h-18 active"></div>
+                    <div class="dot w-18 h-18"></div>
+                    <div class="dot w-18 h-18"></div>
+                    <div class="dot w-18 h-18"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dp-catalog w-full gap-16" id="catalog">
+        <div class="dp-catalog-inner gap-16">
+          <div class="dp-catalog__1" id="catalog__1">
+            <div class="dp-catalog-box__inner gap-11">
+              <div class="dp-catalog__header gap-16">
+                <div class="dp-catalog__title py-7 ps-12 fs-28 font-family-regular">
+                  Extend Me
+                </div>
+                <div class="dp-catalog__year fs-28 font-family-regular">
+                  2023
+                </div>
+              </div>
+              <div class="dp-catalog__content">
+                <img src="./assets/img/extendme-cover.png" alt="" class="h-full w-full" />
+              </div>
+            </div>
+          </div>
+          <div class="dp-catalog__2" id="catalog__2">
+            <div class="dp-catalog-box__inner gap-11">
+              <div class="dp-catalog__header gap-16">
+                <div class="dp-catalog__title py-7 ps-12 fs-28 font-family-regular">
+                  Paw 4 All
+                </div>
+                <div class="dp-catalog__year fs-28 font-family-regular">
+                  2022
+                </div>
+              </div>
+              <div class="dp-catalog__content">
+                <img src="./assets/img/paw4all.png" alt="" class="h-full w-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dp-catalog-inner gap-16">
+          <div class="dp-catalog__3" id="catalog__3">
+            <div class="dp-catalog-box__inner gap-11">
+              <div class="dp-catalog__header gap-16">
+                <div class="dp-catalog__title py-7 ps-12 fs-28 font-family-regular">
+                  MIE Consultants
+                </div>
+                <div class="dp-catalog__year fs-28 font-family-regular">
+                  2024
+                </div>
+              </div>
+              <div class="dp-catalog__content">
+                <img src="./assets/img/mie.png" alt="" class="h-full w-full" />
+              </div>
+            </div>
+          </div>
+          <div class="dp-catalog__1" id="catalog__4">
+            <div class="dp-catalog-box__inner gap-11">
+              <div class="dp-catalog__header gap-16">
+                <div class="dp-catalog__title py-7 ps-12 fs-28 font-family-regular">
+                  Pixelied
+                </div>
+                <div class="dp-catalog__year fs-28 font-family-regular">
+                  2019
+                </div>
+              </div>
+              <div class="dp-catalog__content">
+                <img src="./assets/img/pixel.png" alt="" class="h-full w-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal for Extend ME-->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="dp__leftContent p-16">
+              <div class="dp__innerContent">
+                <div class="slideshow-container">
+                  <div class="mySlidesforextend fade">
+                    <img src="./assets/img/Extend-1.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforextend fade">
+                    <img src="./assets/img/Extend-2.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforextend fade">
+                    <img src="./assets/img/Extend-3.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforextend fade">
+                    <img src="./assets/img/Extend-4.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <a class="prev" onclick="plusSlidesforextend(-1)">❮</a>
+                  <a class="next" onclick="plusSlidesforextend(1)">❯</a>
+                </div>
+              </div>
+            </div>
+            <div class="dp__rightContent p-16">
+              <div class="dp__contentHeader">
+
+                <div class="title flex-between fs-28 font-family-bold text-white">
+                  Extend Me
+                  <a href="https://dribbble.com/Duoplex_Pro" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="16" fill="#4F4F4F" />
+                      <path
+                        d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8078C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7362 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM16 8C18.0547 7.99918 20.0298 8.79493 21.51 10.22C19.982 11.1162 18.3629 11.847 16.68 12.4C15.8425 10.9568 14.8823 9.58844 13.81 8.31C14.522 8.105 15.2591 8.00065 16 8ZM11.89 9.15C12.9377 10.3485 13.878 11.6368 14.7 13C12.7371 13.4874 10.7225 13.7359 8.7 13.74H8.34C8.90721 11.8196 10.1739 10.1818 11.89 9.15ZM10 21.31C8.69876 19.8487 7.98608 17.9566 8 16C8 15.9 8 15.8 8 15.71H8.68C11.0474 15.6888 13.4014 15.3525 15.68 14.71C16 15.32 16.3 15.95 16.59 16.6C15.0315 17.1494 13.58 17.9648 12.3 19.01L12 19.25C11.2871 19.8902 10.6189 20.5785 10 21.31ZM16 24C14.4061 24.0035 12.8482 23.5261 11.53 22.63C12.0168 22.0716 12.5378 21.5439 13.09 21.05L13.41 20.78C14.5932 19.7849 15.949 19.0155 17.41 18.51C18.0113 20.136 18.4795 21.8082 18.81 23.51C17.9098 23.8387 16.9583 24.0046 16 24ZM20.63 22.51C20.3028 20.9966 19.8752 19.5066 19.35 18.05H19.69C19.7294 18.0403 19.7706 18.0403 19.81 18.05H19.92H20.02H20.5C21.5524 18.053 22.5968 18.2321 23.59 18.58C23.0443 20.1704 22.0079 21.5464 20.63 22.51ZM20.5 16C20.29 16 20.08 16 19.88 16C19.7505 15.9837 19.6195 15.9837 19.49 16C19.2182 16.0167 18.9477 16.0501 18.68 16.1H18.58C18.29 15.43 17.99 14.78 17.66 14.1C19.4506 13.4851 21.1704 12.6805 22.79 11.7C23.5934 12.9894 24.0131 14.4808 24 16C24 16.17 24 16.34 24 16.51C22.8667 16.1602 21.686 15.9882 20.5 16Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </div>
+
+
+                <div class="close">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L2 16" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M16 16L2 2" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="dp__contentbio">
+                <div class="year">
+                  <span class="fs-14 font-family-regular text-white">Year:</span>
+                  <p class="fs-18 font-family-bold text-white mb-0 mt-5">
+                    2023
+                  </p>
+                </div>
+                <div class="stack">
+                  <span class="fs-14 font-family-regular text-white">Teams:</span>
+                  <p class="fs-18 font-family-regular text-green mb-0 mt-5">
+                    Web Design, Web Development
+                  </p>
+                </div>
+              </div>
+              <div class="dp__contentOverview p-16">
+                <div class="summary">
+                  <span class="fs-24 font-family-medium text-white d-block py-8">Overview:</span>
+                  <p class="fs-16 font-family-regular text-white">
+                    The emergence of ExtendMe wasn’t a mere technological advancement; it was a response to the
+                    challenges faced by the modern worker.
+                    ExtendMe is more than a tool; it’s a vision, a philosophy aimed at revolutionizing how we work,
+                    create, and engage with content.
+                    <span id="points">...</span>
+                    <span id="more">
+                      </br>
+                      <span class="fs-24 font-family-medium text-blue d-block py-8">Challenges:</span>
+
+                      Chatbots can sometimes confuse the user and frustrate them, impacting engagement and satisfaction.
+                      The inability of AI to correctly interpret user queries or resolve complex queries leads to
+                      unsatisfactory user experiences.
+                      <br><br>
+                      Product presentation is a critical element of UX. Effective layouts, color schemes,
+                      and good layouts play an important role in customer acquisition and retention. Conversely,
+                      an ineffective presentation can lead to user drop-offs and negatively impact sales.<br><br>
+                      Differently abled users rely on assistive technologies like voice assistants to navigate
+                      the internet. Failing to consider the needs of such users can reduce TAM (Total Addressable
+                      Market),
+                      and result in negative brand perception.
+                      <span class="fs-24 font-family-medium text-green d-block py-8">Solutions:</span>
+                      The simplest answer to this is to keep it simple. Use computer-friendly, disambiguated
+                      language for both potential questions and answers. Let the user know if the question is
+                      too complex and connect them to support agents without delay. Meanwhile, continuously iterate on
+                      design to enhance the chatbot's performance and user experience.
+                      <br><br>
+                      Leverage user data to gain insights into consumer impulses and intent. Conduct A/B testing to
+                      determine
+                      the optimal layout, image size, load time, and navigation path. Conduct user research to
+                      understand
+                      preferences and employ best practices for product display, ensuring a positive and engaging user
+                      experience.
+                      <br><br>
+                      Implement accessibility guidelines and incorporate inclusive design principles. Conduct
+                      accessibility
+                      audits and involve users with disabilities in the testing process to ensure a more inclusive user
+                      experience.
+                    </span>
+                    <button onclick="toggleText()" id="textButton">
+                      Show More
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal for Paw for all-->
+        <div id="myModal1" class="modal">
+          <div class="modal-content">
+            <div class="dp__leftContent p-16">
+              <div class="dp__innerContent">
+                <!-- Slider main container -->
+                <div class="slideshow-container">
+                  <div class="mySlidesforpaw fade">
+                    <img src="./assets/img/P4A-1.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforpaw fade">
+                    <img src="./assets/img/P4A-2.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforpaw fade">
+                    <img src="./assets/img/P4A-3.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesforpaw fade">
+                    <img src="./assets/img/P4A-4.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <a class="prev" onclick="plusSlidesforpaw(-1)">❮</a>
+                  <a class="next" onclick="plusSlidesforpaw(1)">❯</a>
+                </div>
+              </div>
+            </div>
+            <div class="dp__rightContent p-16">
+              <div class="dp__contentHeader">
+                <div class="title flex-between fs-28 font-family-bold text-white">
+                  Paw 4 All
+                  <a href="https://dribbble.com/Duoplex_Pro" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="16" fill="#4F4F4F" />
+                      <path
+                        d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8078C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7362 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM16 8C18.0547 7.99918 20.0298 8.79493 21.51 10.22C19.982 11.1162 18.3629 11.847 16.68 12.4C15.8425 10.9568 14.8823 9.58844 13.81 8.31C14.522 8.105 15.2591 8.00065 16 8ZM11.89 9.15C12.9377 10.3485 13.878 11.6368 14.7 13C12.7371 13.4874 10.7225 13.7359 8.7 13.74H8.34C8.90721 11.8196 10.1739 10.1818 11.89 9.15ZM10 21.31C8.69876 19.8487 7.98608 17.9566 8 16C8 15.9 8 15.8 8 15.71H8.68C11.0474 15.6888 13.4014 15.3525 15.68 14.71C16 15.32 16.3 15.95 16.59 16.6C15.0315 17.1494 13.58 17.9648 12.3 19.01L12 19.25C11.2871 19.8902 10.6189 20.5785 10 21.31ZM16 24C14.4061 24.0035 12.8482 23.5261 11.53 22.63C12.0168 22.0716 12.5378 21.5439 13.09 21.05L13.41 20.78C14.5932 19.7849 15.949 19.0155 17.41 18.51C18.0113 20.136 18.4795 21.8082 18.81 23.51C17.9098 23.8387 16.9583 24.0046 16 24ZM20.63 22.51C20.3028 20.9966 19.8752 19.5066 19.35 18.05H19.69C19.7294 18.0403 19.7706 18.0403 19.81 18.05H19.92H20.02H20.5C21.5524 18.053 22.5968 18.2321 23.59 18.58C23.0443 20.1704 22.0079 21.5464 20.63 22.51ZM20.5 16C20.29 16 20.08 16 19.88 16C19.7505 15.9837 19.6195 15.9837 19.49 16C19.2182 16.0167 18.9477 16.0501 18.68 16.1H18.58C18.29 15.43 17.99 14.78 17.66 14.1C19.4506 13.4851 21.1704 12.6805 22.79 11.7C23.5934 12.9894 24.0131 14.4808 24 16C24 16.17 24 16.34 24 16.51C22.8667 16.1602 21.686 15.9882 20.5 16Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="close close1" id="close1">
+
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L2 16" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M16 16L2 2" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </div>
+              </div>
+              <div class="dp__contentbio">
+                <div class="year">
+                  <span class="fs-14 font-family-regular text-white">Year:</span>
+                  <p class="fs-18 font-family-bold text-white mb-0 mt-5">
+                    2022
+                  </p>
+                </div>
+                <div class="stack">
+                  <span class="fs-14 font-family-regular text-white">Tool Stack:</span>
+                  <p class="fs-18 font-family-regular text-green mb-0 mt-5">
+                    Web Design, Web Development
+                  </p>
+                </div>
+              </div>
+              <div class="dp__contentOverview p-16">
+                <div class="summary">
+                  <span class="fs-24 font-family-medium text-white d-block py-8">Overview:</span>
+                  <p class="fs-16 font-family-regular text-white">
+                    Paws 4 All is more than an app; it's a beacon of hope for dog lovers navigating the challenges of
+                    post-pandemic life.
+                    As loneliness and screen time surge, Paws 4 All emerges as a sanctuary, uniting dog owners of all
+                    ages to find
+                    solace and connection through the simple joy of walking our beloved pets together.
+                    <span id="pointsII">...</span>
+                    <span id="moreII">
+                      </br>
+                      <span class="fs-24 font-family-medium text-blue d-block py-8">Challenges:</span>
+
+                      <b>User Engagement and Satisfaction:</b> The risk of user dissatisfaction due to technical
+                      glitches or ineffective
+                      communication within the app could diminish engagement levels. If users struggle to navigate the
+                      app or encounter
+                      difficulties in organizing or joining dog walks, it may lead to frustration and disengagement.
+                      <br><br>
+                      <b>Community Building and Trust:</b> Building a vibrant and trustworthy community within the app
+                      poses a challenge.
+                      Ensuring that users feel safe and welcomed while interacting with others, arranging dog walks, and
+                      sharing
+                      experiences is crucial for fostering meaningful connections.
+                      <br><br>
+                      <b>Balancing Technology and Human Interaction:</b> While technology facilitates connections,
+                      there's a risk of it
+                      overshadowing genuine human interaction. Striking the right balance between utilizing technology
+                      to facilitate
+                      dog walks and ensuring that users still experience the warmth and camaraderie of in-person
+                      interactions presents
+                      a unique challenge.
+                      <span class="fs-24 font-family-medium text-green d-block py-8">Solutions:</span>
+                      <b>Seamless User Experience and Support:</b> Prioritize a user-friendly interface and intuitive
+                      navigation within the
+                      app. Implement robust support mechanisms, including clear instructions and responsive customer
+                      service channels,
+                      to assist users in organizing and participating in dog walks effortlessly.
+                      <br><br>
+                      <b>Community Moderation and Engagement Features:</b> Implement features such as user verification,
+                      community guidelines,
+                      and moderation tools to cultivate a safe and inclusive environment. Foster trust and camaraderie
+                      among users through
+                      virtual meetups, discussion forums, and user-generated content that celebrates the joys of dog
+                      ownership.
+                      <br><br>
+                      <b>Human-Centric Design and Personalization:</b> Infuse the app with elements that enhance, rather
+                      than replace, human interaction.
+                      Integrate features that encourage users to share stories, tips, and advice, fostering a sense of
+                      belonging and camaraderie.
+                      Personalize the user experience by tailoring recommendations and suggestions based on individual
+                      preferences and activity history.
+                      <button onclick="toggleTextII()" id="textButtonII">
+                        Show More
+                      </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal for Mie Consultants-->
+        <div id="myModal2" class="modal">
+          <div class="modal-content">
+            <div class="dp__leftContent p-16">
+              <div class="dp__innerContent">
+                <!-- Slider main container -->
+                <div class="slideshow-container">
+                  <div class="mySlidesformie fade">
+                    <img src="./assets/img/MIE-cover.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesformie fade">
+                    <img src="./assets/img/MIE-Landing.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesformie fade">
+                    <img src="./assets/img/MIE-Countries.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <div class="mySlidesformie fade">
+                    <img src="./assets/img/MIE-banners.png" style="width: 100%" class="toggleImg" />
+                  </div>
+                  <a class="prev" onclick="plusSlidesformie(-1)">❮</a>
+                  <a class="next" onclick="plusSlidesformie(1)">❯</a>
+                </div>
+              </div>
+            </div>
+            <div class="dp__rightContent p-16">
+              <div class="dp__contentHeader">
+                <div class="title flex-between fs-28 font-family-bold text-white">
+                  MIE Consultants
+                  <a href="https://dribbble.com/Duoplex_Pro" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="16" fill="#4F4F4F" />
+                      <path
+                        d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8078C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7362 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM16 8C18.0547 7.99918 20.0298 8.79493 21.51 10.22C19.982 11.1162 18.3629 11.847 16.68 12.4C15.8425 10.9568 14.8823 9.58844 13.81 8.31C14.522 8.105 15.2591 8.00065 16 8ZM11.89 9.15C12.9377 10.3485 13.878 11.6368 14.7 13C12.7371 13.4874 10.7225 13.7359 8.7 13.74H8.34C8.90721 11.8196 10.1739 10.1818 11.89 9.15ZM10 21.31C8.69876 19.8487 7.98608 17.9566 8 16C8 15.9 8 15.8 8 15.71H8.68C11.0474 15.6888 13.4014 15.3525 15.68 14.71C16 15.32 16.3 15.95 16.59 16.6C15.0315 17.1494 13.58 17.9648 12.3 19.01L12 19.25C11.2871 19.8902 10.6189 20.5785 10 21.31ZM16 24C14.4061 24.0035 12.8482 23.5261 11.53 22.63C12.0168 22.0716 12.5378 21.5439 13.09 21.05L13.41 20.78C14.5932 19.7849 15.949 19.0155 17.41 18.51C18.0113 20.136 18.4795 21.8082 18.81 23.51C17.9098 23.8387 16.9583 24.0046 16 24ZM20.63 22.51C20.3028 20.9966 19.8752 19.5066 19.35 18.05H19.69C19.7294 18.0403 19.7706 18.0403 19.81 18.05H19.92H20.02H20.5C21.5524 18.053 22.5968 18.2321 23.59 18.58C23.0443 20.1704 22.0079 21.5464 20.63 22.51ZM20.5 16C20.29 16 20.08 16 19.88 16C19.7505 15.9837 19.6195 15.9837 19.49 16C19.2182 16.0167 18.9477 16.0501 18.68 16.1H18.58C18.29 15.43 17.99 14.78 17.66 14.1C19.4506 13.4851 21.1704 12.6805 22.79 11.7C23.5934 12.9894 24.0131 14.4808 24 16C24 16.17 24 16.34 24 16.51C22.8667 16.1602 21.686 15.9882 20.5 16Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="close close2" id="close2">
+
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L2 16" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M16 16L2 2" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </div>
+              </div>
+              <div class="dp__contentbio">
+                <div class="year">
+                  <span class="fs-14 font-family-regular text-white">Year:</span>
+                  <p class="fs-18 font-family-bold text-white mb-0 mt-5">
+                    2024
+                  </p>
+                </div>
+                <div class="stack">
+                  <span class="fs-14 font-family-regular text-white">Tool Stack:</span>
+                  <p class="fs-18 font-family-regular text-green mb-0 mt-5">
+                    Web Design, Web Development
+                  </p>
+                </div>
+              </div>
+              <div class="dp__contentOverview p-16">
+                <div class="summary">
+                  <span class="fs-24 font-family-medium text-white d-block py-8">Overview:</span>
+                  <p class="fs-16 font-family-regular text-white">
+                    My International Education Consultants (MIE) stands as a beacon of trust and reliability in the
+                    realm of international student visas.
+                    With the proliferation of fraudulent entities preying on unsuspecting clients, MIE emerges as a
+                    beacon of integrity, committed to
+                    providing accurate and transparent information to students seeking to pursue education abroad.
+                    Despite the absence of an online
+                    presence or a physical office, MIE prioritizes corporate-grade solutions and user-friendly processes
+                    to ensure seamless communication
+                    and engagement with their consultants.
+                    <span id="pointsIII">...</span>
+                    <span id="moreIII">
+                      </br>
+                      <span class="fs-24 font-family-medium text-blue d-block py-8">Challenges:</span>
+
+                      <b>Fraudulent Practices:</b> The prevalence of fraudulent agents and entities in the market poses
+                      a significant challenge.
+                      Misinformation, fake promises, and deceptive practices undermine trust and jeopardize the
+                      aspirations of students seeking
+                      international education opportunities.
+                      <br><br>
+                      <b>Limited Accessibility:</b> Without an online platform or a physical office, potential clients
+                      may find it challenging to reach out to MIE consultants.
+                      This limited accessibility could hinder communication and deter prospective clients from seeking
+                      legitimate guidance.
+                      <br><br>
+                      <b>Ensuring Accuracy and Transparency:</b> Providing accurate and transparent information amidst a
+                      sea of misinformation is paramount. Clients must feel
+                      confident in the guidance provided by MIE consultants, knowing that their best interests are
+                      prioritized.
+                      <span class="fs-24 font-family-medium text-green d-block py-8">Solutions:</span>
+                      <b>Robust Verification Mechanisms:</b> Implement stringent verification processes to authenticate
+                      the legitimacy of MIE consultants and their services.
+                      By conducting thorough background checks and ensuring compliance with industry standards, MIE can
+                      instill confidence in their clients regarding
+                      the authenticity of the information provided.
+                      <br><br>
+                      <b>Online Presence and Communication Channels:</b> Establish a user-friendly online platform that
+                      serves as a hub for clients to access information,
+                      schedule consultations, and communicate with MIE consultants. Utilize secure communication
+                      channels, such as encrypted messaging and video conferencing,
+                      to facilitate seamless interaction regardless of geographical barriers.
+                      <br><br>
+                      <b>Education and Awareness Campaigns:</b> Launch educational initiatives to raise awareness about
+                      common fraudulent practices and empower clients to make
+                      informed decisions. By providing resources, guides, and workshops, MIE can equip students with the
+                      knowledge and tools needed to navigate the complexities
+                      of the international education landscape safely.
+                      <button onclick="toggleTextIII()" id="textButtonIII">
+                        Show More
+                      </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal for pixelied-->
+        <div id="myModal3" class="modal">
+          <div class="modal-content">
+            <div class="dp__leftContent p-16">
+              <div class="dp__innerContent flex-box">
+                <!-- Slider main container -->
+                <!-- <div class="slideshow-container">
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-cover.png"
+                        style="width: 100%" class="toggleImg"
+                      />
+                    </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-Landing.png"
+                        style="width: 100%" class="toggleImg"
+                      />
+                    </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-Countries.png"
+                        style="width: 100%" class="toggleImg"
+                      />
+                    </div>
+                    <div class="mySlidesforpixel fade">
+                      <img
+                        src="./assets/img/MIE-banners.png"
+                        style="width: 100%" class="toggleImg"
+                      />
+                    </div>
+                    <a class="prev" onclick="plusSlidesforpixel(-1)">❮</a>
+                    <a class="next" onclick="plusSlidesforpixel(1)">❯</a>
+                  </div> -->
+                <iframe width="85%" height="80%"
+                  src="https://www.youtube.com/embed/vx_AhENASo8?si=kiQ8pHtnyHpQKw0x?autoplay=1"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="dp__rightContent p-16">
+              <div class="dp__contentHeader">
+                <div class="title flex-between fs-28 font-family-bold text-white">
+                  Pixelied
+                  <a href="https://dribbble.com/Duoplex_Pro" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="16" fill="#4F4F4F" />
+                      <path
+                        d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8078C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7362 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM16 8C18.0547 7.99918 20.0298 8.79493 21.51 10.22C19.982 11.1162 18.3629 11.847 16.68 12.4C15.8425 10.9568 14.8823 9.58844 13.81 8.31C14.522 8.105 15.2591 8.00065 16 8ZM11.89 9.15C12.9377 10.3485 13.878 11.6368 14.7 13C12.7371 13.4874 10.7225 13.7359 8.7 13.74H8.34C8.90721 11.8196 10.1739 10.1818 11.89 9.15ZM10 21.31C8.69876 19.8487 7.98608 17.9566 8 16C8 15.9 8 15.8 8 15.71H8.68C11.0474 15.6888 13.4014 15.3525 15.68 14.71C16 15.32 16.3 15.95 16.59 16.6C15.0315 17.1494 13.58 17.9648 12.3 19.01L12 19.25C11.2871 19.8902 10.6189 20.5785 10 21.31ZM16 24C14.4061 24.0035 12.8482 23.5261 11.53 22.63C12.0168 22.0716 12.5378 21.5439 13.09 21.05L13.41 20.78C14.5932 19.7849 15.949 19.0155 17.41 18.51C18.0113 20.136 18.4795 21.8082 18.81 23.51C17.9098 23.8387 16.9583 24.0046 16 24ZM20.63 22.51C20.3028 20.9966 19.8752 19.5066 19.35 18.05H19.69C19.7294 18.0403 19.7706 18.0403 19.81 18.05H19.92H20.02H20.5C21.5524 18.053 22.5968 18.2321 23.59 18.58C23.0443 20.1704 22.0079 21.5464 20.63 22.51ZM20.5 16C20.29 16 20.08 16 19.88 16C19.7505 15.9837 19.6195 15.9837 19.49 16C19.2182 16.0167 18.9477 16.0501 18.68 16.1H18.58C18.29 15.43 17.99 14.78 17.66 14.1C19.4506 13.4851 21.1704 12.6805 22.79 11.7C23.5934 12.9894 24.0131 14.4808 24 16C24 16.17 24 16.34 24 16.51C22.8667 16.1602 21.686 15.9882 20.5 16Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+
+                </div>
+                <div class="close close3" id="close3">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L2 16" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M16 16L2 2" stroke="#F24949" stroke-width="3" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="dp__contentbio">
+                <div class="year">
+                  <span class="fs-14 font-family-regular text-white">Year:</span>
+                  <p class="fs-18 font-family-bold text-white mb-0 mt-5">
+                    2019
+                  </p>
+                </div>
+                <div class="stack">
+                  <span class="fs-14 font-family-regular text-white">Tool Stack:</span>
+                  <p class="fs-18 font-family-regular text-orange mb-0 mt-5">
+                    Animation, Video Editing
+                  </p>
+                </div>
+              </div>
+              <div class="dp__contentOverview p-16">
+                <div class="summary">
+                  <span class="fs-24 font-family-medium text-white d-block py-8">Overview:</span>
+                  <p class="fs-16 font-family-regular text-white">
+                    Pixelied emerges as a versatile solution in the realm of graphic design and photo editing, catering
+                    to businesses and entrepreneurs seeking to
+                    establish a strong brand presence across social media and blogs. This cloud-based tool offers a
+                    plethora of features, including image resizing,
+                    flipping, merging, and brightness adjustments, empowering users to create visually appealing designs
+                    with ease. From adding logos, frames, and
+                    text to replacing backgrounds and applying various image effects, Pixelied provides a comprehensive
+                    suite of editing capabilities tailored to
+                    the needs of modern marketers and content creators.
+                    <span id="pointsIV">...</span>
+                    <span id="moreIV">
+                      </br>
+                      <span class="fs-24 font-family-medium text-blue d-block py-8">Challenges:</span>
+
+                      <b>Competition in the Market:</b> The graphic design and photo editing landscape is saturated with
+                      numerous competitors,
+                      each offering its own set of features and benefits. Standing out amidst this competition and
+                      effectively communicating
+                      Pixelied's unique value proposition presents a significant challenge.
+                      <br><br>
+                      <b>User Adoption and Engagement:</b> Encouraging users to adopt and engage with the platform poses
+                      another hurdle. Despite
+                      its user-friendly interface and extensive feature set, attracting and retaining users amidst a sea
+                      of alternatives
+                      requires strategic marketing and continuous innovation.
+                      <br><br>
+                      <b>Technical Limitations and Performance:</b> As a cloud-based tool, Pixelied must ensure seamless
+                      performance and reliability
+                      to meet the demands of its user base. Technical glitches, slow loading times, or limited
+                      functionality could hinder
+                      user satisfaction and deter potential customers from utilizing the platform.
+                      <span class="fs-24 font-family-medium text-green d-block py-8">Solutions:</span>
+                      <b>Strategic Differentiation and Positioning:</b> Highlight Pixelied's distinct features and
+                      advantages through targeted marketing
+                      campaigns and educational content. Emphasize its ease of use, extensive stock library, and
+                      advanced editing tools to differentiate
+                      it from competitors and attract a diverse user base.
+                      <br><br>
+                      <b>User Onboarding and Support:</b> Implement robust onboarding processes and provide
+                      comprehensive support resources to guide users through
+                      the platform's features and functionalities. Offer tutorials, webinars, and live chat support to
+                      address user inquiries and facilitate
+                      a smooth onboarding experience.
+                      <br><br>
+                      <b>Continuous Improvement and Innovation:</b> Prioritize ongoing product development and
+                      innovation to address user feedback and stay ahead of
+                      evolving market trends. Regularly update the platform with new features, enhancements, and
+                      performance optimizations to enhance user
+                      satisfaction and maintain a competitive edge in the market.
+                    </span>
+                    <button onclick="toggleTextIV()" id="textButtonIV">
+                      Show More
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dp-expertise w-full h-screen gap-16" id="expertise">
+        <div class="dp-expertise__inner">
+          <div class="dp-expertise__headings">
+            <h2 class="dp-expertise_title fs-192 font-family-delirium font-weight-100 text-green mb-5">
+              Expertise
+            </h2>
+            <div class="dp-expertise__list">
+              <button class="bg-yellow py-12 px-24 fs-18 font-family-bold text-black">
+                &starf; Discover Strategy
+              </button>
+              <button class="bg-orange py-12 px-24 fs-18 font-family-bold text-black">
+                &starf; Web Design
+              </button>
+              <button class="bg-blue py-12 px-24 fs-18 font-family-bold text-white">
+                &starf; Full Stack Development
+              </button>
+              <button class="bg-mattRed py-12 px-24 fs-18 font-family-bold text-white">
+                &starf; Animations
+              </button>
+              <button class="bg-purple py-12 px-24 fs-18 font-family-bold text-white">
+                &starf; Video Editing
+              </button>
+            </div>
+          </div>
+          <div class="dp-expertise__showcase">
+            <div class="cont">
+              <div class="cont-int">
+                <div class="cont-wrap">
+                  <div class="col col-1 col-ext">
+                    <div class="block block-1">
+                      <img src="./assets/img/E-5.png" />
+                    </div>
+                    <div class="block block-2">
+                      <img src="./assets/img/E-3.png" />
+                    </div>
+                    <div class="block block-3">
+                      <img src="./assets/img/E-1.png" />
+                    </div>
+                    <div class="block block-4">
+                      <img src="./assets/img/E-5.png" />
+                    </div>
+                    <div class="block block-5">
+                      <img src="./assets/img/E-3.png" />
+                    </div>
+                    <div class="block block-6">
+                      <img src="./assets/img/E-1.png" />
+                    </div>
+                  </div>
+                  <div class="col col-2 col-int">
+                    <div class="block block-1">
+                      <img src="./assets/img/E-4.png" />
+                    </div>
+                    <div class="block block-2">
+                      <img src="./assets/img/E-1.png" />
+                    </div>
+                    <div class="block block-3">
+                      <img src="./assets/img/E-2.png" />
+                    </div>
+                    <div class="block block-4">
+                      <img src="./assets/img/E-4.png" />
+                    </div>
+                    <div class="block block-5">
+                      <img src="./assets/img/E-1.png" />
+                    </div>
+                    <div class="block block-6">
+                      <img src="./assets/img/E-2.png" />
+                    </div>
+                  </div>
+                  <div class="col col-3 col-ext">
+                    <div class="block block-1">
+                      <img src="./assets/img/E-5.png" />
+                    </div>
+                    <div class="block block-2">
+                      <img src="./assets/img/E-3.png" />
+                    </div>
+                    <div class="block block-3">
+                      <img src="./assets/img/E-4.png" />
+                    </div>
+                    <div class="block block-4">
+                      <img src="./assets/img/E-5.png" />
+                    </div>
+                    <div class="block block-5">
+                      <img src="./assets/img/E-3.png" />
+                    </div>
+                    <div class="block block-6">
+                      <img src="./assets/img/E-4.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dp-about w-full h-screen" id="about">
+        <div class="dp-about__inner h-full">
+          <div class="dp-about__topContent">
+            <h2 class="fs-96 font-family-delirium text-green">About us</h2>
+            <p class="fs-26 font-family-medium text-white">
+              Developing Imagination, Enhancing Relationships
+            </p>
+          </div>
+          <div class="dp-about__detail mt-38">
+            <div class="dp-about__leftContent">
+              <div class="tablist p-8">
+                <div class="tab">
+                  <button href="" class="tablinks fs-46 font-family-bold" onclick="openTabs(event, 'Design')"
+                    id="defaultOpen">
+                    Design
+                  </button>
+                  <button href="" class="tablinks fs-46 font-family-bold" onclick="openTabs(event, 'Code')">
+                    Code
+                  </button>
+                </div>
+              </div>
+              <div class="tablist-content">
+                <div id="Design" class="tabcontent p-24">
+                  <img src="./assets/img/EmojiMovie737056523.gif" alt="" class="rounded-12">
+                  <h4 class="your-name fs-48 font-family-bold text-green">
+                    Muhammad Hammad
+                  </h4>
+                  <span class="fs-18 font-family-medium text-white">Product Designer</span>
+                </div>
+                <div id="Code" class="tabcontent p-24">
+                  <img src="./assets/img/EmojiMovie737056501.gif" alt="" class="rounded-12">
+                  <h4 class="your-name fs-48 font-family-bold text-green">
+                    Quratulain Shakeel
+                  </h4>
+                  <span class="fs-18 font-family-medium text-white">Frontend Developer</span>
+                </div>
+              </div>
+            </div>
+            <div class="dp-about__rightContent">
+              <div class="dp-about__intro p-24">
+                <span class="fs-24 font-family-medium text-white d-block py-8">About us:</span>
+                <p class="text-white">
+                  With over six years of combined experience in user experience (UX) and user interface (UI) design,
+                  web design, and frontend/backend development, our team brings a wealth of expertise to every project.
+                  Proficient in HTML5, CSS3, SCSS, and responsive design,
+                  <span id="pointsV">...</span>
+                  <span id="moreV">
+
+                    We specialize in translating UX designs into pixel-perfect code. Our skills extend to Angular,
+                    React,
+                    Bootstrap, WordPress customization, and design tools such as Adobe Illustrator and Photoshop. </br>
+                    <br>We have
+                    led numerous projects, focusing on theme development, component creation, and optimizing UI/UX for
+                    speed and scalability. Certified in Front-End Web Development and MERN Web Development, we
+                    prioritize
+                    delivering user-centric web solutions with precision and functionality. <br> <br>Our proficiency in
+                    version
+                    control systems like GitLab, GitHub, and Bitbucket ensures smooth collaboration and project
+                    management.
+                    With a creative problem-solving approach, dedication to excellence, and passion for innovation, we
+                    are
+                    committed to exceeding client expectations and delivering exceptional results.
+                  </span>
+                  <button onclick="toggleTextV()" id="textButtonV">
+                    Show More
+                  </button>
+                </p>
+              </div>
+              <div class="dp-about__stack p-24">
+                <h4 class="fs-26 font-family-medium text-white mb-16">
+                  Tool Stack
+                </h4>
+                <div class="list">
+                  <button><img src="./assets/img/xd.png" alt="tools" /></button>
+                  <button><img src="./assets/img/figma.png" alt="tools" /></button>
+                  <button><img src="./assets/img/html.png" alt="tools" /></button>
+                  <button><img src="./assets/img/css.png" alt="tools" /></button>
+                  <button><img src="./assets/img/ai.png" alt="tools" /></button>
+                  <button><img src="./assets/img/ps.png" alt="tools" /></button>
+                  <button><img src="./assets/img/js.png" alt="tools" /></button>
+                  <button><img src="./assets/img/react.png" alt="tools" /></button>
+                  <button><img src="./assets/img/angular.png" alt="tools" /></button>
+                  <button><img src="./assets/img/AE.png" alt="tools" /></button>
+                  <button><img src="./assets/img/blender.png" alt="tools" /></button>
+                  <button><img src="./assets/img/gsap.png" alt="tools" /></button>
+                  <button><img src="./assets/img/node.png" alt="tools" /></button>
+                  <button><img src="./assets/img/express.png" alt="tools" /></button>
+                  <button><img src="./assets/img/db.png" alt="tools" /></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dp-excelence w-full h-screen" id="excelence">
+        <div class="dp-excelence__inner">
+          <h2 class="fs-236 font-family-delirium text-green">Embrace</h2>
+          <h3 class="fs-146 font-family-bold text-blue mb-24">EXCELENCE</h3>
+          <button class="fs-26 font-family-bold text-blue">
+            Take your digital journey to the next level!
+          </button>
+        </div>
+      </section>
+      <section class="dp-contact w-full h-screen pb-100" id="contact">
+        <div class="dp-contact__inner">
+          <div class="dp-contact__media">
+            <img src="./assets/img/reach-out.png" alt="contact-us" />
+          </div>
+          <div class="dp-contact__form">
+            <h2 class="fs-162 font-family-delirium text-green">Reach OUT</h2>
+            <p class="fs-26 font-family-medium text-white mb-44">
+              For any inquiries feel free to reach out to us.
+            </p>
+            <form name="contactForm" action="" method="post" class="cform">
+              <div class="form-control">
+                <label for="fname" class="fs-18 font-family-medium text-white sr-only">Full Name <span
+                    class="text-mattRed">*</span></label>
+                <input type="text" name="name" id="name" placeholder="Your Full Name" />
+                <span class="error d-block text-mattRed fs-12" id="name_err">Required</span>
+              </div>
+              <div class="form-control">
+                <label for="email" class="fs-18 font-family-medium text-white sr-only">Email <span
+                    class="text-mattRed">*</span></label>
+                <input type="email" name="email" id="email" placeholder="Your Email" />
+                <span class="error text-mattRed fs-12" id="email_err"
+                  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">Required</span>
+              </div>
+              <div class="form-control">
+                <label for="country" class="fs-18 font-family-medium text-white">Country <span
+                    class="text-mattRed">*</span></label>
+                <input type="text" name="country" id="country" placeholder="Your country" />
+                <span class="error text-mattRed fs-12" id="country_err">Required</span>
+              </div>
+              <div class="form-control">
+                <label for="message" class="fs-18 font-family-medium text-white">Message <span
+                    class="text-mattRed">*</span></label>
+                <textarea name="message" id="message" placeholder="Write here..." rows="4" cols="50"></textarea>
+                <span class="error text-mattRed fs-12" id="msg_err">Required</span>
+              </div>
+              <button id="submit" name="submit" type="submit"
+                class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="dp-footer bg-darkCyan w-full px-42 py-11 text-white">
+        <div class="dp__social-links">
+          <p>© 2024 Duoplex.PRO </p>
+        </div>
+        <div class="dp__web">
+          <div class="dp_link">
+            <a href="https://www.facebook.com/duoplex.pro?mibextid=LQQJ4d">
+              <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.375 0C12.0981 0 12.7164 0.256727 13.2298 0.770182C13.7433 1.28364 14 1.90191 14 2.625V11.375C14 12.0981 13.7433 12.7164 13.2298 13.2298C12.7164 13.7433 12.0981 14 11.375 14H9.66146V8.57682H11.4753L11.7487 6.46224H9.66146V5.11328C9.66146 4.773 9.73286 4.5178 9.87565 4.34766C10.0184 4.17752 10.2964 4.09245 10.7096 4.09245L11.8216 4.08333V2.19661C11.4388 2.14193 10.898 2.11458 10.1992 2.11458C9.37283 2.11458 8.71202 2.35764 8.2168 2.84375C7.72157 3.32986 7.47396 4.01649 7.47396 4.90365V6.46224H5.65104V8.57682H7.47396V14H2.625C1.90191 14 1.28364 13.7433 0.770182 13.2298C0.256727 12.7164 0 12.0981 0 11.375V2.625C0 1.90191 0.256727 1.28364 0.770182 0.770182C1.28364 0.256727 1.90191 0 2.625 0H11.375Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="dp_link">
+            <a href="https://www.instagram.com/duoplex92?igsh=aXEyeDBmZ2ZqbGs5">
+              <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.94833 2.01833C8.80989 2.01833 8.67455 2.05939 8.55943 2.1363C8.44432 2.21322 8.3546 2.32255 8.30162 2.45045C8.24864 2.57836 8.23477 2.71911 8.26178 2.8549C8.28879 2.99068 8.35546 3.11541 8.45336 3.21331C8.55126 3.3112 8.67598 3.37787 8.81177 3.40488C8.94756 3.43189 9.0883 3.41803 9.21621 3.36505C9.34412 3.31207 9.45344 3.22235 9.53036 3.10723C9.60728 2.99212 9.64833 2.85678 9.64833 2.71833C9.64833 2.53268 9.57458 2.35463 9.44331 2.22336C9.31203 2.09208 9.13398 2.01833 8.94833 2.01833ZM11.6317 3.43C11.6203 2.94601 11.5297 2.46715 11.3633 2.0125C11.215 1.62349 10.9842 1.27125 10.6867 0.98C10.3978 0.680998 10.0447 0.451603 9.65417 0.309167C9.20072 0.13776 8.72133 0.0450392 8.23667 0.035C7.61833 -3.25963e-08 7.42 0 5.83333 0C4.24667 0 4.04833 -3.25963e-08 3.43 0.035C2.94534 0.0450392 2.46595 0.13776 2.0125 0.309167C1.62264 0.453045 1.26988 0.682244 0.98 0.98C0.680998 1.26885 0.451603 1.62192 0.309167 2.0125C0.13776 2.46595 0.0450392 2.94534 0.035 3.43C-3.25963e-08 4.04833 0 4.24667 0 5.83333C0 7.42 -3.25963e-08 7.61833 0.035 8.23667C0.0450392 8.72133 0.13776 9.20072 0.309167 9.65417C0.451603 10.0447 0.680998 10.3978 0.98 10.6867C1.26988 10.9844 1.62264 11.2136 2.0125 11.3575C2.46595 11.5289 2.94534 11.6216 3.43 11.6317C4.04833 11.6667 4.24667 11.6667 5.83333 11.6667C7.42 11.6667 7.61833 11.6667 8.23667 11.6317C8.72133 11.6216 9.20072 11.5289 9.65417 11.3575C10.0447 11.2151 10.3978 10.9857 10.6867 10.6867C10.9855 10.3965 11.2165 10.0439 11.3633 9.65417C11.5297 9.19951 11.6203 8.72066 11.6317 8.23667C11.6317 7.61833 11.6667 7.42 11.6667 5.83333C11.6667 4.24667 11.6667 4.04833 11.6317 3.43ZM10.5817 8.16667C10.5774 8.53695 10.5104 8.90383 10.3833 9.25167C10.2902 9.50553 10.1406 9.73491 9.94583 9.9225C9.75663 10.1153 9.52771 10.2646 9.275 10.36C8.92716 10.487 8.56028 10.5541 8.19 10.5583C7.60667 10.5875 7.39083 10.5933 5.85667 10.5933C4.3225 10.5933 4.10667 10.5933 3.52333 10.5583C3.13885 10.5655 2.75601 10.5063 2.39167 10.3833C2.15004 10.283 1.93162 10.1341 1.75 9.94583C1.55638 9.75844 1.40866 9.52886 1.31833 9.275C1.17592 8.92217 1.09693 8.54697 1.085 8.16667C1.085 7.58333 1.05 7.3675 1.05 5.83333C1.05 4.29917 1.05 4.08333 1.085 3.5C1.08761 3.12145 1.15672 2.7463 1.28917 2.39167C1.39186 2.14545 1.54949 1.92597 1.75 1.75C1.92722 1.54943 2.14625 1.39014 2.39167 1.28333C2.74724 1.15503 3.122 1.08796 3.5 1.085C4.08333 1.085 4.29917 1.05 5.83333 1.05C7.3675 1.05 7.58333 1.05 8.16667 1.085C8.53695 1.08925 8.90383 1.15631 9.25167 1.28333C9.51675 1.38171 9.75467 1.54166 9.94583 1.75C10.137 1.92919 10.2864 2.14826 10.3833 2.39167C10.513 2.74688 10.5801 3.12187 10.5817 3.5C10.6108 4.08333 10.6167 4.29917 10.6167 5.83333C10.6167 7.3675 10.6108 7.58333 10.5817 8.16667ZM5.83333 2.84083C5.24172 2.84199 4.66373 3.01847 4.17238 3.34799C3.68104 3.67751 3.29839 4.14528 3.07279 4.69219C2.84719 5.2391 2.78876 5.84061 2.90488 6.42071C3.021 7.00081 3.30647 7.53348 3.72521 7.9514C4.14395 8.36933 4.67717 8.65376 5.2575 8.76875C5.83783 8.88375 6.43922 8.82415 6.98569 8.59748C7.53216 8.37081 7.99918 7.98726 8.32774 7.49527C8.6563 7.00328 8.83167 6.42494 8.83167 5.83333C8.83244 5.43964 8.75537 5.04969 8.60489 4.68589C8.45441 4.32209 8.23349 3.99164 7.95484 3.71353C7.67619 3.43542 7.3453 3.21515 6.98122 3.06538C6.61713 2.91561 6.22702 2.83929 5.83333 2.84083ZM5.83333 7.77583C5.44914 7.77583 5.07358 7.66191 4.75414 7.44846C4.4347 7.23502 4.18572 6.93164 4.0387 6.5767C3.89167 6.22175 3.85321 5.83118 3.92816 5.45437C4.00311 5.07756 4.18811 4.73144 4.45978 4.45978C4.73144 4.18811 5.07756 4.00311 5.45437 3.92816C5.83118 3.85321 6.22175 3.89167 6.5767 4.0387C6.93164 4.18572 7.23502 4.4347 7.44846 4.75414C7.66191 5.07358 7.77583 5.44914 7.77583 5.83333C7.77583 6.08843 7.72559 6.34102 7.62797 6.5767C7.53035 6.81237 7.38727 7.02651 7.20689 7.20689C7.02651 7.38727 6.81237 7.53035 6.5767 7.62797C6.34102 7.72559 6.08843 7.77583 5.83333 7.77583Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="dp_link">
+            <a href="https://x.com/duoplex92?s=21&t=8qRaU5PeRfK98WPKhByyxg">
+              <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.42188 5.5125L13.5625 0H12.25L7.83125 4.725L4.375 0H0L5.38125 7.35L0 13.125H1.3125L5.97187 8.1375L9.625 13.125H14L8.42188 5.5125ZM1.94687 0.875H3.69687L12.0312 12.25H10.2812L1.94687 0.875Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="dp_link">
+            <a href="#">
+              <svg width="18" height="18" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.9968 3.46707C14.0282 2.55678 13.8292 1.65331 13.4181 0.840541C13.1391 0.507041 12.752 0.281981 12.3242 0.204578C10.5546 0.044014 8.77777 -0.0217961 7.00119 0.00743013C5.23108 -0.0231226 3.4606 0.0405639 1.69727 0.198219C1.34864 0.261635 1.02602 0.425157 0.768761 0.668831C0.196395 1.19668 0.132799 2.09975 0.0692028 2.8629C-0.0230676 4.23503 -0.0230676 5.61181 0.0692028 6.98394C0.0876013 7.41347 0.151556 7.83983 0.259991 8.25586C0.336673 8.57706 0.491814 8.87424 0.711525 9.12077C0.970532 9.37735 1.30067 9.55018 1.65911 9.61682C3.03019 9.78606 4.41169 9.8562 5.79286 9.82669C8.01873 9.85849 9.97113 9.82669 12.2797 9.64862C12.6469 9.58607 12.9864 9.41302 13.2527 9.15257C13.4307 8.97445 13.5637 8.75643 13.6406 8.51661C13.8681 7.81871 13.9798 7.0883 13.9713 6.35433C13.9968 5.99819 13.9968 3.84864 13.9968 3.46707ZM5.56392 6.73591V2.7993L9.32881 4.77715C8.27312 5.36223 6.88036 6.02363 5.56392 6.73591Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="dp_link">
+            <a href="https://dribbble.com/Duoplex_Pro">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433284 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM10 2C12.0547 1.99918 14.0298 2.79493 15.51 4.22C13.982 5.1162 12.3629 5.84699 10.68 6.4C9.84249 4.95682 8.88228 3.58844 7.81 2.31C8.52196 2.105 9.25912 2.00065 10 2ZM5.89 3.15C6.93769 4.3485 7.87797 5.6368 8.7 7C6.7371 7.4874 4.72251 7.73587 2.7 7.74H2.34C2.90721 5.81964 4.17394 4.18181 5.89 3.15ZM4 15.31C2.69876 13.8487 1.98608 11.9566 2 10C2 9.9 2 9.8 2 9.71H2.68C5.04738 9.68883 7.4014 9.35254 9.68 8.71C10 9.32 10.3 9.95 10.59 10.6C9.03149 11.1494 7.58001 11.9648 6.3 13.01L6 13.25C5.28712 13.8902 4.61889 14.5785 4 15.31ZM10 18C8.40609 18.0035 6.8482 17.5261 5.53 16.63C6.01684 16.0716 6.53784 15.5439 7.09 15.05L7.41 14.78C8.59317 13.7849 9.94898 13.0155 11.41 12.51C12.0113 14.136 12.4795 15.8082 12.81 17.51C11.9098 17.8387 10.9583 18.0046 10 18ZM14.63 16.51C14.3028 14.9966 13.8752 13.5066 13.35 12.05H13.69C13.7294 12.0403 13.7706 12.0403 13.81 12.05H13.92H14.02H14.5C15.5524 12.053 16.5968 12.2321 17.59 12.58C17.0443 14.1704 16.0079 15.5464 14.63 16.51ZM14.5 10C14.29 10 14.08 10 13.88 10C13.7505 9.98368 13.6195 9.98368 13.49 10C13.2182 10.0167 12.9477 10.0501 12.68 10.1H12.58C12.29 9.43 11.99 8.78 11.66 8.1C13.4506 7.48505 15.1704 6.68048 16.79 5.7C17.5934 6.98937 18.0131 8.48085 18 10C18 10.17 18 10.34 18 10.51C16.8667 10.1602 15.686 9.98817 14.5 10Z"
+                  fill="black" />
+              </svg>
+
+            </a>
+          </div>
+          <div class="dp_link">
+            <a href="mailto:duoplex92@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.3744 8.58646C10.3744 9.19973 10.5489 9.4443 11.0052 9.4443C12.0222 9.4443 12.6698 8.14841 12.6698 5.99322C12.6698 2.6991 10.2693 1.12213 7.27232 1.12213C4.1892 1.12213 1.38496 3.18972 1.38496 7.0971C1.38496 10.8293 3.83803 12.8618 7.60524 12.8618C8.88433 12.8618 9.74291 12.7216 11.0563 12.2836L11.3381 13.4568C10.0415 13.8781 8.65582 14 7.58771 14C2.64654 14 0 11.2841 0 7.09637C0 2.87359 3.06706 0 7.28984 0C11.6878 0 14.0175 2.62829 14.0175 5.85231C14.0175 8.58573 13.1597 10.6708 10.4613 10.6708C9.23404 10.6708 8.42876 10.1802 8.32363 9.09314C8.00824 10.3021 7.16719 10.6708 6.02753 10.6708C4.50313 10.6708 3.22403 9.49614 3.22403 7.13141C3.22403 4.74844 4.34616 3.2766 6.36118 3.2766C7.43002 3.2766 8.09585 3.69712 8.39226 4.36295L8.90113 3.43429H10.373V8.58646H10.3744ZM8.21996 6.27357C8.21996 5.3106 7.50083 4.90686 6.90509 4.90686C6.25678 4.90686 5.53911 5.43179 5.53911 6.97445C5.53911 8.20098 6.08229 8.88433 6.90509 8.88433C7.48331 8.88433 8.21996 8.51637 8.21996 7.5001V6.27357Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a href="https://wa.me/+923394018116" class="floatingButton" target="_blank">
+      <img src="./assets/img/whatsapp.svg" alt="whatsapp" />
+    </a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./src/js/modal.js"></script>
+  <script src="./src/js/slide.js"></script>
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/menu.js"></script>
+  <script src="./src/js/tabs.js"></script>
+  <script>
+    /* loader-44 */
+    var num = document.querySelector('.loader-44 .loader-numbers'),    // Get the number
+      duration = 5500;                                               // Animation in ms
+
+    // Custom easing function, ripped directly from the jQuery easing plugin (easeOutSine)
+    $.extend($.easing, {
+      easeIn: function (x, t, b, c, d) {
+        return c * Math.sin(t / d * (Math.PI / 2)) + b;
+      }
+    });
+
+    // Numbers animation 
+    $({ 'number': 0 }).delay(250).animate({ 'number': 100 }, {
+      duration: duration,
+      easing: 'easeIn',
+      step: function (a) {
+        a = Math.round(a);                   //rounded number
+        a = String(a);                       //convert a number to a string
+        $(num).html(a + '%');
+      }
+    });
+    // $(function () {
+
+    //   $(".loader").timeOut(function () {
+    //     $(".dp-wrapper").fadeIn(800);
+    //   });
+    // });
+    const loader = document.getElementsByClassName("loader");
+    const myTimeout = setTimeout(function(){
+      $(".dp-wrapper").fadeIn("6000");
+      $(".loader").fadeOut("6000");
+ }, 6000);
+    $(document).ready(function (e) {
+      $(".cform").on("submit", function (e) {
+        e.preventDefault();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var country = $("#country").val();
+        var message = $("#message").val();
+        if (!name) {
+          $("#name_err").css("display", "block");
+        } else {
+          $("#name_err").css("display", "none");
+        }
+        if (!email) {
+          $("#email_err").css("display", "block");
+        } else {
+          $("#email_err").css("display", "none");
+        }
+        if (!country) {
+          $("#country_err").css("display", "block");
+        } else {
+          $("#country_err").css("display", "none");
+        }
+        if (!message) {
+          $("#msg_err").css("display", "block");
+        } else {
+          $("#msg_err").css("display", "none");
+        }
+
+        var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
+        $.ajax({
+          url: "reach.php",
+          type: "POST",
+          data: data,
+          cache: false,
+          success: function (data) {
+            console.log(data);
+          },
+          error: function () {
+            //alert("Erorrrrrr");
+            console.log('No post data');
+          },
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
