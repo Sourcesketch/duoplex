@@ -40821,9 +40821,16 @@
   background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 540px) {
   .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control input {
-    min-width: 26.25rem;
+    min-width: 25rem;
+    max-width: 25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control input {
+    min-width: 20rem;
+    max-width: 20rem;
   }
 }
 .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control textarea {
@@ -40847,9 +40854,16 @@
   background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 540px) {
   .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control textarea {
-    min-width: 26.25rem;
+    min-width: 25rem !important;
+    max-width: 25rem !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .form-control textarea {
+    min-width: 20rem !important;
+    max-width: 20rem !important;
   }
 }
 .dp-wrapper .dp-main-content .dp-contact .dp-contact__inner .dp-contact__form form.cform .submitBtn {
