@@ -223,7 +223,7 @@ gsap.fromTo(
         // xPercent: 0,
         transformOrigin: "0% 100%",
         ease: "power4",
-        duration: 2,
+        duration: 1,
     }
 )
 // gsap.fromTo(
