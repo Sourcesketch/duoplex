@@ -1,11 +1,14 @@
-
 <?php 
-  $name = $_POST["name"]; 
-  $email = $_POST["email"]; 
-  $country= $_POST["country"];
-  $message = $_POST["message"];
-  $recieptant= "anniebaig.ab@gmail.com";
-  $header .= "From:" .$name. "<" .$email. ">\r\n";
-  // send email
-  mail($recieptant,"qoute from client",$message,$header);
+  $name = $_REQUEST['name'];
+  $email = $_REQUEST['email'];
+  $message = $_REQUEST['message'];
+  $to = "anniebaig.ab@gmail.com";
+  $subject = "My subject";
+  $txt = "Hello world!";
+  $headers = "From: webmaster@example.com" . "\r\n" .
+  "CC: anniebaig.ab@gmail.com";
+  
+  mail($to,$subject,$txt,$headers);
+  
+
 ?>

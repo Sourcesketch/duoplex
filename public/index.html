@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
   <link rel="stylesheet" href="./src/scss/global.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVW505C0V3"></script>
   <script>
@@ -1205,7 +1206,7 @@
             <p class="fs-26 font-family-medium text-white mb-44">
               For any inquiries feel free to reach out to us.
             </p>
-            <form name="contactForm" action="" method="post" class="cform">
+            <form name="contactForm" action="./reach.php" method="post" class="cform" id="cform">
               <div class="form-control">
                 <label for="fname" class="fs-18 font-family-medium text-white sr-only">Full Name <span
                     class="text-mattRed">*</span></label>
@@ -1234,7 +1235,9 @@
               <button id="submit" name="submit" type="submit"
                 class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue">
                 Submit
+               
               </button>
+              <span class="output_message text-green">.</span>
             </form>
           </div>
         </div>
@@ -1312,11 +1315,13 @@
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+
   <script src="./src/js/modal.js"></script>
   <script src="./src/js/slide.js"></script>
   <script src="./src/js/main.js"></script>
   <script src="./src/js/menu.js"></script>
-  <script src="./src/js/tabs.js"></script>
+  <script src="src/js/tabs.js"></script>
   <script>
     /* loader-44 */
     var num = document.querySelector('.loader-44 .loader-numbers'),    // Get the number
@@ -1378,22 +1383,47 @@
           $("#msg_err").css("display", "none");
         }
 
-        var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
-        $.ajax({
-          url: "reach.php",
-          type: "POST",
-          data: data,
-          cache: false,
-          success: function (data) {
-            console.log(data);
-          },
-          error: function () {
-            //alert("Erorrrrrr");
-            console.log('No post data');
-          },
-        });
+        // var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
+        // $.ajax({
+        //   url: "reach.php",
+        //   type: "POST",
+        //   data: data,
+        //   cache: false,
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        //   error: function () {
+        //     //alert("Erorrrrrr");
+        //     console.log('No post data');
+        //   },
+        // });
       });
     });
+    $(document).ready(function() {
+               $('.cform').on('submit',function(){
+    
+               // Add text 'loading...' right after clicking on the submit button. 
+               $('.output_message').text('Loading...'); 
+               var form=$("#cform");
+               var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
+                    $.ajax({
+                    // if it can't find email.php just chahge the url path to the full path, including your domain and all folders.
+                    url: form.attr("action"),
+                    method: form.attr('method'),
+                    data: data,
+                    success: function(result){
+                    alert(result);
+                    $('.output_message').text('Success'); 
+                    },
+                    error: function(result){
+                      $('.output_message').text('Error'); 
+                    }
+                    
+        });
+        // Prevents default submission of the form after clicking on the submit button. 
+        return false;   
+      });
+      });
   </script>
 </body>
 
