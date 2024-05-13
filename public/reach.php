@@ -1,14 +1,13 @@
 <?php 
-  $name = $_REQUEST['name'];
-  $email = $_REQUEST['email'];
-  $message = $_REQUEST['message'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = htmlspecialchars($_POST['name']);
+  $email = htmlspecialchars($_POST['email']);
+  $country = htmlspecialchars($_POST['country']);
+  $message = htmlspecialchars($_POST['message']);
   $to = "anniebaig.ab@gmail.com";
-  $subject = "My subject";
-  $txt = "Hello world!";
-  $headers = "From: webmaster@example.com" . "\r\n" .
+  $subject = "Client query";
+  $headers = "From:". $email . "\r\n" .
   "CC: anniebaig.ab@gmail.com";
-  
-  mail($to,$subject,$txt,$headers);
-  
-
+  mail($to,$subject,$name,$headers);
+}
 ?>

@@ -1167,20 +1167,20 @@
                   Tool Stack
                 </h4>
                 <div class="list">
-                  <button><img src="./assets/img/xd.png" alt="Adobe XD" title="Adobe XD"/></button>
+                  <button><img src="./assets/img/xd.png" alt="Adobe XD" title="Adobe XD" /></button>
                   <button><img src="./assets/img/figma.png" alt="Figma" title="Figma" /></button>
-                  <button><img src="./assets/img/html.png" alt="HTML" title="HTML"/></button>
+                  <button><img src="./assets/img/html.png" alt="HTML" title="HTML" /></button>
                   <button><img src="./assets/img/css.png" alt="CSS" title="CSS" /></button>
                   <button><img src="./assets/img/ai.png" alt="Adobe Illustrator" title="Adobe Illustrator" /></button>
-                  <button><img src="./assets/img/ps.png" alt="Adobe Photoshop" title="Adobe Photoshop"/></button>
+                  <button><img src="./assets/img/ps.png" alt="Adobe Photoshop" title="Adobe Photoshop" /></button>
                   <button><img src="./assets/img/js.png" alt="JavaScript" title="JavaScript" /></button>
-                  <button><img src="./assets/img/react.png" alt="React JS" title="React JS"/></button>
+                  <button><img src="./assets/img/react.png" alt="React JS" title="React JS" /></button>
                   <button><img src="./assets/img/AE.png" alt="After Effects" title="After Effects" /></button>
-                  <button><img src="./assets/img/blender.png" alt="Blender" title="Blender"/></button>
-                  <button><img src="./assets/img/gsap.png" alt="GSAP" title="GSAP"/></button>
-                  <button><img src="./assets/img/node.png" alt="Node JS" title="Node JS"/></button>
-                  <button><img src="./assets/img/express.png" alt="Express" title="Express"/></button>
-                  <button><img src="./assets/img/db.png" alt="MongoDB" title="MongoDB"/></button>
+                  <button><img src="./assets/img/blender.png" alt="Blender" title="Blender" /></button>
+                  <button><img src="./assets/img/gsap.png" alt="GSAP" title="GSAP" /></button>
+                  <button><img src="./assets/img/node.png" alt="Node JS" title="Node JS" /></button>
+                  <button><img src="./assets/img/express.png" alt="Express" title="Express" /></button>
+                  <button><img src="./assets/img/db.png" alt="MongoDB" title="MongoDB" /></button>
                 </div>
               </div>
             </div>
@@ -1235,9 +1235,9 @@
               <button id="submit" name="submit" type="submit"
                 class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue">
                 Submit
-               
+
               </button>
-              <span class="output_message text-green">.</span>
+              <span class="output_message text-green"></span>
             </form>
           </div>
         </div>
@@ -1315,7 +1315,7 @@
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    
+
 
   <script src="./src/js/modal.js"></script>
   <script src="./src/js/slide.js"></script>
@@ -1351,10 +1351,10 @@
     //   });
     // });
     const loader = document.getElementsByClassName("loader");
-    const myTimeout = setTimeout(function(){
+    const myTimeout = setTimeout(function () {
       $(".dp-wrapper").fadeIn("6000");
       $(".loader").fadeOut("6000");
- }, 6000);
+    }, 6000);
     $(document).ready(function (e) {
       $(".cform").on("submit", function (e) {
         e.preventDefault();
@@ -1399,31 +1399,29 @@
         // });
       });
     });
-    $(document).ready(function() {
-               $('.cform').on('submit',function(){
-    
-               // Add text 'loading...' right after clicking on the submit button. 
-               $('.output_message').text('Loading...'); 
-               var form=$("#cform");
-               var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
-                    $.ajax({
-                    // if it can't find email.php just chahge the url path to the full path, including your domain and all folders.
-                    url: form.attr("action"),
-                    method: form.attr('method'),
-                    data: data,
-                    success: function(result){
-                    alert(result);
-                    $('.output_message').text('Success'); 
-                    },
-                    error: function(result){
-                      $('.output_message').text('Error'); 
-                    }
-                    
+    $(document).ready(function () {
+      $(function () {
+        $('.cform').on('submit', function (e) {
+          e.preventDefault();
+          $('.output_message').text('Sending...');
+          var form = $("#cform");
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var country = $("#country").val();
+          var message = $("#message").val();
+          $.ajax({
+            type: 'post',
+            url: form.attr("action"),
+            data: 'name=' + name + '&email=' + email + '&country=' + country + '&message=' + message,
+            success: function (data) {
+              $('.output_message').text('Submitted Successfully!');
+            }
+          });
+
         });
-        // Prevents default submission of the form after clicking on the submit button. 
-        return false;   
+
       });
-      });
+    });
   </script>
 </body>
 
