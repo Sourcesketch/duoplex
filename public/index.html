@@ -1206,7 +1206,7 @@
             <p class="fs-26 font-family-medium text-white mb-44">
               For any inquiries feel free to reach out to us.
             </p>
-            <form name="contactForm" action="./reach.php" method="post" class="cform" id="cform">
+            <form name="contactForm" action="" method="post" class="cform" id="cform">
               <div class="form-control">
                 <label for="fname" class="fs-18 font-family-medium text-white sr-only">Full Name <span
                     class="text-mattRed">*</span></label>
@@ -1232,7 +1232,7 @@
                 <textarea name="message" id="message" placeholder="Write here..." rows="4" cols="50"></textarea>
                 <span class="error text-mattRed fs-12" id="msg_err">Required</span>
               </div>
-              <button id="submit" name="submit" type="submit"
+              <button id="submit" name="submit" type="submit" onclick="sendToWhatsapp()"
                 class="submitBtn fs-24 font-family-medium text-white py-12 px-24 bg-blue">
                 Submit
 
@@ -1322,67 +1322,60 @@
   <script src="./src/js/main.js"></script>
   <script src="./src/js/menu.js"></script>
   <script src="src/js/tabs.js"></script>
+  <script src="src/js/whatsapp.js"></script>
   <script>
-    /* loader-44 */
-    var num = document.querySelector('.loader-44 .loader-numbers'),    // Get the number
-      duration = 5500;                                               // Animation in ms
-
-    // Custom easing function, ripped directly from the jQuery easing plugin (easeOutSine)
+    //loader animation
+    var num = document.querySelector('.loader-44 .loader-numbers'),    
+      duration = 5500;                                              
     $.extend($.easing, {
       easeIn: function (x, t, b, c, d) {
         return c * Math.sin(t / d * (Math.PI / 2)) + b;
       }
     });
-
-    // Numbers animation 
     $({ 'number': 0 }).delay(250).animate({ 'number': 100 }, {
       duration: duration,
       easing: 'easeIn',
       step: function (a) {
-        a = Math.round(a);                   //rounded number
-        a = String(a);                       //convert a number to a string
+        a = Math.round(a);     
+        a = String(a);                      
         $(num).html(a + '%');
       }
     });
-    // $(function () {
-
-    //   $(".loader").timeOut(function () {
-    //     $(".dp-wrapper").fadeIn(800);
-    //   });
-    // });
     const loader = document.getElementsByClassName("loader");
     const myTimeout = setTimeout(function () {
       $(".dp-wrapper").fadeIn("6000");
       $(".loader").fadeOut("6000");
     }, 6000);
-    $(document).ready(function (e) {
-      $(".cform").on("submit", function (e) {
-        e.preventDefault();
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var country = $("#country").val();
-        var message = $("#message").val();
-        if (!name) {
-          $("#name_err").css("display", "block");
-        } else {
-          $("#name_err").css("display", "none");
-        }
-        if (!email) {
-          $("#email_err").css("display", "block");
-        } else {
-          $("#email_err").css("display", "none");
-        }
-        if (!country) {
-          $("#country_err").css("display", "block");
-        } else {
-          $("#country_err").css("display", "none");
-        }
-        if (!message) {
-          $("#msg_err").css("display", "block");
-        } else {
-          $("#msg_err").css("display", "none");
-        }
-
+    //form validation
+    // $(document).ready(function (e) {
+    //   $(".cform").on("submit", function (e) {
+    //     e.preventDefault();
+    //     var name = $("#name").val();
+    //     var email = $("#email").val();
+    //     var country = $("#country").val();
+    //     var message = $("#message").val();
+    //     if (!name) {
+    //       $("#name_err").css("display", "block");
+    //     } else {
+    //       $("#name_err").css("display", "none");
+    //     }
+    //     if (!email) {
+    //       $("#email_err").css("display", "block");
+    //     } else {
+    //       $("#email_err").css("display", "none");
+    //     }
+    //     if (!country) {
+    //       $("#country_err").css("display", "block");
+    //     } else {
+    //       $("#country_err").css("display", "none");
+    //     }
+    //     if (!message) {
+    //       $("#msg_err").css("display", "block");
+    //     } else {
+    //       $("#msg_err").css("display", "none");
+    //     }
+    //   });
+    // });
         // var data = "&name=" + name + "&email=" + email + "&country=" + country + "&message=" + message;
         // $.ajax({
         //   url: "reach.php",
@@ -1397,31 +1390,29 @@
         //     console.log('No post data');
         //   },
         // });
-      });
-    });
-    $(document).ready(function () {
-      $(function () {
-        $('.cform').on('submit', function (e) {
-          e.preventDefault();
-          $('.output_message').text('Sending...');
-          var form = $("#cform");
-          var name = $("#name").val();
-          var email = $("#email").val();
-          var country = $("#country").val();
-          var message = $("#message").val();
-          $.ajax({
-            type: 'post',
-            url: form.attr("action"),
-            data: 'name=' + name + '&email=' + email + '&country=' + country + '&message=' + message,
-            success: function (data) {
-              $('.output_message').text('Submitted Successfully!');
-            }
-          });
+    // $(document).ready(function () {
+    //   $(function () {
+    //     $('.cform').on('submit', function (e) {
+    //       e.preventDefault();
+    //       $('.output_message').text('Sending...');
+    //       var form = $("#cform");
+    //       var name = $("#name").val();
+    //       var email = $("#email").val();
+    //       var country = $("#country").val();
+    //       var message = $("#message").val();
+    //       $.ajax({
+    //         type: 'post',
+    //         url: form.attr("action"),
+    //         data: 'name=' + name + '&email=' + email + '&country=' + country + '&message=' + message,
+    //         success: function (data) {
+    //           $('.output_message').text('Submitted Successfully!');
+    //         }
+    //       });
 
-        });
+    //     });
 
-      });
-    });
+    //   });
+    // });
   </script>
 </body>
 
